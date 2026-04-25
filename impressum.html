@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum — Your Weekly Chef</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green-dark:    #3D5C28;
+      --green-mid:     #4A6B2F;
+      --green-main:    #5A7A3A;
+      --tan:           #C9A96E;
+      --mint:          #E8F0E2;
+      --cream:         #F7F4EE;
+      --white:         #FFFFFF;
+      --charcoal:      #2C2C2C;
+      --text-body:     #4A4A4A;
+      --font-serif:    'Cormorant Garamond', Georgia, serif;
+      --font-sans:     'DM Sans', system-ui, sans-serif;
+      --font-script:   'Dancing Script', cursive;
+      --transition:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-body);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+    .container { width: 100%; max-width: 800px; margin: 0 auto; padding: 120px 24px 80px; }
+
+    /* Navigation Style from Landing */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--green-dark); padding: 0 24px; }
+    .nav__inner { max-width: 1160px; margin: 0 auto; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .nav__logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+    .nav__logo-script { font-family: var(--font-script); font-size: 1.45rem; color: var(--white); }
+    .nav__logo-sub { font-family: var(--font-sans); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 2px; }
+
+    h1 { font-family: var(--font-serif); font-size: 3rem; color: var(--charcoal); margin-bottom: 40px; font-weight: 500; }
+    h2 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--green-dark); margin: 30px 0 15px; font-weight: 500; }
+    p { margin-bottom: 15px; }
+    strong { color: var(--charcoal); font-weight: 600; }
+
+    .footer { background: var(--charcoal); color: var(--white); padding: 60px 0; text-align: center; }
+    .footer a { color: var(--tan); text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+    .back-link { display: inline-block; margin-top: 40px; color: var(--green-main); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--green-main); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-script">Your Weekly Chef</span>
+        <span class="nav__logo-sub">Berlin · Private Chef</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Impressum</h1>
+
+    <section>
+      <h2>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</h2>
+      <p>
+        Polianina Olha<br>
+        Geisenheimer Strasse 56<br>
+        14197 Berlin<br>
+        Deutschland
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>
+        Telefon: +4916099892607<br>
+        E-Mail: yourweeklychef.de@gmail.com
+      </p>
+
+      <h2>Berufsbezeichnung</h2>
+      <p>Privatkoch</p>
+
+      <h2>Umsatzsteuer-Identifikationsnummer</h2>
+      <p>
+        Da ich als Kleinunternehmerin gemäß § 19 UStG von der Umsatzsteuer befreit bin, entfällt die Angabe einer Umsatzsteuer-Identifikationsnummer.
+      </p>
+
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>
+        Polianina Olha<br>
+        Geisenheimer Strasse 56<br>
+        14197 Berlin<br>
+        Deutschland
+      </p>
+    </section>
+
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Your Weekly Chef. Alle Rechte vorbehalten.</p>
+    <div style="margin-top: 15px;">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+    </div>
+  </footer>
+
+</body>
+</html>

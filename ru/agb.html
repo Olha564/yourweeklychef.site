@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Weekly Chef — Общие условия заключения сделок (AGB)</title>
+  <meta name="description" content="Общие условия заключения сделок для услуг Your Weekly Chef в Берлине. Информация о ценах, отменах и ответственности." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── CSS Variables ─────────────────────────────────────────── */
+    :root {
+      --green-dark:    #3D5C28;
+      --green-mid:     #4A6B2F;
+      --green-main:    #5A7A3A;
+      --green-light:   #6B8F47;
+      --green-muted:   #7A9A55;
+      --green-hero:    #4C6830;
+      --tan:           #C9A96E;
+      --tan-light:     #D4B882;
+      --tan-pale:      #EDD9B0;
+      --mint:          #E8F0E2;
+      --mint-mid:      #D6E8CC;
+      --cream:         #F7F4EE;
+      --cream-dark:    #EDE8DF;
+      --white:         #FFFFFF;
+      --charcoal:      #2C2C2C;
+      --charcoal-mid:  #3E3E3E;
+      --text-body:     #4A4A4A;
+      --text-light:    #6E6E6E;
+      --text-muted:    #8A8A8A;
+      --border:        rgba(90,122,58,0.15);
+      --shadow-sm:     0 2px 12px rgba(60,80,30,0.08);
+      --shadow-md:     0 8px 32px rgba(60,80,30,0.12);
+      --shadow-lg:     0 20px 60px rgba(60,80,30,0.15);
+      --radius-sm:     8px;
+      --radius-md:     16px;
+      --radius-lg:     28px;
+      --radius-xl:     48px;
+      --radius-full:   9999px;
+      --font-serif:    'Cormorant Garamond', Georgia, serif;
+      --font-sans:     'DM Sans', system-ui, sans-serif;
+      --font-script:   'Dancing Script', cursive;
+      --transition:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ─── Reset & Base ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-body);
+      background: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: var(--font-sans); border: none; }
+    ul { list-style: none; }
+
+    /* ─── Utility ───────────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-main);
+      background: var(--mint);
+      border: 1px solid rgba(90,122,58,0.2);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 20px;
+    }
+
+    .section-label--white {
+      color: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--green-main);
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      max-width: 540px;
+      line-height: 1.75;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--tan);
+      color: var(--charcoal);
+    }
+    .btn-primary:hover {
+      background: var(--tan-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(201,169,110,0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.55);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.8);
+    }
+
+    .btn-green {
+      background: var(--green-main);
+      color: var(--white);
+    }
+    .btn-green:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(90,122,58,0.35);
+    }
+
+    .btn-outline-green {
+      background: transparent;
+      color: var(--green-main);
+      border: 1.5px solid var(--green-main);
+    }
+    .btn-outline-green:hover {
+      background: var(--green-main);
+      color: var(--white);
+    }
+
+    /* ─── Navigation ────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 24px;
+      transition: var(--transition);
+    }
+
+    .nav.scrolled {
+      background: rgba(76,104,48,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+
+    .nav__inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav__logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .nav__logo-script {
+      font-family: var(--font-script);
+      font-size: 1.45rem;
+      color: var(--white);
+      letter-spacing: 0.01em;
+    }
+
+    .nav__logo-sub {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-top: 2px;
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav__links a {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.01em;
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--tan);
+      transition: width var(--transition);
+    }
+
+    .nav__links a:hover {
+      color: var(--white);
+    }
+
+    .nav__links a:hover::after {
+      width: 100%;
+    }
+
+    .nav__cta {
+      background: rgba(255,255,255,0.15);
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .nav__cta:hover {
+      background: var(--tan);
+      border-color: var(--tan);
+      color: var(--charcoal);
+    }
+
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      padding: 4px;
+    }
+
+    .nav__hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: rgba(60,85,35,0.98);
+      backdrop-filter: blur(12px);
+      padding: 24px;
+      z-index: 99;
+      flex-direction: column;
+      gap: 4px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav__mobile.open { display: flex; }
+
+    .nav__mobile a {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color var(--transition);
+    }
+
+    .nav__mobile a:hover { color: var(--tan); }
+
+    .nav__mobile .btn-primary {
+      margin-top: 12px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    /* ─── Content Section ───────────────────────────────────────── */
+    .content-section {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+
+    .content-section h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .content-section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .content-section h3 {
+      font-family: var(--font-sans);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--green-main);
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    .content-section p {
+      font-size: 1.05rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .content-section ul {
+      list-style: disc;
+      margin-left: 20px;
+      margin-bottom: 15px;
+      color: var(--text-body);
+    }
+
+    .content-section ul li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .content-section strong {
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    /* ─── Footer ────────────────────────────────────────────────── */
+    .footer {
+      background: var(--charcoal);
+      padding: 60px 0 32px;
+    }
+
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer__logo {
+      font-family: var(--font-script);
+      font-size: 1.6rem;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .footer__logo-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 16px;
+    }
+
+    .footer__tagline {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .footer__social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.55);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .footer__social-link:hover {
+      background: var(--green-main);
+      border-color: var(--green-main);
+      color: var(--white);
+    }
+
+    /* Интерактивная панель WhatsApp */
+    .footer__social-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .wa-panel {
+      position: absolute;
+      bottom: 54px;
+      left: 0;
+      width: 290px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-lg);
+      display: none;
+      z-index: 110;
+      text-align: left;
+    }
+
+    .wa-panel::after {
+      content: '';
+      position: absolute;
+      bottom: -7px;
+      left: 14px;
+      width: 14px;
+      height: 14px;
+      background: var(--white);
+      transform: rotate(45deg);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .wa-panel.open {
+      display: block;
+      animation: waFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes waFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .wa-panel__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .wa-panel__title {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .wa-panel__close {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      line-height: 1;
+      padding: 2px;
+    }
+
+    .wa-panel__close:hover { color: var(--charcoal); }
+
+    .wa-panel__text {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .wa-panel__btn {
+      padding: 10px 16px;
+      font-size: 0.85rem;
+      width: 100%;
+      justify-content: center;
+      background: #25D366 !important;
+      color: #FFFFFF !important;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(37,211,102,0.25);
+    }
+
+    .wa-panel__btn:hover {
+      background: #1BD75E !important;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(37,211,102,0.35);
+    }
+
+    .footer__col-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 16px;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer__links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      transition: color var(--transition);
+    }
+
+    .footer__links a:hover { color: var(--tan); }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer__copy {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer__bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer__bottom-links a {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      transition: color var(--transition);
+    }
+
+    .footer__bottom-links a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ─── Responsive ────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .footer__inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links,
+      .nav__cta { display: none; }
+
+      .nav__hamburger { display: flex; }
+
+      .nav__mobile.open { display: flex; }
+
+      .footer__inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .wa-panel {
+        width: 260px;
+        left: -20px;
+      }
+      .wa-panel::after {
+        left: 32px;
+      }
+    }
+
+    /* ─── Language Switcher ─────────────────────────────────────── */
+    .nav__lang-switcher {
+      display: flex;
+      gap: 12px;
+      margin-left: 16px;
+      padding-left: 16px;
+      border-left: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .lang-link {
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      color: rgba(255,255,255,0.5) !important;
+      transition: var(--transition);
+    }
+
+    .lang-link:hover, .lang-link.active {
+      color: var(--white) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress"></div>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner container">
+      <a href="/ru/" class="nav__logo">
+        <span class="nav__logo-script">Your Weekly Chef</span>
+        <span class="nav__logo-sub">Личный Повар Берлин</span>
+      </a>
+
+      <div class="nav__links">
+        <a href="/ru/#about">Обо мне</a>
+        <a href="/ru/#how-it-works">Как это работает</a>
+        <a href="/ru/#services">Услуги</a>
+        <a href="/ru/#testimonials">Отзывы</a>
+        <a href="/ru/#contact">Контакты</a>
+        <div class="nav__lang-switcher">
+          <a href="/" class="lang-link">DE</a>
+          <a href="/en/" class="lang-link">EN</a>
+          <a href="/ru/" class="lang-link active">RU</a>
+        </div>
+      </div>
+
+      <a href="/ru/#contact" class="nav__cta btn-primary">Заказать</a>
+
+      <button class="nav__hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile">
+      <a href="/ru/#about">Обо мне</a>
+      <a href="/ru/#how-it-works">Как это работает</a>
+      <a href="/ru/#services">Услуги</a>
+      <a href="/ru/#testimonials">Отзывы</a>
+      <a href="/ru/#contact">Контакты</a>
+      <a href="/ru/#contact" class="btn-primary">Заказать</a>
+      <div class="nav__lang-switcher">
+        <a href="/" class="lang-link">DE</a>
+        <a href="/en/" class="lang-link">EN</a>
+        <a href="/ru/" class="lang-link active">RU</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="content-section">
+      <div class="container">
+        <h1>Общие условия заключения сделок (AGB)</h1>
+
+        <h2>1. Сфера действия</h2>
+        <p>Настоящие Общие условия заключения сделок распространяются на все договоры между Your Weekly Chef (далее «Исполнитель») и его клиентами на оказание услуг личного повара, Meal Prep и связанных с ними сервисов.</p>
+
+        <h2>2. Услуги и заключение договора</h2>
+        <p>Исполнитель предлагает индивидуальные поварские услуги на кухне клиента. Договор считается заключенным после письменного подтверждения (по электронной почте или WhatsApp) предложения клиентом.</p>
+
+        <h2>3. Цены и условия оплаты</h2>
+        <ul>
+          <li>Действуют цены, согласованные на момент бронирования.</li>
+          <li>Расходы на продукты питания, если не оговорено иное, не включены в гонорар и выставляются отдельно при предъявлении чеков.</li>
+          <li>Оплата производится, если не оговорено иное, непосредственно после оказания услуги банковским переводом, картой или наличными.</li>
+        </ul>
+
+        <h2>4. Отмена и перенос визита</h2>
+        <p>Даты визитов являются обязательными для обеих сторон. Если клиенту необходимо отменить или перенести визит, действуют следующие условия:</p>
+        <ul>
+          <li>Отмена за <strong>48 часов</strong> до визита осуществляется бесплатно.</li>
+          <li>При отмене менее чем за 48 часов до визита взимается 50% от согласованного гонорара.</li>
+          <li>При отмене менее чем за 24 часа до визита или в случае неявки взимается полный гонорар (100%).</li>
+          <li>Уже закупленные продукты питания должны быть возмещены в размере 100% в любом случае.</li>
+        </ul>
+
+        <h2>5. Аллергии и диетические потребности</h2>
+        <p>Клиент обязан проинформировать Исполнителя не позднее чем за <strong>72 часа</strong> до визита об имеющихся аллергиях, непереносимости продуктов или специфических диетических потребностях. Исполнитель не несет ответственности за аллергические реакции, если эта информация не была предоставлена своевременно или была неполной.</p>
+
+        <h2>6. Требования к кухне клиента</h2>
+        <ul>
+          <li>Клиент предоставляет функциональную и чистую кухню, а также необходимое оборудование (плита, духовка, холодильник, водоснабжение).</li>
+          <li>Исполнитель обязуется оставить кухню в надлежащем и чистом состоянии после завершения работ.</li>
+          <li>Исполнитель относится к помещениям и инвентарю клиента с максимальной осторожностью.</li>
+        </ul>
+
+        <h2>7. Ответственность</h2>
+        <p>Исполнитель несет ответственность за ущерб, причиненный в результате грубой неосторожности или умысла. Ответственность за легкую неосторожность исключается, если не были нарушены существенные договорные обязательства.</p>
+
+        <h2>8. Защита данных</h2>
+        <p>Обработка персональных данных осуществляется в соответствии с Политикой конфиденциальности Исполнителя и законодательными положениями (DSGVO).</p>
+
+        <h2>9. Заключительные положения</h2>
+        <p>Применяется право Федеративной Республики Германия. Если отдельные положения настоящих AGB окажутся недействительными, это не затрагивает действительность остальных положений.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__logo">Your Weekly Chef</div>
+        <div class="footer__logo-sub">Личный Повар Берлин</div>
+        <p class="footer__tagline">Ваш личный повар для здоровых и вкусных блюд, прямо на вашей кухне в Берлине.</p>
+        <div class="footer__social">
+          <div class="footer__social-wrapper">
+            <a href="#" class="footer__social-link wa-trigger">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
+            </a>
+            <div class="wa-panel">
+              <div class="wa-panel__header">
+                <div class="wa-panel__title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
+                  Чат с нами в WhatsApp
+                </div>
+                <button class="wa-panel__close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+              </div>
+              <p class="wa-panel__text">Здравствуйте! Чем могу помочь?</p>
+              <a href="https://wa.me/49176628856" target="_blank" class="wa-panel__btn btn-green">
+                Отправить сообщение
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+          <a href="https://www.instagram.com/yourweeklychef.de/" target="_blank" class="footer__social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Навигация</div>
+        <div class="footer__links">
+          <a href="/ru/#about">Обо мне</a>
+          <a href="/ru/#how-it-works">Как это работает</a>
+          <a href="/ru/#services">Услуги</a>
+          <a href="/ru/#testimonials">Отзывы</a>
+          <a href="/ru/#contact">Контакты</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Юридическая информация</div>
+        <div class="footer__links">
+          <a href="/ru/agb.html">Условия и положения</a>
+          <a href="/ru/datenschutz.html">Политика конфиденциальности</a>
+          <a href="/ru/impressum.html">Выходные данные</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <div class="footer__copy">© 2024 Your Weekly Chef. Все права защищены.</div>
+      <div class="footer__bottom-links">
+        <a href="/ru/datenschutz.html">Политика конфиденциальности</a>
+        <a href="/ru/impressum.html">Выходные данные</a>
+        <a href="/ru/agb.html">Условия и положения</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll progress
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / scrollHeight) * 100;
+      document.querySelector('.scroll-progress').style.width = scrolled + '%';
+    });
+
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile nav toggle
+    const hamburger = document.querySelector('.nav__hamburger');
+    const mobileNav = document.querySelector('.nav__mobile');
+
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('open');
+      });
+    });
+
+    // WhatsApp panel toggle
+    const waTrigger = document.querySelector('.wa-trigger');
+    const waPanel = document.querySelector('.wa-panel');
+    const waClose = document.querySelector('.wa-panel__close');
+
+    waTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      waPanel.classList.toggle('open');
+    });
+
+    waClose.addEventListener('click', () => {
+      waPanel.classList.remove('open');
+    });
+
+    // Close WhatsApp panel when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!waPanel.contains(e.target) && !waTrigger.contains(e.target)) {
+        waPanel.classList.remove('open');
+      }
+    });
+
+    // Form submission
+    const contactForm = document.querySelector('.form');
+    const formSuccess = document.querySelector('.form__success');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isValid = true;
+
+      contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(input => {
+        if (!input.value.trim()) {
+          isValid = false;
+          input.classList.add('error');
+          input.nextElementSibling.classList.add('visible');
+        } else {
+          input.classList.remove('error');
+          input.nextElementSibling.classList.remove('visible');
+        }
+      });
+
+      if (isValid) {
+        // Simulate form submission
+        setTimeout(() => {
+          contactForm.reset();
+          formSuccess.classList.add('visible');
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            formSuccess.classList.remove('visible');
+          }, 5000);
+        }, 500);
+      }
+    });
+
+    contactForm.querySelectorAll('input, select, textarea').forEach(input => {
+      input.addEventListener('input', () => {
+        if (input.value.trim()) {
+          input.classList.remove('error');
+          input.nextElementSibling.classList.remove('visible');
+        }
+      });
+    });
+
+    // Fade-up animation on scroll
+    const fadeUpElements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeUpElements.forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>

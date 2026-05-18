@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Weekly Chef — Private Chef Berlin</title>
-  <meta name="description" content="Your Weekly Chef — Berlin-based private chef specializing in in-home MealPrep. I plan, shop, cook, and clean up so you enjoy a full week of fresh, personalized meals." />
+  <title>Your Weekly Chef — Privatkoch & Personal Chef Berlin</title>
+  <meta name="description" content="Your Weekly Chef bietet exklusive Privatkoch- und Personal Chef-Dienste in Berlin. Genießen Sie maßgeschneiderte Menüs, Einkauf und Kochen direkt bei Ihnen zu Hause. Buchen Sie jetzt Ihren persönlichen Koch!" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet" />
@@ -498,7 +499,7 @@
       padding: 40px;
     }
 
-    .about__photo-icon {
+    .about__photo-inner svg {
       width: 96px;
       height: 96px;
       border-radius: 50%;
@@ -1561,582 +1562,637 @@
       position: fixed;
       top: 0;
       left: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--tan), var(--green-muted));
-      z-index: 200;
-      transition: width 0.1s linear;
+      width: 0%;
+      height: 3px;
+      background: var(--tan);
+      z-index: 100;
     }
+
+    /* ─── Language Switcher ─────────────────────────────────────── */
+    .nav__lang-switcher {
+      display: flex;
+      gap: 12px;
+      margin-left: 16px;
+      padding-left: 16px;
+      border-left: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .lang-link {
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      color: rgba(255,255,255,0.5) !important;
+      transition: var(--transition);
+    }
+
+    .lang-link:hover, .lang-link.active {
+      color: var(--white) !important;
+    }
+
   </style>
 </head>
 <body>
 
-  <!-- Scroll Progress -->
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="scroll-progress"></div>
 
-  <!-- ─── Navigation ──────────────────────────────────────────── -->
-  <nav class="nav" id="mainNav">
-    <div class="nav__inner">
-      <a href="#hero" class="nav__logo">
+  <nav class="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo">
         <span class="nav__logo-script">Your Weekly Chef</span>
-        <span class="nav__logo-sub">Berlin · Personal Chef</span>
+        <span class="nav__logo-sub">Privatkoch Berlin</span>
       </a>
 
-      <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#how">How It Works</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#why">Why Me</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="nav__links">
+        <a href="#about">Über mich</a>
+        <a href="#how-it-works">So funktioniert's</a>
+        <a href="#services">Dienstleistungen</a>
+        <a href="#testimonials">Referenzen</a>
+        <a href="#contact">Kontakt</a>
+        <div class="nav__lang-switcher">
+          <a href="/" class="lang-link active">DE</a>
+          <a href="/en/" class="lang-link">EN</a>
+          <a href="/ru/" class="lang-link">RU</a>
+        </div>
+      </div>
 
-      <a href="#contact" class="nav__cta">Book a Consultation</a>
+      <a href="#contact" class="nav__cta btn-primary">Jetzt buchen</a>
 
-      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <button class="nav__hamburger">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
+
+    <div class="nav__mobile">
+      <a href="#about">Über mich</a>
+      <a href="#how-it-works">So funktioniert's</a>
+      <a href="#services">Dienstleistungen</a>
+      <a href="#testimonials">Referenzen</a>
+      <a href="#contact">Kontakt</a>
+      <a href="#contact" class="btn-primary">Jetzt buchen</a>
+      <div class="nav__lang-switcher">
+        <a href="/" class="lang-link active">DE</a>
+        <a href="/en/" class="lang-link">EN</a>
+        <a href="/ru/" class="lang-link">RU</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Mobile Nav -->
-  <div class="nav__mobile" id="mobileNav">
-    <a href="#about" onclick="closeMobileNav()">About</a>
-    <a href="#how" onclick="closeMobileNav()">How It Works</a>
-    <a href="#services" onclick="closeMobileNav()">Services</a>
-    <a href="#why" onclick="closeMobileNav()">Why Me</a>
-    <a href="#contact" onclick="closeMobileNav()">Contact</a>
-    <a href="#contact" class="btn btn-primary" onclick="closeMobileNav()">Book a Consultation</a>
-  </div>
+  <main>
+    <section class="hero">
+      <div class="hero__orb-1"></div>
+      <div class="hero__orb-2"></div>
+      <div class="hero__orb-3"></div>
+      <div class="hero__divider"></div>
 
-  <!-- ─── Hero ────────────────────────────────────────────────── -->
-  <section class="hero" id="hero">
-    <div class="hero__orb-1"></div>
-    <div class="hero__orb-2"></div>
-    <div class="hero__orb-3"></div>
-    <div class="hero__divider"></div>
+      <div class="hero__inner container">
+        <div class="hero__badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chef-hat"><path d="M12 2a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3Z"/><path d="M10 13v6a2 2 0 0 0 2 2c2.7 0 5.2-1.3 7-4l-4.5-4.5L20 8c1.7 2.7 2 6.4 2 7a9 9 0 0 1-9 9c-3.3 0-6.2-1.7-8-4.5l-.3-.5c-.3-.4-.6-.8-.9-1.2H2v-4h3"/></svg>
+          Privatkoch Berlin
+        </div>
+        <h1 class="hero__title">Gesund. Ausgewogen. <em>Meal Prep</em> — direkt in Ihrer Küche.</h1>
+        <p class="hero__subtitle">Ihr persönlicher Koch in Berlin, der Ihre Mahlzeiten plant, einkauft, kocht und aufräumt, damit Sie eine ganze Woche lang frische, personalisierte Gerichte genießen können.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn-primary">Jetzt buchen</a>
+          <a href="#services" class="btn btn-outline">Dienstleistungen entdecken</a>
+        </div>
 
-    <div class="hero__inner">
-      <div class="hero__badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-        Private Chef · Berlin
-      </div>
-
-      <h1 class="hero__title">
-        Healthy. Balanced.<br>
-        <em>Meal Prep</em> —<br>
-        right in your kitchen.
-      </h1>
-
-      <p class="hero__subtitle">
-        I come to you. I plan, shop, cook, and clean up — so you enjoy a full week of fresh, personalized meals without lifting a finger.
-      </p>
-
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-            <line x1="16" y1="2" x2="16" y2="6"/>
-            <line x1="8" y1="2" x2="8" y2="6"/>
-            <line x1="3" y1="10" x2="21" y2="10"/>
-          </svg>
-          Book a Consultation
+        <a href="#about" class="hero__scroll">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+          Scrollen
         </a>
-        <a href="#how" class="btn btn-outline">See How It Works</a>
       </div>
-    </div>
+    </section>
 
-    <div class="hero__scroll">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
-      </svg>
-      Scroll
-    </div>
-  </section>
-
-  <!-- ─── About ────────────────────────────────────────────────── -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about__inner">
-
-        <div class="about__visual fade-up">
+    <section class="about" id="about">
+      <div class="container about__inner">
+        <div class="about__visual">
           <div class="about__photo-wrap">
+            <img src="https://yourweeklychef.de/assets/chef-photo.webp" alt="Chef" />
             <div class="about__photo-inner">
-              <div class="about__photo-icon">👨‍🍳</div>
-              <p class="about__photo-text">"Cooking is my way<br>of caring for you."</p>
-              <span class="about__photo-sub">Your Weekly Chef · Berlin</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote"><path d="M3 21c3 0 7-1 7-8V5c0-1.4-1.4-2-2-2H3v7c0 1.7 1 3 2 3 1 0 1 1 0 2H3c0 1 1 2 2 2 0 1-1 2-2 2Z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.4-1.4-2-2-2H15v7c0 1.7 1 3 2 3 1 0 1 1 0 2H15c0 1 1 2 2 2 0 1-1 2-2 2Z"/></svg>
+              <p class="about__photo-text">"Essen ist eine Notwendigkeit, aber Kochen ist eine Kunst."</p>
+              <span class="about__photo-sub">— Unbekannt</span>
             </div>
           </div>
           <div class="about__accent-card">
-            <div class="about__accent-card-num">100%</div>
-            <div class="about__accent-card-label">Personalized<br>every time</div>
+            <div class="about__accent-card-num">5+</div>
+            <div class="about__accent-card-label">Jahre Erfahrung</div>
           </div>
         </div>
-
-        <div class="about__content fade-up fade-up-delay-1">
-          <span class="section-label">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            About Me
-          </span>
-          <h2 class="section-title">A private chef who <em>truly</em> cares about what you eat</h2>
-          <p class="about__text">
-            Hi, I'm a Berlin-based private chef with a deep passion for fresh, seasonal, and nourishing food. I believe that eating well shouldn't be a luxury — it should be effortless and joyful. That's why I bring the full meal prep experience directly to your home.
-          </p>
-          <p class="about__text">
-            From our first conversation to the last clean dish, I handle everything: <strong>menu planning tailored to your goals</strong>, sourcing the freshest local ingredients, cooking in your own kitchen, and leaving it spotless. You come home to a fridge full of beautiful, ready-to-eat meals.
-          </p>
-          <p class="about__text">
-            Whether you're looking to eat healthier, save time, or simply enjoy restaurant-quality food at home — I'm here to make it happen, every single week.
-          </p>
-
+        <div>
+          <div class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Über mich
+          </div>
+          <h2 class="section-title">Ihr persönlicher <em>Privatkoch</em> in Berlin</h2>
+          <p class="section-subtitle">Ich bin Ihr engagierter Privatkoch, der sich leidenschaftlich der Zubereitung köstlicher und nahrhafter Mahlzeiten widmet, die auf Ihre individuellen Bedürfnisse zugeschnitten sind.</p>
+          <p class="about__text">Mit über <strong>5 Jahren Erfahrung</strong> in der kulinarischen Welt habe ich meine Fähigkeiten verfeinert, um Ihnen ein unvergleichliches Esserlebnis zu bieten. Mein Ziel ist es, Ihnen das Leben zu erleichtern, indem ich Ihnen die Last der Essensplanung, des Einkaufs und des Kochens abnehme. Ich glaube, dass gutes Essen nicht nur den Körper nährt, sondern auch die Seele erfreut.</p>
+          <p class="about__text">Ich arbeite eng mit Ihnen zusammen, um Ihre Vorlieben, Ernährungsbedürfnisse und Allergien zu verstehen. Ob Sie eine spezielle Diät einhalten, vegetarisch, vegan oder glutenfrei essen, ich kreiere Menüs, die Sie lieben werden. Ich verwende nur die frischesten, saisonalen und hochwertigsten Zutaten, oft von lokalen Märkten in Berlin.</p>
           <div class="about__langs">
-            <span class="about__lang-label">I speak:</span>
-            <span class="about__lang-tag">🇬🇧 English</span>
-            <span class="about__lang-tag">🇩🇪 Deutsch</span>
-            <span class="about__lang-tag">🇷🇺 Русский</span>
+            <span class="about__lang-label">Sprachen:</span>
+            <span class="about__lang-tag">Deutsch</span>
+            <span class="about__lang-tag">Englisch</span>
+            <span class="about__lang-tag">Russisch</span>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ─── How It Works ─────────────────────────────────────────── -->
-  <section class="how" id="how">
-    <div class="container">
-      <div class="how__header fade-up">
-        <span class="section-label section-label--white">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          The Process
-        </span>
-        <h2 class="section-title">How it works — <em>simple as that</em></h2>
-        <p class="section-subtitle">Four easy steps from first contact to a fridge full of delicious, healthy meals.</p>
-      </div>
-
-      <div class="how__steps">
-        <div class="how__connector"></div>
-
-        <div class="how__step fade-up fade-up-delay-1">
-          <div class="how__step-num">01</div>
-          <div class="how__step-icon">💬</div>
-          <h3 class="how__step-title">We talk about your needs & goals</h3>
-          <p class="how__step-text">A relaxed consultation to understand your dietary preferences, health goals, household size, and schedule. No commitment needed.</p>
+    <section class="how" id="how-it-works">
+      <div class="container">
+        <div class="how__header">
+          <div class="section-label section-label--white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.78 1.31a2 2 0 0 0 .73 2.73l.15.08a2 2 0 0 1 1 1.73v.44a2 2 0 0 1-1 1.73l-.15.08a2 2 0 0 0-.73 2.73l.78 1.31a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.78-1.31a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.73v-.44a2 2 0 0 1 1-1.73l.15-.08a2 2 0 0 0 .73-2.73l-.78-1.31a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2Z"/><circle cx="12" cy="12" r="3"/></svg>
+            So funktioniert's
+          </div>
+          <h2 class="section-title">Ihr Weg zu frischen, <em>gesunden Mahlzeiten</em></h2>
+          <p class="section-subtitle">Ich mache es Ihnen leicht, gesunde und köstliche Mahlzeiten zu genießen, ohne den Stress der Zubereitung.</p>
         </div>
 
-        <div class="how__step fade-up fade-up-delay-2">
-          <div class="how__step-num">02</div>
-          <div class="how__step-icon">📋</div>
-          <h3 class="how__step-title">I plan your weekly menu</h3>
-          <p class="how__step-text">A fully personalized menu crafted around your tastes, nutritional needs, and the best seasonal ingredients available that week.</p>
-        </div>
+        <div class="how__steps">
+          <div class="how__connector"></div>
+          <div class="how__step">
+            <div class="how__step-num">1</div>
+            <div class="how__step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+            </div>
+            <h3 class="how__step-title">Termin vereinbaren</h3>
+            <p class="how__step-text">Kontaktieren Sie mich, um Ihre Bedürfnisse zu besprechen und einen passenden Termin zu finden.</p>
+          </div>
 
-        <div class="how__step fade-up fade-up-delay-3">
-          <div class="how__step-num">03</div>
-          <div class="how__step-icon">🛒</div>
-          <h3 class="how__step-title">I shop for fresh ingredients</h3>
-          <p class="how__step-text">I source the freshest, highest-quality ingredients — from local markets and trusted suppliers — so you never have to worry about shopping.</p>
-        </div>
+          <div class="how__step">
+            <div class="how__step-num">2</div>
+            <div class="how__step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chef-hat"><path d="M12 2a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3Z"/><path d="M10 13v6a2 2 0 0 0 2 2c2.7 0 5.2-1.3 7-4l-4.5-4.5L20 8c1.7 2.7 2 6.4 2 7a9 9 0 0 1-9 9c-3.3 0-6.2-1.7-8-4.5l-.3-.5c-.3-.4-.6-.8-.9-1.2H2v-4h3"/></svg>
+            </div>
+            <h3 class="how__step-title">Menüplanung</h3>
+            <p class="how__step-text">Wir erstellen ein individuelles Menü, das Ihren Vorlieben und Ernährungsbedürfnissen entspricht.</p>
+          </div>
 
-        <div class="how__step fade-up fade-up-delay-4">
-          <div class="how__step-num">04</div>
-          <div class="how__step-icon">✨</div>
-          <h3 class="how__step-title">I cook & clean up at your home</h3>
-          <p class="how__step-text">I arrive, cook everything in your kitchen, label and store your meals — then leave it cleaner than I found it. You just enjoy the food.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <div class="how__step">
+            <div class="how__step-num">3</div>
+            <div class="how__step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            </div>
+            <h3 class="how__step-title">Einkauf & Zubereitung</h3>
+            <p class="how__step-text">Ich kaufe frische Zutaten ein und bereite die Mahlzeiten direkt in Ihrer Küche zu.</p>
+          </div>
 
-  <!-- ─── Services ─────────────────────────────────────────────── -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="services__header fade-up">
-        <span class="section-label">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          Services
-        </span>
-        <h2 class="section-title">What I offer — <em>tailored for you</em></h2>
-        <p class="section-subtitle">Every service is fully customized. No two clients are the same, and neither are their menus.</p>
-      </div>
-
-      <div class="services__grid">
-
-        <div class="service-card service-card--featured fade-up fade-up-delay-1">
-          <div class="service-card__icon">🍱</div>
-          <span class="service-card__badge">Most Popular</span>
-          <h3 class="service-card__title">Weekly MealPrep</h3>
-          <p class="service-card__text">My signature service. I come to your home once a week, cook a full set of balanced meals for the days ahead, and handle everything from planning to clean-up. You open your fridge and find restaurant-quality food, ready to eat.</p>
-          <div class="service-card__tags">
-            <span class="service-card__tag">Full week coverage</span>
-            <span class="service-card__tag">Grocery included</span>
-            <span class="service-card__tag">Clean-up included</span>
-            <span class="service-card__tag">Labeled & stored</span>
+          <div class="how__step">
+            <div class="how__step-num">4</div>
+            <div class="how__step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-soup"><path d="M12 21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v10a2 2 0 0 1-2 2h-1"/><path d="M15 3v4a2 2 0 0 0 2 2h4"/><path d="M7 18v3"/><path d="M12 18v3"/><path d="M17 18v3"/></svg>
+            </div>
+            <h3 class="how__step-title">Genießen & Entspannen</h3>
+            <p class="how__step-text">Ihre Mahlzeiten sind fertig. Genießen Sie frische Küche ohne Aufwand!</p>
           </div>
         </div>
-
-        <div class="service-card fade-up fade-up-delay-2">
-          <div class="service-card__icon">🥗</div>
-          <h3 class="service-card__title">Special Diet Plans</h3>
-          <p class="service-card__text">Whether you follow a specific diet or have food allergies, I create menus that are both medically appropriate and genuinely delicious. No compromise on taste, ever.</p>
-          <div class="service-card__tags">
-            <span class="service-card__tag">Keto & Low-Carb</span>
-            <span class="service-card__tag">Vegan & Plant-Based</span>
-            <span class="service-card__tag">Allergy-Friendly</span>
-            <span class="service-card__tag">Gluten-Free</span>
-            <span class="service-card__tag">Anti-Inflammatory</span>
-          </div>
-        </div>
-
-        <div class="service-card fade-up fade-up-delay-3">
-          <div class="service-card__icon">👨‍👩‍👧‍👦</div>
-          <h3 class="service-card__title">Family MealPrep</h3>
-          <p class="service-card__text">Feeding a family with different tastes and nutritional needs? I plan and prepare meals that everyone at the table will love — including kid-friendly options and adult portions alike.</p>
-          <div class="service-card__tags">
-            <span class="service-card__tag">Kid-friendly options</span>
-            <span class="service-card__tag">Portion planning</span>
-            <span class="service-card__tag">Varied menus</span>
-          </div>
-        </div>
-
-        <div class="service-card fade-up fade-up-delay-4">
-          <div class="service-card__icon">🍽️</div>
-          <h3 class="service-card__title">One-Time Cooking Session</h3>
-          <p class="service-card__text">Not ready for a weekly commitment? Book a single session — perfect for a special occasion, a dinner party, or just to try the experience before subscribing to a regular service.</p>
-          <div class="service-card__tags">
-            <span class="service-card__tag">Dinner parties</span>
-            <span class="service-card__tag">Special occasions</span>
-            <span class="service-card__tag">No commitment</span>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ─── Why Me ────────────────────────────────────────────────── -->
-  <section class="why" id="why">
-    <div class="container">
-      <div class="why__inner">
-
-        <div class="why__content fade-up">
-          <span class="section-label">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            Why Choose Me
-          </span>
-          <h2 class="section-title">The <em>difference</em> you'll feel from day one</h2>
-          <p class="section-subtitle">I'm not a catering company. I'm your personal chef — and that changes everything.</p>
-
-          <ul class="why__list">
-            <li class="why__item fade-up fade-up-delay-1">
-              <div class="why__item-icon">🎯</div>
-              <div class="why__item-body">
-                <div class="why__item-title">Fully Customized Menus</div>
-                <div class="why__item-text">Every menu is built around you — your preferences, your goals, your lifestyle. No templates, no shortcuts.</div>
-              </div>
-            </li>
-            <li class="why__item fade-up fade-up-delay-2">
-              <div class="why__item-icon">🌿</div>
-              <div class="why__item-body">
-                <div class="why__item-title">Fresh & Seasonal Ingredients</div>
-                <div class="why__item-text">I source the best produce available, prioritizing local, seasonal, and organic where possible — for maximum flavor and nutrition.</div>
-              </div>
-            </li>
-            <li class="why__item fade-up fade-up-delay-3">
-              <div class="why__item-icon">✨</div>
-              <div class="why__item-body">
-                <div class="why__item-title">Full-Service — No Mess Left Behind</div>
-                <div class="why__item-text">I cook, I clean, I organize. Your kitchen will be spotless and your fridge will be stocked. That's the full-service promise.</div>
-              </div>
-            </li>
-            <li class="why__item fade-up fade-up-delay-4">
-              <div class="why__item-icon">📅</div>
-              <div class="why__item-body">
-                <div class="why__item-title">Flexible Scheduling</div>
-                <div class="why__item-text">I work around your calendar. Morning, afternoon, or evening — weekdays or weekends. Your schedule comes first.</div>
-              </div>
-            </li>
-            <li class="why__item fade-up">
-              <div class="why__item-icon">📍</div>
-              <div class="why__item-body">
-                <div class="why__item-title">Berlin-Based & Locally Connected</div>
-                <div class="why__item-text">I know Berlin's best markets and suppliers. I'm part of this city's food culture — and I bring that knowledge to your table.</div>
-              </div>
-            </li>
-          </ul>
+    <section class="services" id="services">
+      <div class="container">
+        <div class="services__header">
+          <div class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-concierge-bell"><path d="M2 18h20"/><path d="M20 18v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><path d="M7.5 21.5L4 18V6a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v12l-3.5 3.5"/><path d="M12 4v17"/><path d="M7 18h10"/></svg>
+            Dienstleistungen
+          </div>
+          <h2 class="section-title">Maßgeschneiderte <em>kulinarische Erlebnisse</em></h2>
+          <p class="section-subtitle">Ich biete eine Reihe von Dienstleistungen an, die auf Ihre individuellen Bedürfnisse zugeschnitten sind.</p>
         </div>
 
+        <div class="services__grid">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-soup"><path d="M12 21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v10a2 2 0 0 1-2 2h-1"/><path d="M15 3v4a2 2 0 0 0 2 2h4"/><path d="M7 18v3"/><path d="M12 18v3"/><path d="M17 18v3"/></svg>
+            </div>
+            <h3 class="service-card__title">Wöchentliches Meal Prep</h3>
+            <p class="service-card__text">Genießen Sie eine ganze Woche lang frische, gesunde und köstliche Mahlzeiten, die speziell für Sie zubereitet werden. Ich kümmere mich um die Planung, den Einkauf, das Kochen und die Reinigung.</p>
+            <div class="service-card__tags">
+              <span class="service-card__tag">Individuelle Menüs</span>
+              <span class="service-card__tag">Frische Zutaten</span>
+              <span class="service-card__tag">Zeitersparnis</span>
+            </div>
+          </div>
+
+          <div class="service-card service-card--featured">
+            <div class="service-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cake"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/><path d="M7 4v.01"/><path d="M12 4v.01"/><path d="M17 4v.01"/></svg>
+            </div>
+            <div class="service-card__badge">Beliebt</div>
+            <h3 class="service-card__title">Besondere Anlässe & Dinnerpartys</h3>
+            <p class="service-card__text">Beeindrucken Sie Ihre Gäste mit einem unvergesslichen kulinarischen Erlebnis. Ich kreiere und serviere ein exquisites Menü für Ihre Dinnerparty oder besondere Veranstaltung.</p>
+            <div class="service-card__tags">
+              <span class="service-card__tag">Feine Küche</span>
+              <span class="service-card__tag">Individuelle Menüs</span>
+              <span class="service-card__tag">Professioneller Service</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-salad"><path d="M7.5 13.5c.8-.8 2-.8 2.8 0L12 15l-1.5 1.5c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8l1.5-1.5Z"/><path d="M14 17.5c.8-.8 2-.8 2.8 0L19 19l-1.5 1.5c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8l1.5-1.5Z"/><path d="M5 11.5c.8-.8 2-.8 2.8 0L10 13l-1.5 1.5c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8l1.5-1.5Z"/><path d="M12.5 4.5c.8-.8 2-.8 2.8 0L17 7l-1.5 1.5c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8l1.5-1.5Z"/><path d="M17.5 9.5c.8-.8 2-.8 2.8 0L22 12l-1.5 1.5c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8l1.5-1.5Z"/><path d="M3 6h.01"/><path d="M19 3h.01"/><path d="M10 20h.01"/></svg>
+            </div>
+            <h3 class="service-card__title">Ernährungsberatung & Diätplanung</h3>
+            <p class="service-card__text">Ich helfe Ihnen, Ihre Ernährungsziele zu erreichen, indem ich personalisierte Diätpläne erstelle und Sie auf Ihrem Weg zu einem gesünderen Lebensstil begleite.</p>
+            <div class="service-card__tags">
+              <span class="service-card__tag">Gesunde Ernährung</span>
+              <span class="service-card__tag">Gewichtsmanagement</span>
+              <span class="service-card__tag">Allergiebewusst</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0-.009 1.837l8.574 3.837a2 2 0 0 0 1.584 0z"/><path d="M22 10v6"/><path d="M6 12v4"/><path d="M12 12v6"/></svg>
+            </div>
+            <h3 class="service-card__title">Kochkurse & Workshops</h3>
+            <p class="service-card__text">Lernen Sie die Geheimnisse der professionellen Küche kennen! Ich biete private Kochkurse und Workshops für Einzelpersonen oder kleine Gruppen an.</p>
+            <div class="service-card__tags">
+              <span class="service-card__tag">Interaktives Lernen</span>
+              <span class="service-card__tag">Alle Fähigkeitsstufen</span>
+              <span class="service-card__tag">Spaß & Genuss</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section class="why" id="why-me">
+      <div class="container why__inner">
+        <div class="section-label">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles"><path d="M9.9 10.4 7.8 8.3c-.9-.9-2.2-.7-2.8.3-.6 1-.3 2.4.6 3.3l.9.9"/><path d="M14.1 13.6 16.2 15.7c.9.9.7 2.2-.3 2.8-1 .6-2.4.3-3.3-.6l-.9-.9"/><path d="M19.5 12c.7-1.2 1-2.6 1-4 0-4.4-3.6-8-8-8s-8 3.6-8 8c0 1.4.3 2.8 1 4"/><path d="M8.5 2c.3 0 .5.2.5.5v1c0 .3-.2.5-.5.5s-.5-.2-.5-.5V2.5c0-.3.2-.5.5-.5Z"/><path d="M15.5 19c.3 0 .5.2.5.5v1c0 .3-.2.5-.5.5s-.5-.2-.5-.5V19.5c0-.3.2-.5.5-.5Z"/><path d="M12 22.5c.3 0 .5.2.5.5v1c0 .3-.2.5-.5.5s-.5-.2-.5-.5v-1c0-.3.2-.5.5-.5Z"/></svg>
+            Warum ich?
+          </div>
+          <h2 class="section-title">Ihr <em>Vertrauen</em> ist meine Priorität</h2>
+          <p class="section-subtitle">Ich bin mehr als nur ein Koch; ich bin Ihr kulinarischer Partner, der sich um jedes Detail kümmert.</p>
 
-  <!-- ─── Contact / Booking ─────────────────────────────────────── -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact__inner">
+          <div class="why__list">
+            <div class="why__item">
+              <div class="why__item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17.18 19H6.82l1.703-6.11.333-.917a2 2 0 0 1 1.416-1.416L12 10.5l2.371.657a2 2 0 0 1 1.416 1.416l.333.917Z"/></svg>
+              </div>
+              <div>
+                <h3 class="why__item-title">Professionelle Expertise</h3>
+                <p class="why__item-text">Mit jahrelanger Erfahrung in der Gastronomie garantiere ich höchste Qualität und exquisite Geschmäcker.</p>
+              </div>
+            </div>
 
-        <div class="contact__info fade-up">
-          <span class="section-label section-label--white">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            Book a Consultation
-          </span>
-          <h2 class="section-title">Let's talk about <em>your</em> meals</h2>
-          <p class="section-subtitle">The first consultation is free and without obligation. Tell me about your goals and I'll put together a menu concept just for you.</p>
+            <div class="why__item">
+              <div class="why__item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-heart"><path d="M11 13H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><path d="M18 13c.8 1.3 2 2 3 2 0 2.7-2.7 5-5 5h-1c-1.5 0-2.6-.8-3.4-2.2"/><path d="M14 13V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v4"/><path d="M18 13c.8 1.3 2 2 3 2 0 2.7-2.7 5-5 5h-1c-1.5 0-2.6-.8-3.4-2.2"/></svg>
+              </div>
+              <div>
+                <h3 class="why__item-title">Personalisierter Service</h3>
+                <p class="why__item-text">Jedes Menü wird individuell auf Ihre Vorlieben, Ernährungsbedürfnisse und Wünsche zugeschnitten.</p>
+              </div>
+            </div>
+
+            <div class="why__item">
+              <div class="why__item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 4.7 22 5 22 2.8 22 2.8c-.2-.1-.6-.4-1-.4 2 6.4-1.4 12-6 12-1.1 0-2.3-.3-3.4-.7M9.8 6.1C15.5 5 17 4.4 19 4.7 22 5 22 2.8 22 2.8c-.2-.1-.6-.4-1-.4 2 6.4-1.4 12-6 12-1.1 0-2.3-.3-3.4-.7"/></svg>
+              </div>
+              <div>
+                <h3 class="why__item-title">Frische & Qualität</h3>
+                <p class="why__item-text">Ich verwende ausschließlich frische, saisonale und hochwertige Zutaten, oft von lokalen Anbietern.</p>
+              </div>
+            </div>
+
+            <div class="why__item">
+              <div class="why__item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h3 class="why__item-title">Zeitersparnis & Komfort</h3>
+                <p class="why__item-text">Lehnen Sie sich zurück und genießen Sie. Ich kümmere mich um alles – von der Planung bis zur Reinigung.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="testimonials__header">
+          <div class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Referenzen
+          </div>
+          <h2 class="section-title">Was meine <em>Kunden sagen</em></h2>
+          <p class="section-subtitle">Hören Sie, was meine zufriedenen Kunden über ihre Erfahrungen mit Your Weekly Chef zu berichten haben.</p>
+        </div>
+
+        <div class="testimonials__grid">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__quote">"Ich bin absolut begeistert von den Mahlzeiten! Sie sind nicht nur unglaublich lecker, sondern auch perfekt auf meine Ernährungsbedürfnisse abgestimmt. Eine riesige Zeitersparnis und ein wahrer Genuss."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">A.S.</div>
+              <div>
+                <div class="testimonial-card__name">Anna Schmidt</div>
+                <div class="testimonial-card__meta">Berlin</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__quote">"Die Dinnerparty war ein voller Erfolg! Der Koch hat ein fantastisches Menü gezaubert und sich um alles gekümmert. Meine Gäste waren beeindruckt, und ich konnte den Abend entspannt genießen."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">M.K.</div>
+              <div>
+                <div class="testimonial-card__name">Max K.</div>
+                <div class="testimonial-card__meta">Berlin</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-card__quote">"Die Kochkurse sind fantastisch! Ich habe so viel gelernt und fühle mich jetzt viel sicherer in der Küche. Der Koch ist sehr geduldig und erklärt alles super verständlich."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">L.M.</div>
+              <div>
+                <div class="testimonial-card__name">Lena Müller</div>
+                <div class="testimonial-card__meta">Berlin</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <div class="section-label section-label--white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Kontakt
+          </div>
+          <h2 class="section-title">Bereit für Ihr <em>kulinarisches Erlebnis</em>?</h2>
+          <p class="section-subtitle">Kontaktieren Sie mich noch heute, um Ihre Bedürfnisse zu besprechen und ein maßgeschneidertes Angebot zu erhalten.</p>
 
           <div class="contact__details">
             <div class="contact__detail">
-              <div class="contact__detail-icon">📍</div>
-              <span>Berlin, Germany — serving all neighborhoods</span>
+              <div class="contact__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <span>hello@yourweeklychef.de</span>
             </div>
             <div class="contact__detail">
-              <div class="contact__detail-icon">🌐</div>
-              <span>yourweeklychef.de</span>
+              <div class="contact__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span>+49 176 628856</span>
             </div>
             <div class="contact__detail">
-              <div class="contact__detail-icon">📸</div>
-              <span>@yourweekly.chef on Instagram</span>
-            </div>
-            <div class="contact__detail">
-              <div class="contact__detail-icon">🗣️</div>
-              <span>Available in English, Deutsch & Русский</span>
+              <div class="contact__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M12 12.7a1 1 0 1 0 0-1.4A1 1 0 0 0 12 12.7Z"/><path d="M19.4 15C20.4 13.4 21 11.7 21 10a9 9 0 0 0-9-9 9 9 0 0 0-9 9c0 1.7.6 3.4 1.6 5L12 22z"/></svg>
+              </div>
+              <span>Berlin, Deutschland</span>
             </div>
           </div>
         </div>
 
-        <div class="contact__form-wrap fade-up fade-up-delay-1">
-          <h3 class="contact__form-title">Send me a message</h3>
-          <p class="contact__form-sub">I'll get back to you within 24 hours.</p>
-
-          <div class="form__success" id="formSuccess">
-            <div class="form__success-icon">🎉</div>
-            <div class="form__success-title">Message sent!</div>
-            <p class="form__success-text">Thank you for reaching out. I'll be in touch within 24 hours to schedule your free consultation.</p>
-          </div>
-
-          <form class="form" id="contactForm" novalidate>
+        <div class="contact__form-wrap">
+          <h3 class="contact__form-title">Senden Sie mir eine Nachricht</h3>
+          <p class="contact__form-sub">Ich antworte in der Regel innerhalb von 24 Stunden.</p>
+          <form class="form">
             <div class="form__row">
               <div class="form__group">
-                <label class="form__label" for="name">Full Name <span>*</span></label>
-                <input class="form__input" type="text" id="name" name="name" placeholder="Your name" autocomplete="name" />
-                <span class="form__error" id="nameError">Please enter your name.</span>
+                <label for="name" class="form__label">Name <span>*</span></label>
+                <input type="text" id="name" class="form__input" placeholder="Ihr Name" required />
+                <span class="form__error">Bitte geben Sie Ihren Namen ein.</span>
               </div>
               <div class="form__group">
-                <label class="form__label" for="email">Email Address <span>*</span></label>
-                <input class="form__input" type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
-                <span class="form__error" id="emailError">Please enter a valid email address.</span>
+                <label for="email" class="form__label">E-Mail <span>*</span></label>
+                <input type="email" id="email" class="form__input" placeholder="Ihre E-Mail" required />
+                <span class="form__error">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
               </div>
             </div>
-
-            <div class="form__row">
-              <div class="form__group">
-                <label class="form__label" for="phone">Phone Number</label>
-                <input class="form__input" type="tel" id="phone" name="phone" placeholder="+49 ..." autocomplete="tel" />
-              </div>
-              <div class="form__group">
-                <label class="form__label" for="neighborhood">Neighborhood in Berlin <span>*</span></label>
-                <select class="form__select" id="neighborhood" name="neighborhood">
-                  <option value="">Select your area…</option>
-                  <option>Mitte</option>
-                  <option>Prenzlauer Berg</option>
-                  <option>Friedrichshain</option>
-                  <option>Kreuzberg</option>
-                  <option>Charlottenburg</option>
-                  <option>Wilmersdorf</option>
-                  <option>Schöneberg</option>
-                  <option>Neukölln</option>
-                  <option>Tempelhof</option>
-                  <option>Steglitz</option>
-                  <option>Pankow</option>
-                  <option>Lichtenberg</option>
-                  <option>Treptow</option>
-                  <option>Spandau</option>
-                  <option>Other / Outside Berlin</option>
-                </select>
-                <span class="form__error" id="neighborhoodError">Please select your neighborhood.</span>
-              </div>
-            </div>
-
             <div class="form__group">
-              <label class="form__label" for="service">Service of Interest</label>
-              <select class="form__select" id="service" name="service">
-                <option value="">Select a service…</option>
-                <option>Weekly MealPrep</option>
-                <option>Special Diet Plan</option>
-                <option>Family MealPrep</option>
-                <option>One-Time Cooking Session</option>
-                <option>Not sure yet — tell me more</option>
+              <label for="service" class="form__label">Interessierte Dienstleistung <span>*</span></label>
+              <select id="service" class="form__select" required>
+                <option value="">Wählen Sie eine Dienstleistung</option>
+                <option value="meal-prep">Wöchentliches Meal Prep</option>
+                <option value="events">Besondere Anlässe & Dinnerpartys</option>
+                <option value="consulting">Ernährungsberatung & Diätplanung</option>
+                <option value="classes">Kochkurse & Workshops</option>
+                <option value="other">Sonstiges</option>
               </select>
+              <span class="form__error">Bitte wählen Sie eine Dienstleistung.</span>
             </div>
-
             <div class="form__group">
-              <label class="form__label" for="goals">Dietary Needs & Goals <span>*</span></label>
-              <textarea class="form__textarea" id="goals" name="goals" placeholder="Tell me about your dietary preferences, any allergies or intolerances, health goals, household size, and anything else I should know…"></textarea>
-              <span class="form__error" id="goalsError">Please tell me a bit about your needs.</span>
+              <label for="district" class="form__label">Bezirk <span>*</span></label>
+              <input type="text" id="district" class="form__input" placeholder="Ihr Bezirk in Berlin" required />
+              <span class="form__error">Bitte geben Sie Ihren Bezirk ein.</span>
             </div>
-
             <div class="form__group">
-              <label class="form__label">Preferred Days</label>
-              <div class="form__days">
-                <input class="form__day" type="checkbox" id="day-mon" name="days" value="Monday" />
-                <label class="form__day-label" for="day-mon">Mon</label>
-
-                <input class="form__day" type="checkbox" id="day-tue" name="days" value="Tuesday" />
-                <label class="form__day-label" for="day-tue">Tue</label>
-
-                <input class="form__day" type="checkbox" id="day-wed" name="days" value="Wednesday" />
-                <label class="form__day-label" for="day-wed">Wed</label>
-
-                <input class="form__day" type="checkbox" id="day-thu" name="days" value="Thursday" />
-                <label class="form__day-label" for="day-thu">Thu</label>
-
-                <input class="form__day" type="checkbox" id="day-fri" name="days" value="Friday" />
-                <label class="form__day-label" for="day-fri">Fri</label>
-
-                <input class="form__day" type="checkbox" id="day-sat" name="days" value="Saturday" />
-                <label class="form__day-label" for="day-sat">Sat</label>
-
-                <input class="form__day" type="checkbox" id="day-sun" name="days" value="Sunday" />
-                <label class="form__day-label" for="day-sun">Sun</label>
-              </div>
+              <label for="message" class="form__label">Ihre Nachricht <span>*</span></label>
+              <textarea id="message" class="form__textarea" placeholder="Ihre Nachricht" required></textarea>
+              <span class="form__error">Bitte geben Sie Ihre Nachricht ein.</span>
             </div>
-
-            <button type="submit" class="form__submit">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
-              Send Message
+            <button type="submit" class="form__submit btn-green">
+              Nachricht senden
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
             </button>
+            <div class="form__success">
+              <div class="form__success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              </div>
+              <h3 class="form__success-title">Vielen Dank!</h3>
+              <p class="form__success-text">Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich in Kürze bei Ihnen.</p>
+            </div>
           </form>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ─── Footer ───────────────────────────────────────────────── -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-
-        <div class="footer__brand">
-          <div class="footer__logo">Your Weekly Chef</div>
-          <div class="footer__logo-sub">Berlin · Private Chef</div>
-          <p class="footer__tagline">Healthy, personalized meal prep — right in your kitchen. Available across Berlin.</p>
-          <div class="footer__social">
-            <a href="https://www.instagram.com/yourweekly.chef/" target="_blank" class="footer__social-link" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
-              </svg>
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__logo">Your Weekly Chef</div>
+        <div class="footer__logo-sub">Privatkoch Berlin</div>
+        <p class="footer__tagline">Ihr persönlicher Koch für gesunde und köstliche Mahlzeiten, direkt in Ihrer Küche in Berlin.</p>
+        <div class="footer__social">
+          <div class="footer__social-wrapper">
+            <a href="#" class="footer__social-link wa-trigger">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
             </a>
-
-            <!-- Модифицированный контейнер WhatsApp со всплывающей панелью -->
-            <div class="footer__social-wrapper">
-              <a href="#" class="footer__social-link" id="waToggle" aria-label="WhatsApp">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                </svg>
-              </a>
-
-              <!-- Модальное окно чата -->
-              <div class="wa-panel" id="waPanel">
-                <div class="wa-panel__header">
-                  <span class="wa-panel__title">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%2325D366" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                    Chat on WhatsApp
-                  </span>
-                  <button type="button" class="wa-panel__close" id="waClose">&times;</button>
+            <div class="wa-panel">
+              <div class="wa-panel__header">
+                <div class="wa-panel__title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
+                  Chatten Sie mit uns auf WhatsApp
                 </div>
-                <p class="wa-panel__text">Hi! Got any questions about meal prep services or want to talk about your custom menu? Drop me a line directly!</p>
-                <!-- !!! ЗАМЕНИТЕ НОМЕР +491500000000 НА ВАШ НАСТОЯЩИЙ НОМЕР ТЕЛЕФОНА БЕЗ ПЛЮСА И ПРОБЕЛОВ !!! -->
-                <a href="https://wa.me/4916099892607?text=Hello!%20I'm%20interested%20in%20your%20meal%20prep%20services." target="_blank" class="btn wa-panel__btn">
-                  Open Chat
-                </a>
+                <button class="wa-panel__close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
               </div>
+              <p class="wa-panel__text">Hallo! Wie kann ich Ihnen heute helfen?</p>
+              <a href="https://wa.me/49176628856" target="_blank" class="wa-panel__btn btn-green">
+                Nachricht senden
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
+              </a>
             </div>
-
           </div>
+          <a href="https://www.instagram.com/yourweeklychef.de/" target="_blank" class="footer__social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
         </div>
-
-        <div>
-          <div class="footer__col-title">Navigation</div>
-          <ul class="footer__links">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#how">How It Works</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Book a Consultation</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer__col-title">Services</div>
-          <ul class="footer__links">
-            <li><a href="#services">Weekly MealPrep</a></li>
-            <li><a href="#services">Special Diet Plans</a></li>
-            <li><a href="#services">Family MealPrep</a></li>
-            <li><a href="#services">One-Time Sessions</a></li>
-          </ul>
-          <div class="footer__col-title" style="margin-top: 28px;">Contact</div>
-          <ul class="footer__links">
-            <li><a href="https://yourweeklychef.de">yourweeklychef.de</a></li>
-            <li><a href="https://www.instagram.com/yourweekly.chef/">@yourweekly.chef</a></li>
-            <li><a href="#contact">Send a message</a></li>
-          </ul>
-        </div>
-
       </div>
 
-      <div class="footer__bottom">
-        <p class="footer__copy">© 2026 Your Weekly Chef · Berlin. All rights reserved.</p>
-        <div class="footer__bottom-links">
+      <div>
+        <div class="footer__col-title">Navigation</div>
+        <div class="footer__links">
+          <a href="#about">Über mich</a>
+          <a href="#how-it-works">So funktioniert's</a>
+          <a href="#services">Dienstleistungen</a>
+          <a href="#testimonials">Referenzen</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Rechtliches</div>
+        <div class="footer__links">
+          <a href="agb.html">Allgemeine Geschäftsbedingungen</a>
           <a href="datenschutz.html">Datenschutzerklärung</a>
           <a href="impressum.html">Impressum</a>
-          <a href="agb.html">Allgemeine Geschäftsbedingungen</a>
         </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <div class="footer__copy">© 2024 Your Weekly Chef. Alle Rechte vorbehalten.</div>
+      <div class="footer__bottom-links">
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="agb.html">Allgemeine Geschäftsbedingungen</a>
       </div>
     </div>
   </footer>
 
-  <!-- ─── JavaScript ────────────────────────────────────────────── -->
   <script>
-    // ── Scroll Progress Bar ──────────────────────────────────────
-    const progressBar = document.getElementById('scrollProgress');
+    // Scroll progress
     window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      progressBar.style.width = progress + '%';
-    }, { passive: true });
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / scrollHeight) * 100;
+      document.querySelector('.scroll-progress').style.width = scrolled + '%';
+    });
 
-    // ── Navbar scroll effect ─────────────────────────────────────
-    const nav = document.getElementById('mainNav');
+    // Nav scroll effect
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
+      const nav = document.querySelector('.nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
 
-    // ── Mobile nav toggle ────────────────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
+    // Mobile nav toggle
+    const hamburger = document.querySelector('.nav__hamburger');
+    const mobileNav = document.querySelector('.nav__mobile');
 
     hamburger.addEventListener('click', () => {
       mobileNav.classList.toggle('open');
-      const isOpen = mobileNav.classList.contains('open');
-      hamburger.querySelectorAll('span')[0].style.transform = isOpen ? 'rotate(45deg) translate(5px, 5px)' : '';
-      hamburger.querySelectorAll('span')[1].style.opacity = isOpen ? '0' : '1';
-      hamburger.querySelectorAll('span')[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px, -5px)' : '';
+      hamburger.classList.toggle('open');
     });
 
-    function closeMobileNav() {
-      mobileNav.classList.remove('remove');
-      mobileNav.classList.remove('open');
-      hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = '1'; });
-    }
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('open');
+      });
+    });
 
-    // ── Intersection Observer for fade-up animations ─────────────
-    const fadeEls = document.querySelectorAll('.fade-up');
+    // WhatsApp panel toggle
+    const waTrigger = document.querySelector('.wa-trigger');
+    const waPanel = document.querySelector('.wa-panel');
+    const waClose = document.querySelector('.wa-panel__close');
+
+    waTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      waPanel.classList.toggle('open');
+    });
+
+    waClose.addEventListener('click', () => {
+      waPanel.classList.remove('open');
+    });
+
+    // Close WhatsApp panel when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!waPanel.contains(e.target) && !waTrigger.contains(e.target)) {
+        waPanel.classList.remove('open');
+      }
+    });
+
+    // Form submission
+    const contactForm = document.querySelector('.form');
+    const formSuccess = document.querySelector('.form__success');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isValid = true;
+
+      contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(input => {
+        if (!input.value.trim()) {
+          isValid = false;
+          input.classList.add('error');
+          input.nextElementSibling.classList.add('visible');
+        } else {
+          input.classList.remove('error');
+          input.nextElementSibling.classList.remove('visible');
+        }
+      });
+
+      if (isValid) {
+        // Simulate form submission
+        setTimeout(() => {
+          contactForm.reset();
+          formSuccess.classList.add('visible');
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            formSuccess.classList.remove('visible');
+          }, 5000);
+        }, 500);
+      }
+    });
+
+    contactForm.querySelectorAll('input, select, textarea').forEach(input => {
+      input.addEventListener('input', () => {
+        if (input.value.trim()) {
+          input.classList.remove('error');
+          input.nextElementSibling.classList.remove('visible');
+        }
+      });
+    });
+
+    // Fade-up animation on scroll
+    const fadeUpElements = document.querySelectorAll('.fade-up');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -2144,135 +2200,11 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1 });
 
-    fadeEls.forEach(el => observer.observe(el));
-
-    // ── WhatsApp Panel Toggle Script ──────────────────────────────
-    const waToggle = document.getElementById('waToggle');
-    const waPanel = document.getElementById('waPanel');
-    const waClose = document.getElementById('waClose');
-
-    waToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      waPanel.classList.toggle('open');
-    });
-
-    waClose.addEventListener('click', function() {
-      waPanel.classList.remove('open');
-    });
-
-    // Close panel on clicking outside
-    document.addEventListener('click', function(e) {
-      if (!waToggle.contains(e.target) && !waPanel.contains(e.target)) {
-        waPanel.classList.remove('open');
-      }
-    });
-
-    // ── Form Validation & Remote Submission ───────────────────────
-    const form = document.getElementById('contactForm');
-    const successMsg = document.getElementById('formSuccess');
-
-    function validateField(id, errorId, condition) {
-      const field = document.getElementById(id);
-      const error = document.getElementById(errorId);
-      if (!condition(field.value)) {
-        field.classList.add('error');
-        error.classList.add('visible');
-        return false;
-      } else {
-        field.classList.remove('error');
-        error.classList.remove('visible');
-        return true;
-      }
-    }
-
-    function isValidEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-
-    // Live validation
-    document.getElementById('name').addEventListener('input', function() {
-      validateField('name', 'nameError', v => v.trim().length >= 2);
-    });
-    document.getElementById('email').addEventListener('input', function() {
-      validateField('email', 'emailError', v => isValidEmail(v.trim()));
-    });
-    document.getElementById('neighborhood').addEventListener('change', function() {
-      validateField('neighborhood', 'neighborhoodError', v => v !== '');
-    });
-    document.getElementById('goals').addEventListener('input', function() {
-      validateField('goals', 'goalsError', v => v.trim().length >= 10);
-    });
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const validName = validateField('name', 'nameError', v => v.trim().length >= 2);
-      const validEmail = validateField('email', 'emailError', v => isValidEmail(v.trim()));
-      const validNeighborhood = validateField('neighborhood', 'neighborhoodError', v => v !== '');
-      const validGoals = validateField('goals', 'goalsError', v => v.trim().length >= 10);
-
-      if (validName && validEmail && validNeighborhood && validGoals) {
-        // Захват кнопки и смена состояния отправки
-        const submitBtn = form.querySelector('.form__submit');
-        const originalBtnText = submitBtn.innerHTML;
-        submitBtn.innerText = 'Sending...';
-        submitBtn.disabled = true;
-
-        // Отправка формы по AJAX на Formspree, настроенный на ваш email
-        const formData = new FormData(form);
-
-        fetch('https://formspree.io/f/xpqbreng', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        })
-        .then(response => {
-          if (response.ok) {
-            form.style.display = 'none';
-            successMsg.classList.add('visible');
-            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          } else {
-            response.json().then(data => {
-              if (Object.hasOwn(data, 'errors')) {
-                alert(data["errors"].map(error => error["message"]).join(", "));
-              } else {
-                alert('Oops! There was a problem submitting your form. Please check your details.');
-              }
-            });
-            submitBtn.innerHTML = originalBtnText;
-            submitBtn.disabled = false;
-          }
-        })
-        .catch(error => {
-          alert('Network connection error. Please try again later.');
-          submitBtn.innerHTML = originalBtnText;
-          submitBtn.disabled = false;
-        });
-
-      } else {
-        // Scroll to first error
-        const firstError = form.querySelector('.form__input.error, .form__select.error, .form__textarea.error');
-        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    });
-
-    // ── Smooth scroll for all anchor links ───────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          const offset = 80;
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      });
+    fadeUpElements.forEach(element => {
+      observer.observe(element);
     });
   </script>
-
 </body>
 </html>

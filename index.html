@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Weekly Chef — Privatkoch & Personal Chef Berlin</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
   <meta name="description" content="Your Weekly Chef bietet exklusive Privatkoch- und Personal Chef-Dienste in Berlin. Genießen Sie maßgeschneiderte Menüs, Einkauf und Kochen direkt bei Ihnen zu Hause. Buchen Sie jetzt Ihren persönlichen Koch!" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -481,22 +482,20 @@
     }
 
     .about__photo-wrap {
-
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 4/5;
-
-background: linear-gradient(145deg, var(--green-main) 0%, var(--green-dark) 100%); /* Запасной цвет, пока грузится фото */
+  background: linear-gradient(145deg, var(--green-main) 0%, var(--green-dark) 100%); /* Запасной цвет, пока грузится фото */
 }
 
 
     .about__photo-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Картинка заполнит блок как фон, но не исказится */
-  object-position: center ; /* ВАЖНО: покажет лицо/верхнюю часть. Если надо центр - пишите center */
-  display: block; /* Убирает отступ снизу у картинки */
+  object-fit: cover;
+  object-position: center ;
+  display: block;
 }
 
     .about__photo-inner {
@@ -1890,53 +1889,55 @@ background: linear-gradient(145deg, var(--green-main) 0%, var(--green-dark) 100%
         <div class="contact__form-wrap">
           <h3 class="contact__form-title">Senden Sie mir eine Nachricht</h3>
           <p class="contact__form-sub">Ich antworte in der Regel innerhalb von 24 Stunden.</p>
-          <form class="form">
-            <div class="form__row">
-              <div class="form__group">
-                <label for="name" class="form__label">Name <span>*</span></label>
-                <input type="text" id="name" class="form__input" placeholder="Ihr Name" required />
-                <span class="form__error">Bitte geben Sie Ihren Namen ein.</span>
-              </div>
-              <div class="form__group">
-                <label for="email" class="form__label">E-Mail <span>*</span></label>
-                <input type="email" id="email" class="form__input" placeholder="Ihre E-Mail" required />
-                <span class="form__error">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
-              </div>
-            </div>
-            <div class="form__group">
-              <label for="service" class="form__label">Interessierte Dienstleistung <span>*</span></label>
-              <select id="service" class="form__select" required>
-                <option value="">Wählen Sie eine Dienstleistung</option>
-                <option value="meal-prep">Wöchentliches Meal Prep</option>
-                <option value="events">Besondere Anlässe & Dinnerpartys</option>
-                <option value="consulting">Ernährungsberatung & Diätplanung</option>
-                <option value="classes">Kochkurse & Workshops</option>
-                <option value="other">Sonstiges</option>
-              </select>
-              <span class="form__error">Bitte wählen Sie eine Dienstleistung.</span>
-            </div>
-            <div class="form__group">
-              <label for="district" class="form__label">Bezirk <span>*</span></label>
-              <input type="text" id="district" class="form__input" placeholder="Ihr Bezirk in Berlin" required />
-              <span class="form__error">Bitte geben Sie Ihren Bezirk ein.</span>
-            </div>
-            <div class="form__group">
-              <label for="message" class="form__label">Ihre Nachricht <span>*</span></label>
-              <textarea id="message" class="form__textarea" placeholder="Ihre Nachricht" required></textarea>
-              <span class="form__error">Bitte geben Sie Ihre Nachricht ein.</span>
-            </div>
-            <button type="submit" class="form__submit btn-green">
-              Nachricht senden
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
-            </button>
+         <form id="contact-form" class="form" action="https://formspree.io/f/xpqbreng" method="POST">
+  <!-- Остальной код формы остается таким же -->
+  <div class="form__row">
+    <div class="form__group">
+      <label for="name" class="form__label">Name <span>*</span></label>
+      <input type="text" id="name" name="name" class="form__input" placeholder="Ihr Name" required />
+      <span class="form__error">Bitte geben Sie Ihren Namen ein.</span>
+    </div>
+    <div class="form__group">
+      <label for="email" class="form__label">E-Mail <span>*</span></label>
+      <input type="email" id="email" name="email" class="form__input" placeholder="Ihre E-Mail" required />
+      <span class="form__error">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
+    </div>
+  </div>
+  <div class="form__group">
+    <label for="service" class="form__label">Interessierte Dienstleistung <span>*</span></label>
+    <select id="service" name="service" class="form__select" required>
+      <option value="">Wählen Sie eine Dienstleistung</option>
+      <option value="meal-prep">Wöchentliches Meal Prep</option>
+      <option value="events">Besondere Anlässe & Dinnerpartys</option>
+      <option value="consulting">Ernährungsberatung & Diätplanung</option>
+      <option value="classes">Kochkurse & Workshops</option>
+      <option value="other">Sonstiges</option>
+    </select>
+    <span class="form__error">Bitte wählen Sie eine Dienstleistung.</span>
+  </div>
+  <div class="form__group">
+    <label for="district" class="form__label">Bezirk <span>*</span></label>
+    <input type="text" id="district" name="district" class="form__input" placeholder="Ihr Bezirk in Berlin" required />
+    <span class="form__error">Bitte geben Sie Ihren Bezirk ein.</span>
+  </div>
+  <div class="form__group">
+    <label for="message" class="form__label">Ihre Nachricht <span>*</span></label>
+    <textarea id="message" name="message" class="form__textarea" placeholder="Ihre Nachricht" required></textarea>
+    <span class="form__error">Bitte geben Sie Ihre Nachricht ein.</span>
+  </div>
+  <button type="submit" class="form__submit btn-green">
+    Nachricht senden
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
+  </button>
+</form>
             <div class="form__success">
-              <div class="form__success-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-              </div>
-              <h3 class="form__success-title">Vielen Dank!</h3>
-              <p class="form__success-text">Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich in Kürze bei Ihnen.</p>
-            </div>
-          </form>
+  <div class="form__success-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+  </div>
+  <h3 class="form__success-title">Vielen Dank!</h3>
+  <p class="form__success-text">Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich in Kürze bei Ihnen.</p>
+</div>
+
         </div>
       </div>
     </section>
@@ -2040,67 +2041,42 @@ background: linear-gradient(145deg, var(--green-main) 0%, var(--green-dark) 100%
       });
     });
 
-    // WhatsApp panel toggle
-    const waTrigger = document.querySelector('.wa-trigger');
-    const waPanel = document.querySelector('.wa-panel');
-    const waClose = document.querySelector('.wa-panel__close');
 
-    waTrigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      waPanel.classList.toggle('open');
-    });
+const form = document.getElementById('contact-form');
+const formSuccess = document.querySelector('.form__success');
 
-    waClose.addEventListener('click', () => {
-      waPanel.classList.remove('open');
-    });
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
 
-    // Close WhatsApp panel when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!waPanel.contains(e.target) && !waTrigger.contains(e.target)) {
-        waPanel.classList.remove('open');
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
       }
     });
 
-    // Form submission
-    const contactForm = document.querySelector('.form');
-    const formSuccess = document.querySelector('.form__success');
+    if (response.ok) {
+      form.reset();
 
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let isValid = true;
+      formSuccess.classList.add('visible');
 
-      contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('error');
-          input.nextElementSibling.classList.add('visible');
-        } else {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
-        }
-      });
+      setTimeout(() => {
+        formSuccess.classList.remove('visible');
+      }, 5000);
 
-      if (isValid) {
-        // Simulate form submission
-        setTimeout(() => {
-          contactForm.reset();
-          formSuccess.classList.add('visible');
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            formSuccess.classList.remove('visible');
-          }, 5000);
-        }, 500);
-      }
-    });
+    } else {
+      alert('Fehler beim Senden. Bitte versuchen Sie es erneut.');
+    }
 
-    contactForm.querySelectorAll('input, select, textarea').forEach(input => {
-      input.addEventListener('input', () => {
-        if (input.value.trim()) {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
-        }
-      });
-    });
+  } catch (error) {
+    alert('Netzwerkfehler. Bitte später erneut versuchen.');
+  }
+});
+
 
     // Fade-up animation on scroll
     const fadeUpElements = document.querySelectorAll('.fade-up');

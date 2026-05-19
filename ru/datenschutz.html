@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Weekly Chef — Политика конфиденциальности</title>
-  <meta name="description" content="Политика конфиденциальности для услуг Your Weekly Chef в Берлине. Информация об обработке персональных данных и положениях о защите данных." />
+  <title>Datenschutzerklärung — Your Weekly Chef Berlin</title>
+  <meta name="description" content="Datenschutzerklärung von Your Weekly Chef in Berlin. Informationen über die Erhebung, Verarbeitung und den Schutz Ihrer personenbezogenen Daten gemäß DSGVO." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet" />
@@ -75,50 +75,6 @@
       padding: 0 24px;
     }
 
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--green-main);
-      background: var(--mint);
-      border: 1px solid rgba(90,122,58,0.2);
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
-      margin-bottom: 20px;
-    }
-
-    .section-label--white {
-      color: rgba(255,255,255,0.9);
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.25);
-    }
-
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 500;
-      line-height: 1.2;
-      color: var(--charcoal);
-      margin-bottom: 16px;
-    }
-
-    .section-title em {
-      font-style: italic;
-      color: var(--green-main);
-    }
-
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-light);
-      max-width: 540px;
-      line-height: 1.75;
-    }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -132,45 +88,11 @@
       white-space: nowrap;
     }
 
-    .btn-primary {
-      background: var(--tan);
-      color: var(--charcoal);
-    }
-    .btn-primary:hover {
-      background: var(--tan-light);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(201,169,110,0.4);
-    }
+    .btn-primary { background: var(--tan); color: var(--charcoal); }
+    .btn-primary:hover { background: var(--tan-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,169,110,0.4); }
 
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.55);
-    }
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.8);
-    }
-
-    .btn-green {
-      background: var(--green-main);
-      color: var(--white);
-    }
-    .btn-green:hover {
-      background: var(--green-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(90,122,58,0.35);
-    }
-
-    .btn-outline-green {
-      background: transparent;
-      color: var(--green-main);
-      border: 1.5px solid var(--green-main);
-    }
-    .btn-outline-green:hover {
-      background: var(--green-main);
-      color: var(--white);
-    }
+    .btn-green { background: var(--green-main); color: var(--white); }
+    .btn-green:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(90,122,58,0.35); }
 
     /* ─── Navigation ────────────────────────────────────────────── */
     .nav {
@@ -181,9 +103,6 @@
       z-index: 100;
       padding: 0 24px;
       transition: var(--transition);
-    }
-
-    .nav.scrolled {
       background: rgba(76,104,48,0.97);
       backdrop-filter: blur(12px);
       box-shadow: 0 2px 20px rgba(0,0,0,0.15);
@@ -199,482 +118,185 @@
       gap: 24px;
     }
 
-    .nav__logo {
-      display: flex;
-      flex-direction: column;
-      line-height: 1;
-    }
+    .nav__logo { display: flex; flex-direction: column; line-height: 1; }
+    .nav__logo-script { font-family: var(--font-script); font-size: 1.45rem; color: var(--white); letter-spacing: 0.01em; }
+    .nav__logo-sub { font-family: var(--font-sans); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 2px; }
 
-    .nav__logo-script {
-      font-family: var(--font-script);
-      font-size: 1.45rem;
+    .nav__links { display: flex; align-items: center; gap: 32px; }
+    .nav__links a { font-size: 0.88rem; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 0.01em; transition: color var(--transition); position: relative; }
+    .nav__links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--tan); transition: width var(--transition); }
+    .nav__links a:hover { color: var(--white); }
+    .nav__links a:hover::after { width: 100%; }
+
+    .nav__cta { background: rgba(255,255,255,0.15); color: var(--white); border: 1.5px solid rgba(255,255,255,0.4); padding: 10px 22px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 500; transition: var(--transition); }
+    .nav__cta:hover { background: var(--tan); border-color: var(--tan); color: var(--charcoal); }
+
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; background: none; padding: 4px; }
+    .nav__hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+
+    .nav__mobile { display: none; position: fixed; top: 72px; left: 0; right: 0; background: rgba(60,85,35,0.98); backdrop-filter: blur(12px); padding: 24px; z-index: 99; flex-direction: column; gap: 4px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { color: rgba(255,255,255,0.85); font-size: 1rem; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color var(--transition); }
+    .nav__mobile a:hover { color: var(--tan); }
+    .nav__mobile .btn-primary { margin-top: 12px; text-align: center; justify-content: center; }
+
+    /* ─── Page Header ───────────────────────────────────────────── */
+    .page-header {
+      padding: 160px 0 60px;
+      background: linear-gradient(145deg, var(--green-dark) 0%, var(--green-hero) 100%);
       color: var(--white);
-      letter-spacing: 0.01em;
-    }
-
-    .nav__logo-sub {
-      font-family: var(--font-sans);
-      font-size: 0.6rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
-      margin-top: 2px;
-    }
-
-    .nav__links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .nav__links a {
-      font-size: 0.88rem;
-      font-weight: 400;
-      color: rgba(255,255,255,0.85);
-      letter-spacing: 0.01em;
-      transition: color var(--transition);
+      text-align: center;
       position: relative;
     }
 
-    .nav__links a::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--tan);
-      transition: width var(--transition);
-    }
-
-    .nav__links a:hover {
-      color: var(--white);
-    }
-
-    .nav__links a:hover::after {
-      width: 100%;
-    }
-
-    .nav__cta {
-      background: rgba(255,255,255,0.15);
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.4);
-      padding: 10px 22px;
-      border-radius: var(--radius-full);
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .nav__cta:hover {
-      background: var(--tan);
-      border-color: var(--tan);
-      color: var(--charcoal);
-    }
-
-    .nav__hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      padding: 4px;
-    }
-
-    .nav__hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 2px;
-      transition: var(--transition);
-    }
-
-    .nav__mobile {
-      display: none;
-      position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      background: rgba(60,85,35,0.98);
-      backdrop-filter: blur(12px);
-      padding: 24px;
-      z-index: 99;
-      flex-direction: column;
-      gap: 4px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .nav__mobile.open { display: flex; }
-
-    .nav__mobile a {
-      color: rgba(255,255,255,0.85);
-      font-size: 1rem;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      transition: color var(--transition);
-    }
-
-    .nav__mobile a:hover { color: var(--tan); }
-
-    .nav__mobile .btn-primary {
-      margin-top: 12px;
-      text-align: center;
-      justify-content: center;
-    }
-
-    /* ─── Content Section ───────────────────────────────────────── */
-    .content-section {
-      padding: 120px 0;
-      background: var(--cream);
-    }
-
-    .content-section h1 {
+    .page-header__title {
       font-family: var(--font-serif);
       font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 500;
-      color: var(--charcoal);
-      margin-bottom: 32px;
-      text-align: center;
-    }
-
-    .content-section h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      font-weight: 500;
-      color: var(--charcoal);
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-
-    .content-section h3 {
-      font-family: var(--font-sans);
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--green-main);
-      margin-top: 30px;
-      margin-bottom: 15px;
-    }
-
-    .content-section p {
-      font-size: 1.05rem;
-      color: var(--text-body);
-      line-height: 1.8;
-      margin-bottom: 15px;
-    }
-
-    .content-section ul {
-      list-style: disc;
-      margin-left: 20px;
-      margin-bottom: 15px;
-      color: var(--text-body);
-    }
-
-    .content-section ul li {
-      margin-bottom: 8px;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-
-    .content-section strong {
-      font-weight: 600;
-      color: var(--charcoal);
-    }
-
-    /* ─── Footer ────────────────────────────────────────────────── */
-    .footer {
-      background: var(--charcoal);
-      padding: 60px 0 32px;
-    }
-
-    .footer__inner {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-
-    .footer__logo {
-      font-family: var(--font-script);
-      font-size: 1.6rem;
-      color: var(--white);
-      margin-bottom: 6px;
-    }
-
-    .footer__logo-sub {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
+      line-height: 1.1;
       margin-bottom: 16px;
     }
 
-    .footer__tagline {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.45);
-      line-height: 1.65;
-      max-width: 260px;
+    .page-header__subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .footer__social {
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
+    /* ─── Legal Content ─────────────────────────────────────────── */
+    .legal-content {
+      padding: 80px 0 120px;
+      background: var(--cream);
     }
 
-    .footer__social-link {
-      width: 38px;
-      height: 38px;
-      border-radius: var(--radius-sm);
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.55);
-      font-size: 1rem;
-      transition: var(--transition);
-    }
-
-    .footer__social-link:hover {
-      background: var(--green-main);
-      border-color: var(--green-main);
-      color: var(--white);
-    }
-
-    /* Интерактивная панель WhatsApp */
-    .footer__social-wrapper {
-      position: relative;
-      display: inline-block;
-    }
-
-    .wa-panel {
-      position: absolute;
-      bottom: 54px;
-      left: 0;
-      width: 290px;
+    .legal-box {
       background: var(--white);
       border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      box-shadow: var(--shadow-lg);
-      display: none;
-      z-index: 110;
-      text-align: left;
+      border-radius: var(--radius-lg);
+      padding: 60px 80px;
+      box-shadow: var(--shadow-sm);
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .wa-panel::after {
-      content: '';
-      position: absolute;
-      bottom: -7px;
-      left: 14px;
-      width: 14px;
-      height: 14px;
-      background: var(--white);
-      transform: rotate(45deg);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .wa-panel.open {
-      display: block;
-      animation: waFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    @keyframes waFadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .wa-panel__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .wa-panel__title {
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: 0.95rem;
+    .legal-box h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
       color: var(--charcoal);
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      margin: 48px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.3;
     }
 
-    .wa-panel__close {
-      background: none;
-      border: none;
-      font-size: 1.3rem;
-      color: var(--text-muted);
-      line-height: 1;
-      padding: 2px;
-    }
+    .legal-box h2:first-of-type { margin-top: 0; }
 
-    .wa-panel__close:hover { color: var(--charcoal); }
-
-    .wa-panel__text {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 16px;
-      line-height: 1.5;
-    }
-
-    .wa-panel__btn {
-      padding: 10px 16px;
-      font-size: 0.85rem;
-      width: 100%;
-      justify-content: center;
-      background: #25D366 !important;
-      color: #FFFFFF !important;
-      border-radius: var(--radius-full);
+    .legal-box h3 {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
       font-weight: 600;
-      box-shadow: 0 4px 12px rgba(37,211,102,0.25);
+      color: var(--charcoal-mid);
+      margin: 32px 0 14px;
     }
 
-    .wa-panel__btn:hover {
-      background: #1BD75E !important;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(37,211,102,0.35);
+    .legal-box p, .legal-box li {
+      font-size: 1.02rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      margin-bottom: 18px;
     }
 
-    .footer__col-title {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 16px;
+    .legal-box ul {
+      list-style-type: disc;
+      margin: 16px 0 24px 28px;
     }
 
-    .footer__links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .legal-box li { margin-bottom: 8px; }
+
+    .legal-box a { color: var(--green-main); text-decoration: underline; font-weight: 500; }
+    .legal-box a:hover { color: var(--green-dark); }
+
+    .legal-box .highlight-box {
+      background: var(--mint);
+      border-left: 4px solid var(--green-main);
+      padding: 24px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 32px 0;
     }
 
-    .footer__links a {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.55);
-      transition: color var(--transition);
+    .legal-box .highlight-box h4 {
+      font-size: 1.1rem;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+      font-weight: 600;
     }
 
+    .legal-box .highlight-box p { margin-bottom: 0; font-size: 0.98rem; }
+
+    /* ─── Footer (Identical) ────────────────────────────────────── */
+    .footer { background: var(--charcoal); padding: 60px 0 32px; }
+    .footer__inner { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer__logo { font-family: var(--font-script); font-size: 1.6rem; color: var(--white); margin-bottom: 6px; }
+    .footer__logo-sub { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+    .footer__tagline { font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.65; max-width: 260px; }
+
+    .footer__social { display: flex; gap: 12px; margin-top: 20px; }
+    .footer__social-link { width: 38px; height: 38px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.55); font-size: 1rem; transition: var(--transition); }
+    .footer__social-link:hover { background: var(--green-main); border-color: var(--green-main); color: var(--white); }
+
+    .footer__social-wrapper { position: relative; display: inline-block; }
+    .wa-panel { position: absolute; bottom: 54px; left: 0; width: 290px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-lg); display: none; z-index: 110; text-align: left; }
+    .wa-panel::after { content: ''; position: absolute; bottom: -7px; left: 14px; width: 14px; height: 14px; background: var(--white); transform: rotate(45deg); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .wa-panel.open { display: block; animation: waFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    @keyframes waFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .wa-panel__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .wa-panel__title { font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; color: var(--charcoal); display: flex; align-items: center; gap: 6px; }
+    .wa-panel__close { background: none; border: none; font-size: 1.3rem; color: var(--text-muted); line-height: 1; padding: 2px; }
+    .wa-panel__close:hover { color: var(--charcoal); }
+    .wa-panel__text { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; line-height: 1.5; }
+    .wa-panel__btn { padding: 10px 16px; font-size: 0.85rem; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; background: #25D366 !important; color: #FFFFFF !important; border-radius: var(--radius-full); font-weight: 600; box-shadow: 0 4px 12px rgba(37,211,102,0.25); text-decoration: none; }
+    .wa-panel__btn:hover { background: #1BD75E !important; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(37,211,102,0.35); }
+
+    .footer__col-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+    .footer__links { display: flex; flex-direction: column; gap: 10px; }
+    .footer__links a { font-size: 0.88rem; color: rgba(255,255,255,0.55); transition: color var(--transition); }
     .footer__links a:hover { color: var(--tan); }
-
-    .footer__bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footer__copy {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.3);
-    }
-
-    .footer__bottom-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer__bottom-links a {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.3);
-      transition: color var(--transition);
-    }
-
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .footer__copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .footer__bottom-links { display: flex; gap: 20px; }
+    .footer__bottom-links a { font-size: 0.78rem; color: rgba(255,255,255,0.3); transition: color var(--transition); }
     .footer__bottom-links a:hover { color: rgba(255,255,255,0.6); }
 
     /* ─── Responsive ────────────────────────────────────────────── */
-    @media (max-width: 1024px) {
-      .footer__inner {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
     @media (max-width: 768px) {
-      .nav__links,
-      .nav__cta { display: none; }
-
+      .nav__links, .nav__cta { display: none; }
       .nav__hamburger { display: flex; }
-
-      .nav__mobile.open { display: flex; }
-
-      .footer__inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .footer__bottom {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .wa-panel {
-        width: 260px;
-        left: -20px;
-      }
-      .wa-panel::after {
-        left: 32px;
-      }
-    }
-
-    /* ─── Language Switcher ─────────────────────────────────────── */
-    .nav__lang-switcher {
-      display: flex;
-      gap: 12px;
-      margin-left: 16px;
-      padding-left: 16px;
-      border-left: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .lang-link {
-      font-size: 0.75rem !important;
-      font-weight: 600 !important;
-      color: rgba(255,255,255,0.5) !important;
-      transition: var(--transition);
-    }
-
-    .lang-link:hover, .lang-link.active {
-      color: var(--white) !important;
+      .legal-box { padding: 40px 24px; }
+      .footer__inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer__bottom { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <div class="scroll-progress"></div>
-
-  <nav class="nav scrolled">
+  <nav class="nav">
     <div class="nav__inner container">
-      <a href="/ru/" class="nav__logo">
+      <a href="index.html" class="nav__logo">
         <span class="nav__logo-script">Your Weekly Chef</span>
-        <span class="nav__logo-sub">Личный Повар Берлин</span>
+        <span class="nav__logo-sub">Privatkoch Berlin</span>
       </a>
 
       <div class="nav__links">
-        <a href="/ru/#about">Обо мне</a>
-        <a href="/ru/#how-it-works">Как это работает</a>
-        <a href="/ru/#services">Услуги</a>
-        <a href="/ru/#testimonials">Отзывы</a>
-        <a href="/ru/#contact">Контакты</a>
-        <div class="nav__lang-switcher">
-          <a href="/" class="lang-link">DE</a>
-          <a href="/en/" class="lang-link">EN</a>
-          <a href="/ru/" class="lang-link active">RU</a>
-        </div>
+        <a href="index.html#about">Über mich</a>
+        <a href="index.html#how-it-works">So funktioniert's</a>
+        <a href="index.html#services">Dienstleistungen</a>
+        <a href="index.html#contact">Kontakt</a>
       </div>
 
-      <a href="/ru/#contact" class="nav__cta btn-primary">Заказать</a>
+      <a href="index.html#contact" class="nav__cta btn-primary">Jetzt buchen</a>
 
-      <button class="nav__hamburger">
+      <button class="nav__hamburger" aria-label="Menü öffnen">
         <span></span>
         <span></span>
         <span></span>
@@ -682,254 +304,219 @@
     </div>
 
     <div class="nav__mobile">
-      <a href="/ru/#about">Обо мне</a>
-      <a href="/ru/#how-it-works">Как это работает</a>
-      <a href="/ru/#services">Услуги</a>
-      <a href="/ru/#testimonials">Отзывы</a>
-      <a href="/ru/#contact">Контакты</a>
-      <a href="/ru/#contact" class="btn-primary">Заказать</a>
-      <div class="nav__lang-switcher">
-        <a href="/" class="lang-link">DE</a>
-        <a href="/en/" class="lang-link">EN</a>
-        <a href="/ru/" class="lang-link active">RU</a>
-      </div>
+      <a href="index.html#about">Über mich</a>
+      <a href="index.html#how-it-works">So funktioniert's</a>
+      <a href="index.html#services">Dienstleistungen</a>
+      <a href="index.html#contact">Kontakt</a>
+      <a href="index.html#contact" class="btn-primary">Jetzt buchen</a>
     </div>
   </nav>
 
-  <main>
-    <section class="content-section">
-      <div class="container">
-        <h1>Политика конфиденциальности</h1>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-header__title">Datenschutzerklärung</h1>
+      <p class="page-header__subtitle">Informationen über die Erhebung, Verarbeitung und Nutzung Ihrer personenbezogenen Daten beim Besuch unserer Website.</p>
+    </div>
+  </header>
 
-        <h2>1. Введение</h2>
-        <p>Настоящая Политика конфиденциальности информирует вас о характере, объеме и цели обработки персональных данных (далее «данные») в рамках нашего онлайн-предложения и связанных с ним веб-сайтов, функций и контента, а также внешних онлайн-присутствий, таких как наш профиль в социальных сетях (далее совместно именуемые «онлайн-предложение»).</p>
+  <main class="legal-content">
+    <div class="container">
+      <div class="legal-box">
 
-        <h2>2. Ответственное лицо</h2>
-        <p>Your Weekly Chef<br> [Ваше имя]<br> [Ваш адрес]<br> [Ваш адрес электронной почты]</p>
+        <div class="highlight-box">
+          <h4>Kurzinformation auf einen Blick</h4>
+          <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Website dient der reinen Informationsvermittlung sowie der einfachen Kontaktaufnahme. <strong>Wir verwenden keinerlei Tracking-Tools wie Google Analytics, keine Werbe-Pixel und setzen keine Analyse-Cookies ein.</strong> Ihre Daten werden nur verarbeitet, soweit dies für die technische Bereitstellung (Hosting via GitHub) oder zur Beantwortung Ihrer Anfragen (Kontaktformular, E-Mail, WhatsApp) erforderlich ist.</p>
+        </div>
 
-        <h2>3. Виды обрабатываемых данных</h2>
+        <h2>1. Datenschutz auf einen Blick</h2>
+        <h3>Allgemeine Hinweise</h3>
+        <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+
+        <h3>Datenerfassung auf dieser Website</h3>
+        <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung sowie dem Impressum entnehmen.</p>
+        <p><strong>Wie erfassen wir Ihre Daten?</strong><br>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben oder uns per E-Mail oder WhatsApp übermitteln.<br>Andere Daten werden automatisch beim Besuch der Website durch die IT-Systeme unseres Hosters erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</p>
+        <p><strong>Wofür nutzen wir Ihre Daten?</strong><br>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Bearbeitung und Beantwortung Ihrer geschäftlichen Anfragen verwendet werden.</p>
+        <p><strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong><br>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Des Weiteren haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen sowie ein Beschwerderecht bei der zuständigen Aufsichtsbehörde.</p>
+
+        <h2>2. Allgemeine Hinweise und Pflichtinformationen</h2>
+        <h3>Datenschutz</h3>
+        <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften (insb. der Datenschutz-Grundverordnung – DSGVO, dem Bundesdatenschutzgesetz – BDSG sowie dem Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz – TDDDG) sowie dieser Datenschutzerklärung.</p>
+
+        <h3>Hinweis zur verantwortlichen Stelle</h3>
+        <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+        <p>
+          <strong>Your Weekly Chef</strong><br>
+          Privatkoch & Personal Chef Berlin<br>
+          Berlin, Deutschland<br>
+          Telefon: +49 176 628856<br>
+          E-Mail: yourweeklychef.de@gmail.com
+        </p>
+        <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
+
+        <h3>Speicherdauer</h3>
+        <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen nach HGB oder AO); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
+
+        <h3>Rechtsgrundlagen der Datenverarbeitung</h3>
+        <p>Soweit Sie uns eine Einwilligung zur Verarbeitung von personenbezogenen Daten erteilt haben, ist die Rechtsgrundlage für die Verarbeitung Art. 6 Abs. 1 lit. a DSGVO. Bei der Verarbeitung von personenbezogenen Daten, die zur Erfüllung eines Vertrages mit Ihnen oder zur Durchführung vorvertraglicher Maßnahmen (z. B. Buchungsanfragen) erforderlich sind, dient Art. 6 Abs. 1 lit. b DSGVO als Rechtsgrundlage. Soweit eine Verarbeitung personenbezogener Daten zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist, der unser Unternehmen unterliegt, dient Art. 6 Abs. 1 lit. c DSGVO als Rechtsgrundlage. Darüber hinaus können Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet werden, wenn die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens oder eines Dritten erforderlich ist und Ihre Interessen, Grundrechte und Grundfreiheiten das erstgenannte Interesse nicht überwiegen.</p>
+
+        <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+        <p>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt. Senden Sie uns hierzu formlos eine E-Mail an yourweeklychef.de@gmail.com.</p>
+
+        <h3>Widerspruchsrecht gegen Datenerhebung in besonderen Fällen sowie Direktwerbung (Art. 21 DSGVO)</h3>
+        <p><strong>WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN. DIE JEWEILIGE RECHTSGRUNDLAGE KÖNNEN SIE DIESER DATENSCHUTZERKLÄRUNG ENTNEHMEN. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN, ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN.</strong></p>
+
+        <h3>Beschwerderecht bei der zuständigen Aufsichtsbehörde</h3>
+        <p>Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Für Berlin ist die zuständige Aufsichtsbehörde: <em>Berliner Beauftragte für Datenschutz und Informationsfreiheit, Alt-Moabit 59–61, 10555 Berlin.</em></p>
+
+        <h3>Recht auf Datenübertragbarkeit</h3>
+        <p>Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
+
+        <h3>SSL- bzw. TLS-Verschlüsselung</h3>
+        <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
+
+        <h2>3. Datenerfassung auf unserer Website</h2>
+        <h3>Hosting auf GitHub Pages</h3>
+        <p>Wir hosten unsere Website auf GitHub Pages. Anbieter dieses Dienstes ist die GitHub, Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA (nachfolgend „GitHub“). Beim Aufruf unserer Website werden durch Ihren Browser automatisch technische Informationen an die Server von GitHub übermittelt und in sogenannten Server-Log-Dateien temporär gespeichert. Zu diesen Daten gehören in der Regel:</p>
         <ul>
-          <li>Инвентарные данные (например, имена, адреса).</li>
-          <li>Контактные данные (например, электронная почта, номера телефонов).</li>
-          <li>Данные контента (например, текстовые вводы, фотографии, видео).</li>
-          <li>Данные использования (например, посещенные веб-сайты, интерес к контенту, время доступа).</li>
-          <li>Мета-/коммуникационные данные (например, информация об устройстве, IP-адреса).</li>
+          <li>Browsertyp und Browserversion</li>
+          <li>Verwendetes Betriebssystem</li>
+          <li>Referrer URL (die zuvor besuchte Seite)</li>
+          <li>Hostname des zugreifenden Rechners / IP-Adresse</li>
+          <li>Datum und Uhrzeit der Serveranfrage</li>
         </ul>
+        <p>Diese Daten werden nicht mit anderen Datenquellen zusammengeführt. GitHub verwendet diese Daten, um die Sicherheit und Integrität der Infrastruktur aufrechtzuerhalten, Fehler zu beheben und die Website zuverlässig und schnell an Sie auszuliefern. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in einer technisch einwandfreien, hochverfügbaren und sicheren Darstellung unserer Website.</p>
+        <p><strong>Datenübermittlung in die USA:</strong> Die Datenverarbeitung durch GitHub findet auch in den USA statt. GitHub, Inc. ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert. Das DPF ist ein Abkommen zwischen der Europäischen Union und den USA, das die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleistet. Ergänzend stützt sich GitHub auf EU-Standardvertragsklauseln (Standard Contractual Clauses – SCC).</p>
+        <p>Weitere Informationen zum Datenschutz bei GitHub finden Sie in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement</a>.</p>
 
-        <h2>4. Цели обработки</h2>
-        <p>Мы обрабатываем ваши данные для следующих целей:</p>
-        <ul>
-          <li>Предоставление онлайн-предложения, его функций и контента.</li>
-          <li>Ответы на контактные запросы и общение с пользователями.</li>
-          <li>Меры безопасности.</li>
-          <li>Измерение охвата/маркетинг.</li>
-        </ul>
+        <h3>Google Fonts</h3>
+        <p>Diese Seite nutzt zur einheitlichen und optisch ansprechenden Darstellung von Schriftarten sogenannte Google Fonts. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Mutterunternehmen ist die Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</p>
+        <p>Beim Aufruf einer Seite lädt Ihr Browser die benötigten Schriftarten in ihren Browsercache, um Texte und Schriftarten korrekt und in der von uns gestalteten Form anzuzeigen. Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von Google aufnehmen. Hierdurch erlangt Google Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde. Die Nutzung von Google Fonts erfolgt im Interesse einer einheitlichen, professionellen und ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+        <p><strong>Datenübermittlung in die USA:</strong> Das Mutterunternehmen Google LLC ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert, wodurch ein angemessenes Datenschutzniveau für Datenübermittlungen in die USA nach Art. 45 DSGVO gewährleistet ist.</p>
+        <p>Weitere Informationen zu Google Fonts finden Sie unter: <a href="https://developers.google.com/fonts/faq" target="_blank" rel="noopener noreferrer">https://developers.google.com/fonts/faq</a> und in der Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
 
-        <h2>5. Правовые основы обработки</h2>
-        <p>Обработка ваших данных осуществляется на основе следующих правовых оснований:</p>
-        <ul>
-          <li>Согласие (ст. 6 п. 1 лит. а GDPR).</li>
-          <li>Исполнение договора и преддоговорные запросы (ст. 6 п. 1 лит. б GDPR).</li>
-          <li>Юридическое обязательство (ст. 6 п. 1 лит. в GDPR).</li>
-          <li>Законные интересы (ст. 6 п. 1 лит. е GDPR).</li>
-        </ul>
+        <h3>Kontaktformular & E-Mail-Kontakt</h3>
+        <p>Wenn Sie uns per Kontaktformular oder per E-Mail Anfragen (z. B. zu einem wöchentlichen Meal Prep oder Event) zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten (Name, E-Mail-Adresse, Bezirk, gewünschter Service, Inhalt Ihrer Nachricht) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
+        <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), sofern diese abgefragt wurde.</p>
+        <p>Die von Ihnen im Kontaktformular oder in E-Mails eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere handels- und steuerrechtliche Aufbewahrungsfristen (6 bzw. 10 Jahre gem. § 257 HGB und § 147 AO) – bleiben unberührt.</p>
 
-        <h2>6. Ваши права как субъекта данных</h2>
-        <p>Вы имеете право требовать подтверждения того, обрабатываются ли касающиеся вас данные, а также информацию об этих данных, а также дополнительную информацию и копию данных в соответствии со ст. 15 GDPR.</p>
-        <p>В соответствии со ст. 16 GDPR вы имеете право требовать дополнения касающихся вас данных или исправления неверных данных, касающихся вас.</p>
-        <p>В соответствии со ст. 17 GDPR вы имеете право требовать немедленного удаления соответствующих данных или, в качестве альтернативы, в соответствии со ст. 18 GDPR, требовать ограничения обработки данных.</p>
-        <p>Вы имеете право требовать получения касающихся вас данных, которые вы нам предоставили, в соответствии со ст. 20 GDPR и требовать их передачи другим контроллерам.</p>
-        <p>В соответствии со ст. 77 GDPR вы имеете право подать жалобу в компетентный надзорный орган.</p>
+        <h2>4. Soziale Medien und Messenger-Dienste</h2>
+        <h3>WhatsApp (Click-to-Chat / Chat-Panel)</h3>
+        <p>Auf unserer Website bieten wir die Möglichkeit, über einen „WhatsApp-Button“ oder ein interaktives Chat-Panel direkt mit uns via WhatsApp in Kontakt zu treten. Hierfür nutzen wir die sogenannte „Click-to-Chat“-Funktion (Verlinkung auf „wa.me/49176628856“). Anbieter des Messenger-Dienstes ist in Europa die Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland.</p>
+        <p>Auf unserer Website selbst sind keine Tracking-Skripte von WhatsApp eingebunden. Erst wenn Sie aktiv auf die Schaltfläche „Nachricht senden“ klicken, werden Sie zu den Servern und der Anwendung von WhatsApp weitergeleitet. Wenn Sie uns eine Nachricht via WhatsApp senden, übermitteln Sie uns Ihre Telefonnummer, Ihren dort gewählten Profilnamen sowie den Inhalt Ihrer Nachricht.</p>
+        <p><strong>Hinweis zur Datenverarbeitung durch Meta:</strong> Wir weisen ausdrücklich darauf hin, dass Meta (WhatsApp) bei der Nutzung des Dienstes Metadaten der Kommunikation (z. B. Zeitpunkt, Sender, Empfänger, Gerätedaten und IP-Adresse) verarbeitet und diese Daten auch auf Server in den USA sowie anderen Drittländern übermitteln kann. Meta Platforms Inc. ist unter dem EU-US Data Privacy Framework zertifiziert. Die Nutzung von WhatsApp für die Kommunikation mit uns basiert auf Ihrer freiwilligen Entscheidung und dient der einfachen und schnellen Vertragsanbahnung gem. Art. 6 Abs. 1 lit. b bzw. lit. a DSGVO. Sie sind selbstverständlich nicht verpflichtet, WhatsApp zu nutzen – Sie können uns jederzeit auch per E-Mail oder über unser Kontaktformular erreichen.</p>
+        <p>Weitere Informationen zu den Datenschutzbestimmungen von WhatsApp finden Sie unter: <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer">https://www.whatsapp.com/legal/privacy-policy-eea</a>.</p>
 
-        <h2>7. Право на отзыв согласия</h2>
-        <p>Вы имеете право отозвать предоставленные согласия в соответствии со ст. 7 п. 3 GDPR с действием на будущее.</p>
+        <h3>Instagram</h3>
+        <p>Auf unserer Website verlinken wir auf unser Profil beim sozialen Netzwerk Instagram (@yourweekly.chef). Anbieter ist die Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland.</p>
+        <p>Es handelt sich hierbei um eine reine Verlinkung (Hyperlink). Auf unserer Website sind keine Instagram-Plugins oder Like-Buttons eingebunden, die bereits beim Laden unserer Seite Daten an Meta übertragen würden. Erst wenn Sie auf das Instagram-Symbol oder den Textlink klicken, öffnet sich in Ihrem Browser die externe Seite von Instagram und es werden Daten (wie Ihre IP-Adresse und die Herkunftsseite) an Meta übertragen. Wenn Sie währenddessen in Ihrem Instagram-Account eingeloggt sind, kann Meta den Besuch unserem Profil zuordnen.</p>
+        <p>Die Datenschutzerklärung von Instagram finden Sie unter: <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener noreferrer">https://privacycenter.instagram.com/policy/</a>.</p>
 
-        <h2>8. Право на возражение</h2>
-        <p>Вы можете в любое время возразить против будущей обработки касающихся вас данных в соответствии со ст. 21 GDPR.</p>
-
-        <h2>9. Изменения в Политике конфиденциальности</h2>
-        <p>Мы просим вас регулярно ознакомляться с содержанием нашей Политики конфиденциальности. Мы будем корректировать Политику конфиденциальности, как только изменения в осуществляемой нами обработке данных сделают это необходимым. Мы проинформируем вас, как только изменения потребуют вашего участия (например, согласия) или иного индивидуального уведомления.</p>
+        <h2>5. Verzicht auf Cookies und Tracking</h2>
+        <p>Wir respektieren Ihre Privatsphäre in höchstem Maße. <strong>Diese Website setzt keine Cookies auf Ihrem Endgerät und verwendet keinerlei Analyse- oder Tracking-Software.</strong> Es werden keine Nutzerprofile erstellt und Ihr Verhalten auf dieser Seite wird nicht zu Werbezwecken ausgewertet. Da keine zustimmungspflichtigen Cookies oder Dienste eingesetzt werden, erfordert diese Website auch kein Cookie-Consent-Banner („Cookie-Banner“).</p>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
       <div>
         <div class="footer__logo">Your Weekly Chef</div>
-        <div class="footer__logo-sub">Личный Повар Берлин</div>
-        <p class="footer__tagline">Ваш личный повар для здоровых и вкусных блюд, прямо на вашей кухне в Берлине.</p>
+        <div class="footer__logo-sub">Privatkoch Berlin</div>
+        <p class="footer__tagline">Ihr persönlicher Koch für gesunde und köstliche Mahlzeiten, direkt in Ihrer Küche in Berlin.</p>
         <div class="footer__social">
           <div class="footer__social-wrapper">
-            <a href="#" class="footer__social-link wa-trigger">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
-            </a>
+            <button class="wa-trigger footer__social-link" title="WhatsApp Chat öffnen" aria-label="WhatsApp Chat öffnen">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </button>
             <div class="wa-panel">
               <div class="wa-panel__header">
                 <div class="wa-panel__title">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
-                  Чат с нами в WhatsApp
+                  Chatten Sie mit mir auf WhatsApp
                 </div>
-                <button class="wa-panel__close">
+                <button class="wa-panel__close" aria-label="Schließen">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 </button>
               </div>
-              <p class="wa-panel__text">Здравствуйте! Чем могу помочь?</p>
-              <a href="https://wa.me/49176628856" target="_blank" class="wa-panel__btn btn-green">
-                Отправить сообщение
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
+              <p class="wa-panel__text">Hallo! Wie kann ich Ihnen heute helfen?</p>
+              <a href="https://wa.me/49176628856" target="_blank" rel="noopener noreferrer" class="wa-panel__btn btn-green">
+                Nachricht senden
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
               </a>
             </div>
           </div>
-          <a href="https://www.instagram.com/yourweeklychef.de/" target="_blank" class="footer__social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
+          <a href="https://www.instagram.com/yourweekly.chef/" target="_blank" rel="noopener noreferrer" class="footer__social-link" title="Instagram Profil" aria-label="Instagram Profil">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
         </div>
       </div>
 
       <div>
-        <div class="footer__col-title">Навигация</div>
+        <div class="footer__col-title">Navigation</div>
         <div class="footer__links">
-          <a href="/ru/#about">Обо мне</a>
-          <a href="/ru/#how-it-works">Как это работает</a>
-          <a href="/ru/#services">Услуги</a>
-          <a href="/ru/#testimonials">Отзывы</a>
-          <a href="/ru/#contact">Контакты</a>
+          <a href="index.html#about">Über mich</a>
+          <a href="index.html#how-it-works">So funktioniert's</a>
+          <a href="index.html#services">Dienstleistungen</a>
+          <a href="index.html#contact">Kontakt</a>
         </div>
       </div>
 
       <div>
-        <div class="footer__col-title">Юридическая информация</div>
+        <div class="footer__col-title">Rechtliches</div>
         <div class="footer__links">
-          <a href="/ru/agb.html">Условия и положения</a>
-          <a href="/ru/datenschutz.html">Политика конфиденциальности</a>
-          <a href="/ru/impressum.html">Выходные данные</a>
+          <a href="agb.html">Allgemeine Geschäftsbedingungen</a>
+          <a href="datenschutz.html">Datenschutzerklärung</a>
+          <a href="impressum.html">Impressum</a>
         </div>
       </div>
     </div>
 
     <div class="container footer__bottom">
-      <div class="footer__copy">© 2024 Your Weekly Chef. Все права защищены.</div>
+      <div class="footer__copy">© 2026 Your Weekly Chef. Alle Rechte vorbehalten.</div>
       <div class="footer__bottom-links">
-        <a href="/ru/datenschutz.html">Политика конфиденциальности</a>
-        <a href="/ru/impressum.html">Выходные данные</a>
-        <a href="/ru/agb.html">Условия и положения</a>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="agb.html">Allgemeine Geschäftsbedingungen</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Scroll progress
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (scrollTop / scrollHeight) * 100;
-      document.querySelector('.scroll-progress').style.width = scrolled + '%';
-    });
-
-    // Nav scroll effect
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.nav');
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-
     // Mobile nav toggle
     const hamburger = document.querySelector('.nav__hamburger');
     const mobileNav = document.querySelector('.nav__mobile');
-
-    hamburger.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-      hamburger.classList.toggle('open');
-    });
-
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        hamburger.classList.remove('open');
+    if (hamburger && mobileNav) {
+      hamburger.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        hamburger.classList.toggle('open');
       });
-    });
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          hamburger.classList.remove('open');
+        });
+      });
+    }
 
     // WhatsApp panel toggle
     const waTrigger = document.querySelector('.wa-trigger');
     const waPanel = document.querySelector('.wa-panel');
     const waClose = document.querySelector('.wa-panel__close');
 
-    waTrigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      waPanel.classList.toggle('open');
-    });
-
-    waClose.addEventListener('click', () => {
-      waPanel.classList.remove('open');
-    });
-
-    // Close WhatsApp panel when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!waPanel.contains(e.target) && !waTrigger.contains(e.target)) {
+    if (waTrigger && waPanel && waClose) {
+      waTrigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        waPanel.classList.toggle('open');
+      });
+      waClose.addEventListener('click', () => {
         waPanel.classList.remove('open');
-      }
-    });
-
-    // Form submission
-    const contactForm = document.querySelector('.form');
-    const formSuccess = document.querySelector('.form__success');
-
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let isValid = true;
-
-      contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('error');
-          input.nextElementSibling.classList.add('visible');
-        } else {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
+      });
+      document.addEventListener('click', (e) => {
+        if (!waPanel.contains(e.target) && !waTrigger.contains(e.target)) {
+          waPanel.classList.remove('open');
         }
       });
-
-      if (isValid) {
-        // Simulate form submission
-        setTimeout(() => {
-          contactForm.reset();
-          formSuccess.classList.add('visible');
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            formSuccess.classList.remove('visible');
-          }, 5000);
-        }, 500);
-      }
-    });
-
-    contactForm.querySelectorAll('input, select, textarea').forEach(input => {
-      input.addEventListener('input', () => {
-        if (input.value.trim()) {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
-        }
-      });
-    });
-
-    // Fade-up animation on scroll
-    const fadeUpElements = document.querySelectorAll('.fade-up');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    fadeUpElements.forEach(element => {
-      observer.observe(element);
-    });
+    }
   </script>
 </body>
 </html>

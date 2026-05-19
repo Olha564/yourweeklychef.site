@@ -480,13 +480,22 @@
       position: relative;
     }
 
-    .about__photo-wrap {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      aspect-ratio: 4/5;
-      background: linear-gradient(145deg, var(--green-main) 0%, var(--green-dark) 100%);
-    }
+     .about__photo-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: linear-gradient(145deg, var(--green-main) 0%, var(--green-dark) 100%); /* Запасной цвет, пока грузится фото */
+}
+
+
+    .about__photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center ;
+  display: block;
+}
 
     .about__photo-inner {
       width: 100%;
@@ -1272,7 +1281,7 @@
 
     .footer__social {
       display: flex;
-      gap: 10px;
+
       margin-top: 20px;
     }
 
@@ -1627,7 +1636,6 @@
       <a href="/en/#about">About Me</a>
       <a href="/en/#how-it-works">How It Works</a>
       <a href="/en/#services">Services</a>
-      <a href="/en/#testimonials">Testimonials</a>
       <a href="/en/#contact">Contact</a>
       <a href="/en/#contact" class="btn-primary">Book Now</a>
       <div class="nav__lang-switcher">
@@ -1668,17 +1676,10 @@
       <div class="container about__inner">
         <div class="about__visual">
           <div class="about__photo-wrap">
-            <img src="https://yourweeklychef.de/assets/chef-photo.webp" alt="Chef" />
-            <div class="about__photo-inner">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote"><path d="M3 21c3 0 7-1 7-8V5c0-1.4-1.4-2-2-2H3v7c0 1.7 1 3 2 3 1 0 1 1 0 2H3c0 1 1 2 2 2 0 1-1 2-2 2Z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.4-1.4-2-2-2H15v7c0 1.7 1 3 2 3 1 0 1 1 0 2H15c0 1 1 2 2 2 0 1-1 2-2 2Z"/></svg>
-              <p class="about__photo-text">"Eating is a necessity, but cooking is an art."</p>
-              <span class="about__photo-sub">— Unknown</span>
-            </div>
+            <img src="img/first.PNG" alt="Chef" />
+
           </div>
-          <div class="about__accent-card">
-            <div class="about__accent-card-num">5+</div>
-            <div class="about__accent-card-label">Years Experience</div>
-          </div>
+
         </div>
         <div>
           <div class="section-label">
@@ -1763,7 +1764,7 @@
         </div>
 
         <div class="services__grid">
-          <div class="service-card">
+          <div class="service-card service-card--featured">
             <div class="service-card__icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-soup"><path d="M12 21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v10a2 2 0 0 1-2 2h-1"/><path d="M15 3v4a2 2 0 0 0 2 2h4"/><path d="M7 18v3"/><path d="M12 18v3"/><path d="M17 18v3"/></svg>
             </div>
@@ -1776,19 +1777,7 @@
             </div>
           </div>
 
-          <div class="service-card service-card--featured">
-            <div class="service-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cake"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/><path d="M7 4v.01"/><path d="M12 4v.01"/><path d="M17 4v.01"/></svg>
-            </div>
-            <div class="service-card__badge">Popular</div>
-            <h3 class="service-card__title">Special Occasions & Dinner Parties</h3>
-            <p class="service-card__text">Impress your guests with an unforgettable culinary experience. I create and serve an exquisite menu for your dinner party or special event.</p>
-            <div class="service-card__tags">
-              <span class="service-card__tag">Fine Dining</span>
-              <span class="service-card__tag">Custom Menus</span>
-              <span class="service-card__tag">Professional Service</span>
-            </div>
-          </div>
+
 
           <div class="service-card">
             <div class="service-card__icon">
@@ -1803,18 +1792,7 @@
             </div>
           </div>
 
-          <div class="service-card">
-            <div class="service-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0-.009 1.837l8.574 3.837a2 2 0 0 0 1.584 0z"/><path d="M22 10v6"/><path d="M6 12v4"/><path d="M12 12v6"/></svg>
-            </div>
-            <h3 class="service-card__title">Cooking Classes & Workshops</h3>
-            <p class="service-card__text">Learn the secrets of professional cooking! I offer private cooking classes and workshops for individuals or small groups.</p>
-            <div class="service-card__tags">
-              <span class="service-card__tag">Interactive Learning</span>
-              <span class="service-card__tag">All Skill Levels</span>
-              <span class="service-card__tag">Fun & Enjoyment</span>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -1872,74 +1850,7 @@
         </div>
     </section>
 
-    <section class="testimonials" id="testimonials">
-      <div class="container">
-        <div class="testimonials__header">
-          <div class="section-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Testimonials
-          </div>
-          <h2 class="section-title">What My <em>Clients Say</em></h2>
-          <p class="section-subtitle">Hear what my satisfied clients have to say about their experiences with Your Weekly Chef.</p>
-        </div>
 
-        <div class="testimonials__grid">
-          <div class="testimonial-card">
-            <div class="testimonial-card__stars">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-card__quote">"I am absolutely thrilled with the meals! They are not only incredibly delicious but also perfectly tailored to my dietary needs. A huge time-saver and a true delight."</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar">A.S.</div>
-              <div>
-                <div class="testimonial-card__name">Anna S.</div>
-                <div class="testimonial-card__meta">Berlin</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-card__stars">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-card__quote">"The dinner party was a complete success! The chef conjured up a fantastic menu and took care of everything. My guests were impressed, and I was able to enjoy the evening relaxed."</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar">M.K.</div>
-              <div>
-                <div class="testimonial-card__name">Max K.</div>
-                <div class="testimonial-card__meta">Berlin</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-card__stars">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star testimonial-card__star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="testimonial-card__quote">"The cooking classes are fantastic! I've learned so much and now feel much more confident in the kitchen. The chef is very patient and explains everything very clearly."</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar">L.M.</div>
-              <div>
-                <div class="testimonial-card__name">Lena M.</div>
-                <div class="testimonial-card__meta">Berlin</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="contact" id="contact">
       <div class="container contact__inner">
@@ -1956,13 +1867,13 @@
               <div class="contact__detail-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               </div>
-              <span>hello@yourweeklychef.de</span>
+              <span>yourweeklychef.de@gmail.com</span>
             </div>
             <div class="contact__detail">
               <div class="contact__detail-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               </div>
-              <span>+49 176 628856</span>
+              <span>+49 160 9989 2607</span>
             </div>
             <div class="contact__detail">
               <div class="contact__detail-icon">
@@ -2036,9 +1947,7 @@
         <p class="footer__tagline">Your personal chef for healthy and delicious meals, right in your kitchen in Berlin.</p>
         <div class="footer__social">
           <div class="footer__social-wrapper">
-            <a href="#" class="footer__social-link wa-trigger">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
-            </a>
+
             <div class="wa-panel">
               <div class="wa-panel__header">
                 <div class="wa-panel__title">
@@ -2084,7 +1993,7 @@
     </div>
 
     <div class="container footer__bottom">
-      <div class="footer__copy">© 2024 Your Weekly Chef. All rights reserved.</div>
+      <div class="footer__copy">© 2026 Your Weekly Chef. All rights reserved.</div>
       <div class="footer__bottom-links">
         <a href="/en/datenschutz.html">Privacy Policy</a>
         <a href="/en/impressum.html">Imprint</a>

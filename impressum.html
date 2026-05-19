@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -381,6 +384,16 @@
       color: var(--charcoal);
     }
 
+    .content-section a {
+      color: var(--green-main);
+      text-decoration: underline;
+      transition: color var(--transition);
+    }
+
+    .content-section a:hover {
+      color: var(--green-dark);
+    }
+
     /* ─── Footer ────────────────────────────────────────────────── */
     .footer {
       background: var(--charcoal);
@@ -441,103 +454,6 @@
       background: var(--green-main);
       border-color: var(--green-main);
       color: var(--white);
-    }
-
-    /* Интерактивная панель WhatsApp */
-    .footer__social-wrapper {
-      position: relative;
-      display: inline-block;
-    }
-
-    .wa-panel {
-      position: absolute;
-      bottom: 54px;
-      left: 0;
-      width: 290px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      box-shadow: var(--shadow-lg);
-      display: none;
-      z-index: 110;
-      text-align: left;
-    }
-
-    .wa-panel::after {
-      content: '';
-      position: absolute;
-      bottom: -7px;
-      left: 14px;
-      width: 14px;
-      height: 14px;
-      background: var(--white);
-      transform: rotate(45deg);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .wa-panel.open {
-      display: block;
-      animation: waFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    @keyframes waFadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .wa-panel__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .wa-panel__title {
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--charcoal);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .wa-panel__close {
-      background: none;
-      border: none;
-      font-size: 1.3rem;
-      color: var(--text-muted);
-      line-height: 1;
-      padding: 2px;
-    }
-
-    .wa-panel__close:hover { color: var(--charcoal); }
-
-    .wa-panel__text {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 16px;
-      line-height: 1.5;
-    }
-
-    .wa-panel__btn {
-      padding: 10px 16px;
-      font-size: 0.85rem;
-      width: 100%;
-      justify-content: center;
-      background: #25D366 !important;
-      color: #FFFFFF !important;
-      border-radius: var(--radius-full);
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(37,211,102,0.25);
-    }
-
-    .wa-panel__btn:hover {
-      background: #1BD75E !important;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(37,211,102,0.35);
     }
 
     .footer__col-title {
@@ -617,16 +533,6 @@
       }
     }
 
-    @media (max-width: 480px) {
-      .wa-panel {
-        width: 260px;
-        left: -20px;
-      }
-      .wa-panel::after {
-        left: 32px;
-      }
-    }
-
     /* ─── Language Switcher ─────────────────────────────────────── */
     .nav__lang-switcher {
       display: flex;
@@ -649,8 +555,6 @@
   </style>
 </head>
 <body>
-
-  <div class="scroll-progress"></div>
 
   <nav class="nav scrolled">
     <div class="nav__inner container">
@@ -701,41 +605,90 @@
       <div class="container">
         <h1>Impressum</h1>
 
-        <h2>Angaben gemäß § 5 TMG</h2>
-        <p>Your Weekly Chef<br>
-        [Ihr Name]<br>
-        [Ihre Adresse]<br>
-        [Ihre Stadt, Postleitzahl]</p>
+        <h2>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</h2>
+        <p>
+          <strong>Your Weekly Chef</strong><br>
+          Olha Polianina<br>
+          Geisenheimer Straße 56<br>
+          14197 Berlin<br>
+          Deutschland
+        </p>
 
-        <h2>Kontakt</h2>
-        <p>Telefon: [Ihre Telefonnummer]<br>
-        E-Mail: [Ihre E-Mail-Adresse]</p>
+        <h2>Kontaktinformationen</h2>
+        <p>
+          <strong>Telefon:</strong> +49 160 99892607<br>
+          <strong>E-Mail:</strong> <a href="mailto:yourweeklychef.de@gmail.com">yourweeklychef.de@gmail.com</a>
+        </p>
 
-        <h2>Umsatzsteuer-ID</h2>
-        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
-        [Ihre Umsatzsteuer-ID]</p>
+        <h2>Hinweis zur Geschäftstätigkeit</h2>
+        <p>
+          Die offizielle Aufnahme der gewerblichen Tätigkeit erfolgt zum <strong>01.06.2026</strong>. Zum gegenwärtigen Zeitpunkt findet noch keine aktive Geschäftstätigkeit über diese Website statt.
+        </p>
+        <p>
+          Die Erteilung der Steuernummer sowie (falls zutreffend) der Umsatzsteuer-Identifikationsnummer wurde beim zuständigen Finanzamt Berlin bereits beantragt. Die entsprechenden Angaben befinden sich im Bearbeitungsprozess und werden unmittelbar nach Erhalt an dieser Stelle gemäß § 5 DDG ergänzt.
+        </p>
 
         <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-        <p>Berufsbezeichnung: Privatkoch<br>
-        Zuständige Kammer: [Zuständige Kammer, z.B. IHK Berlin]<br>
-        Verliehen in: Deutschland</p>
+        <p>
+          <strong>Berufsbezeichnung:</strong> Privatkoch / Unabhängiger Dienstleister im Bereich Gastronomie<br>
+          <strong>Verliehen in:</strong> Deutschland (Bundesrepublik)
+        </p>
+        <p>
+          Die Tätigkeit als Privatkoch ist in Deutschland ein zulassungsfreies Handwerk gemäß Anlage B der Handwerksordnung (HwO). Es unterliegen daher keine speziellen berufsrechtlichen Regelungen außer den allgemeinen Bestimmungen des Gaststätten- und Lebensmittelrechts sowie der Lebensmittelhygiene-Verordnung (LMHV).
+        </p>
 
-        <h2>Streitschlichtung</h2>
-        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>.<br>
-        Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
-        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-
-        <h2>Haftung für Inhalte</h2>
-        <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-        <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+        <h2>Verantwortlichkeit für Inhalte</h2>
+        <p>
+          Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+        </p>
+        <p>
+          Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+        </p>
 
         <h2>Haftung für Links</h2>
-        <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
-        <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <p>
+          Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+        </p>
+        <p>
+          Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+        </p>
 
         <h2>Urheberrecht</h2>
-        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
-        <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+        <p>
+          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+        </p>
+        <p>
+          Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+        </p>
+
+        <h2>Streitschlichtung</h2>
+        <p>
+          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>
+        </p>
+        <p>
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+
+        <h2>Datenschutz</h2>
+        <p>
+          Informationen zum Datenschutz und zur Verarbeitung Ihrer personenbezogenen Daten finden Sie in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+
+        <h2>Allgemeine Geschäftsbedingungen</h2>
+        <p>
+          Unsere <a href="/agb.html">Allgemeinen Geschäftsbedingungen (AGB)</a> regeln die Nutzung unserer Dienstleistungen und Ihre Rechte und Pflichten.
+        </p>
+
+        <h2>Haftungsausschluss</h2>
+        <p>
+          Die Inhalte unserer Website werden mit größter Sorgfalt erstellt. Wir übernehmen jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte der Website erfolgt auf eigene Gefahr des Nutzers. Namentlich gekennzeichnete Beiträge geben die Meinung des jeweiligen Autors und nicht immer die Meinung des Anbieters wieder.
+        </p>
+
+        <h2>Änderungen des Impressums</h2>
+        <p>
+          Wir behalten uns das Recht vor, die Inhalte dieser Website jederzeit und ohne vorherige Ankündigung zu ändern, zu ergänzen oder zu löschen.
+        </p>
+
       </div>
     </section>
   </main>
@@ -747,27 +700,6 @@
         <div class="footer__logo-sub">Privatkoch Berlin</div>
         <p class="footer__tagline">Ihr persönlicher Koch für gesunde und köstliche Mahlzeiten, direkt in Ihrer Küche in Berlin.</p>
         <div class="footer__social">
-          <div class="footer__social-wrapper">
-            <a href="#" class="footer__social-link wa-trigger">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
-            </a>
-            <div class="wa-panel">
-              <div class="wa-panel__header">
-                <div class="wa-panel__title">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
-                  Chatten Sie mit uns auf WhatsApp
-                </div>
-                <button class="wa-panel__close">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                </button>
-              </div>
-              <p class="wa-panel__text">Hallo! Wie kann ich Ihnen heute helfen?</p>
-              <a href="https://wa.me/49176628856" target="_blank" class="wa-panel__btn btn-green">
-                Nachricht senden
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
-              </a>
-            </div>
-          </div>
           <a href="https://www.instagram.com/yourweeklychef.de/" target="_blank" class="footer__social-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </a>
@@ -796,7 +728,7 @@
     </div>
 
     <div class="container footer__bottom">
-      <div class="footer__copy">© 2024 Your Weekly Chef. Alle Rechte vorbehalten.</div>
+      <div class="footer__copy">© 2026 Your Weekly Chef. Alle Rechte vorbehalten.</div>
       <div class="footer__bottom-links">
         <a href="/datenschutz.html">Datenschutzerklärung</a>
         <a href="/impressum.html">Impressum</a>
@@ -806,14 +738,6 @@
   </footer>
 
   <script>
-    // Scroll progress
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (scrollTop / scrollHeight) * 100;
-      document.querySelector('.scroll-progress').style.width = scrolled + '%';
-    });
-
     // Nav scroll effect
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('.nav');
@@ -840,83 +764,14 @@
       });
     });
 
-    // WhatsApp panel toggle
-    const waTrigger = document.querySelector('.wa-trigger');
-    const waPanel = document.querySelector('.wa-panel');
-    const waClose = document.querySelector('.wa-panel__close');
-
-    waTrigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      waPanel.classList.toggle('open');
-    });
-
-    waClose.addEventListener('click', () => {
-      waPanel.classList.remove('open');
-    });
-
-    // Close WhatsApp panel when clicking outside
+    // Close mobile nav when clicking outside
     document.addEventListener('click', (e) => {
-      if (!waPanel.contains(e.target) && !waTrigger.contains(e.target)) {
-        waPanel.classList.remove('open');
+      if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('open');
       }
-    });
-
-    // Form submission
-    const contactForm = document.querySelector('.form');
-    const formSuccess = document.querySelector('.form__success');
-
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let isValid = true;
-
-      contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('error');
-          input.nextElementSibling.classList.add('visible');
-        } else {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
-        }
-      });
-
-      if (isValid) {
-        // Simulate form submission
-        setTimeout(() => {
-          contactForm.reset();
-          formSuccess.classList.add('visible');
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            formSuccess.classList.remove('visible');
-          }, 5000);
-        }, 500);
-      }
-    });
-
-    contactForm.querySelectorAll('input, select, textarea').forEach(input => {
-      input.addEventListener('input', () => {
-        if (input.value.trim()) {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
-        }
-      });
-    });
-
-    // Fade-up animation on scroll
-    const fadeUpElements = document.querySelectorAll('.fade-up');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    fadeUpElements.forEach(element => {
-      observer.observe(element);
     });
   </script>
+
 </body>
 </html>

@@ -1,58 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Weekly Chef — Datenschutzerklärung</title>
-  <meta name="description" content="Datenschutzerklärung für die Dienste von Your Weekly Chef in Berlin. Informationen zum Umgang mit persönlichen Daten und Datenschutzbestimmungen." />
+  <meta name="description" content="Datenschutzerklärung für Your Weekly Chef in Berlin. Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ─── CSS Variables ─────────────────────────────────────────── */
     :root {
       --green-dark:    #3D5C28;
       --green-mid:     #4A6B2F;
       --green-main:    #5A7A3A;
       --green-light:   #6B8F47;
       --green-muted:   #7A9A55;
-      --green-hero:    #4C6830;
       --tan:           #C9A96E;
       --tan-light:     #D4B882;
-      --tan-pale:      #EDD9B0;
-      --mint:          #E8F0E2;
-      --mint-mid:      #D6E8CC;
       --cream:         #F7F4EE;
-      --cream-dark:    #EDE8DF;
       --white:         #FFFFFF;
       --charcoal:      #2C2C2C;
-      --charcoal-mid:  #3E3E3E;
       --text-body:     #4A4A4A;
       --text-light:    #6E6E6E;
       --text-muted:    #8A8A8A;
-      --border:        rgba(90,122,58,0.15);
-      --shadow-sm:     0 2px 12px rgba(60,80,30,0.08);
-      --shadow-md:     0 8px 32px rgba(60,80,30,0.12);
-      --shadow-lg:     0 20px 60px rgba(60,80,30,0.15);
-      --radius-sm:     8px;
-      --radius-md:     16px;
-      --radius-lg:     28px;
-      --radius-xl:     48px;
-      --radius-full:   9999px;
       --font-serif:    'Cormorant Garamond', Georgia, serif;
       --font-sans:     'DM Sans', system-ui, sans-serif;
       --font-script:   'Dancing Script', cursive;
       --transition:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* ─── Reset & Base ──────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
       font-family: var(--font-sans);
@@ -67,7 +48,6 @@
     button { cursor: pointer; font-family: var(--font-sans); border: none; }
     ul { list-style: none; }
 
-    /* ─── Utility ───────────────────────────────────────────────── */
     .container {
       width: 100%;
       max-width: 1160px;
@@ -75,104 +55,6 @@
       padding: 0 24px;
     }
 
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--green-main);
-      background: var(--mint);
-      border: 1px solid rgba(90,122,58,0.2);
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
-      margin-bottom: 20px;
-    }
-
-    .section-label--white {
-      color: rgba(255,255,255,0.9);
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.25);
-    }
-
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 500;
-      line-height: 1.2;
-      color: var(--charcoal);
-      margin-bottom: 16px;
-    }
-
-    .section-title em {
-      font-style: italic;
-      color: var(--green-main);
-    }
-
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-light);
-      max-width: 540px;
-      line-height: 1.75;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      border-radius: var(--radius-full);
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      transition: var(--transition);
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--tan);
-      color: var(--charcoal);
-    }
-    .btn-primary:hover {
-      background: var(--tan-light);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(201,169,110,0.4);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.55);
-    }
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.8);
-    }
-
-    .btn-green {
-      background: var(--green-main);
-      color: var(--white);
-    }
-    .btn-green:hover {
-      background: var(--green-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(90,122,58,0.35);
-    }
-
-    .btn-outline-green {
-      background: transparent;
-      color: var(--green-main);
-      border: 1.5px solid var(--green-main);
-    }
-    .btn-outline-green:hover {
-      background: var(--green-main);
-      color: var(--white);
-    }
-
-    /* ─── Navigation ────────────────────────────────────────────── */
     .nav {
       position: fixed;
       top: 0;
@@ -180,10 +62,6 @@
       right: 0;
       z-index: 100;
       padding: 0 24px;
-      transition: var(--transition);
-    }
-
-    .nav.scrolled {
       background: rgba(76,104,48,0.97);
       backdrop-filter: blur(12px);
       box-shadow: 0 2px 20px rgba(0,0,0,0.15);
@@ -234,44 +112,9 @@
       color: rgba(255,255,255,0.85);
       letter-spacing: 0.01em;
       transition: color var(--transition);
-      position: relative;
     }
 
-    .nav__links a::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--tan);
-      transition: width var(--transition);
-    }
-
-    .nav__links a:hover {
-      color: var(--white);
-    }
-
-    .nav__links a:hover::after {
-      width: 100%;
-    }
-
-    .nav__cta {
-      background: rgba(255,255,255,0.15);
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.4);
-      padding: 10px 22px;
-      border-radius: var(--radius-full);
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .nav__cta:hover {
-      background: var(--tan);
-      border-color: var(--tan);
-      color: var(--charcoal);
-    }
+    .nav__links a:hover { color: var(--white); }
 
     .nav__hamburger {
       display: none;
@@ -287,7 +130,6 @@
       height: 2px;
       background: var(--white);
       border-radius: 2px;
-      transition: var(--transition);
     }
 
     .nav__mobile {
@@ -317,16 +159,10 @@
 
     .nav__mobile a:hover { color: var(--tan); }
 
-    .nav__mobile .btn-primary {
-      margin-top: 12px;
-      text-align: center;
-      justify-content: center;
-    }
-
-    /* ─── Content Section ───────────────────────────────────────── */
     .content-section {
       padding: 120px 0;
       background: var(--cream);
+      margin-top: 72px;
     }
 
     .content-section h1 {
@@ -381,7 +217,16 @@
       color: var(--charcoal);
     }
 
-    /* ─── Footer ────────────────────────────────────────────────── */
+    .content-section a {
+      color: var(--green-main);
+      text-decoration: underline;
+      transition: color var(--transition);
+    }
+
+    .content-section a:hover {
+      color: var(--green-dark);
+    }
+
     .footer {
       background: var(--charcoal);
       padding: 60px 0 32px;
@@ -415,129 +260,6 @@
       color: rgba(255,255,255,0.45);
       line-height: 1.65;
       max-width: 260px;
-    }
-
-    .footer__social {
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .footer__social-link {
-      width: 38px;
-      height: 38px;
-      border-radius: var(--radius-sm);
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.55);
-      font-size: 1rem;
-      transition: var(--transition);
-    }
-
-    .footer__social-link:hover {
-      background: var(--green-main);
-      border-color: var(--green-main);
-      color: var(--white);
-    }
-
-    /* Интерактивная панель WhatsApp */
-    .footer__social-wrapper {
-      position: relative;
-      display: inline-block;
-    }
-
-    .wa-panel {
-      position: absolute;
-      bottom: 54px;
-      left: 0;
-      width: 290px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      box-shadow: var(--shadow-lg);
-      display: none;
-      z-index: 110;
-      text-align: left;
-    }
-
-    .wa-panel::after {
-      content: '';
-      position: absolute;
-      bottom: -7px;
-      left: 14px;
-      width: 14px;
-      height: 14px;
-      background: var(--white);
-      transform: rotate(45deg);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .wa-panel.open {
-      display: block;
-      animation: waFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    @keyframes waFadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .wa-panel__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .wa-panel__title {
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--charcoal);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .wa-panel__close {
-      background: none;
-      border: none;
-      font-size: 1.3rem;
-      color: var(--text-muted);
-      line-height: 1;
-      padding: 2px;
-    }
-
-    .wa-panel__close:hover { color: var(--charcoal); }
-
-    .wa-panel__text {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 16px;
-      line-height: 1.5;
-    }
-
-    .wa-panel__btn {
-      padding: 10px 16px;
-      font-size: 0.85rem;
-      width: 100%;
-      justify-content: center;
-      background: #25D366 !important;
-      color: #FFFFFF !important;
-      border-radius: var(--radius-full);
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(37,211,102,0.25);
-    }
-
-    .wa-panel__btn:hover {
-      background: #1BD75E !important;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(37,211,102,0.35);
     }
 
     .footer__col-title {
@@ -591,68 +313,17 @@
 
     .footer__bottom-links a:hover { color: rgba(255,255,255,0.6); }
 
-    /* ─── Responsive ────────────────────────────────────────────── */
-    @media (max-width: 1024px) {
-      .footer__inner {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
     @media (max-width: 768px) {
-      .nav__links,
-      .nav__cta { display: none; }
-
+      .nav__links { display: none; }
       .nav__hamburger { display: flex; }
-
-      .nav__mobile.open { display: flex; }
-
-      .footer__inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .footer__bottom {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .wa-panel {
-        width: 260px;
-        left: -20px;
-      }
-      .wa-panel::after {
-        left: 32px;
-      }
-    }
-
-    /* ─── Language Switcher ─────────────────────────────────────── */
-    .nav__lang-switcher {
-      display: flex;
-      gap: 12px;
-      margin-left: 16px;
-      padding-left: 16px;
-      border-left: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .lang-link {
-      font-size: 0.75rem !important;
-      font-weight: 600 !important;
-      color: rgba(255,255,255,0.5) !important;
-      transition: var(--transition);
-    }
-
-    .lang-link:hover, .lang-link.active {
-      color: var(--white) !important;
+      .footer__inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer__bottom { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <div class="scroll-progress"></div>
-
-  <nav class="nav scrolled">
+  <nav class="nav">
     <div class="nav__inner container">
       <a href="/" class="nav__logo">
         <span class="nav__logo-script">Your Weekly Chef</span>
@@ -665,14 +336,7 @@
         <a href="/#services">Leistungen</a>
         <a href="/#testimonials">Referenzen</a>
         <a href="/#contact">Kontakt</a>
-        <div class="nav__lang-switcher">
-          <a href="/" class="lang-link active">DE</a>
-          <a href="/en/" class="lang-link">EN</a>
-          <a href="/ru/" class="lang-link">RU</a>
-        </div>
       </div>
-
-      <a href="/#contact" class="nav__cta btn-primary">Jetzt buchen</a>
 
       <button class="nav__hamburger">
         <span></span>
@@ -687,12 +351,6 @@
       <a href="/#services">Leistungen</a>
       <a href="/#testimonials">Referenzen</a>
       <a href="/#contact">Kontakt</a>
-      <a href="/#contact" class="btn-primary">Jetzt buchen</a>
-      <div class="nav__lang-switcher">
-        <a href="/" class="lang-link active">DE</a>
-        <a href="/en/" class="lang-link">EN</a>
-        <a href="/ru/" class="lang-link">RU</a>
-      </div>
     </div>
   </nav>
 
@@ -701,54 +359,238 @@
       <div class="container">
         <h1>Datenschutzerklärung</h1>
 
-        <h2>1. Einleitung</h2>
-        <p>Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und den Zweck der Verarbeitung von personenbezogenen Daten (im Folgenden „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profil (im Folgenden gemeinsam bezeichnet als „Onlineangebot“).</p>
+        <h2>1. Verantwortlicher für die Datenverarbeitung</h2>
+        <p>
+          <strong>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer datenschutzrechtlicher Bestimmungen:</strong><br><br>
+          Your Weekly Chef<br>
+          Olha Polianina<br>
+          Geisenheimer Straße 56<br>
+          14197 Berlin<br>
+          Deutschland<br><br>
+          <strong>E-Mail:</strong> <a href="mailto:yourweeklychef.de@gmail.com">yourweeklychef.de@gmail.com</a><br>
+          <strong>Telefon:</strong> +49 160 99892607
+        </p>
 
-        <h2>2. Verantwortlicher</h2>
-        <p>Your Weekly Chef<br> [Ihr Name]<br> [Ihre Adresse]<br> [Ihre E-Mail-Adresse]</p>
+        <h2>2. Allgemeine Hinweise zur Datenverarbeitung</h2>
+        <p>
+          Wir nehmen den Schutz Ihrer personenbezogenen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie über die Verarbeitung Ihrer Daten auf dieser Website gemäß der Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz (BDSG).
+        </p>
+        <p>
+          <strong>Personenbezogene Daten</strong> sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Dies umfasst beispielsweise Namen, E-Mail-Adressen, Telefonnummern, Adressen und Informationen über Ihre Nutzung dieser Website.
+        </p>
 
-        <h2>3. Arten der verarbeiteten Daten</h2>
+        <h2>3. Rechtsgrundlagen der Datenverarbeitung</h2>
+        <p>
+          Die Verarbeitung Ihrer personenbezogenen Daten erfolgt auf Grundlage folgender Rechtsgrundlagen:
+        </p>
         <ul>
-          <li>Bestandsdaten (z.B. Namen, Adressen).</li>
-          <li>Kontaktdaten (z.B. E-Mail, Telefonnummern).</li>
-          <li>Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos).</li>
-          <li>Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten).</li>
-          <li>Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen).</li>
+          <li><strong>Art. 6 Abs. 1 lit. a DSGVO:</strong> Verarbeitung mit Ihrer Einwilligung (z.B. Newsletter-Anmeldung)</li>
+          <li><strong>Art. 6 Abs. 1 lit. b DSGVO:</strong> Verarbeitung zur Erfüllung eines Vertrags (z.B. Buchung von Dienstleistungen)</li>
+          <li><strong>Art. 6 Abs. 1 lit. c DSGVO:</strong> Verarbeitung zur Erfüllung einer rechtlichen Verpflichtung (z.B. Steuerrecht)</li>
+          <li><strong>Art. 6 Abs. 1 lit. f DSGVO:</strong> Verarbeitung zur Wahrung berechtigter Interessen (z.B. Website-Sicherheit)</li>
         </ul>
 
-        <h2>4. Zwecke der Verarbeitung</h2>
-        <p>Wir verarbeiten Ihre Daten zu folgenden Zwecken:</p>
+        <h2>4. Datenerfassung beim Besuch der Website</h2>
+
+        <h3>4.1 Automatisch erfasste Daten (Server-Logdaten)</h3>
+        <p>
+          Beim Besuch dieser Website erfasst unser Webserver automatisch folgende Informationen:
+        </p>
         <ul>
-          <li>Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte.</li>
-          <li>Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern.</li>
-          <li>Sicherheitsmaßnahmen.</li>
-          <li>Reichweitenmessung/Marketing.</li>
+          <li>IP-Adresse des Besuchers</li>
+          <li>Datum und Uhrzeit des Zugriffs</li>
+          <li>Aufgerufene Seite und Dateien</li>
+          <li>Referrer (von welcher Seite Sie gekommen sind)</li>
+          <li>Browser-Typ und Betriebssystem</li>
+          <li>Menge der übertragenen Daten</li>
+          <li>HTTP-Status-Code</li>
+        </ul>
+        <p>
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Sicherheit und Funktionalität der Website)<br>
+          <strong>Speicherdauer:</strong> Die Logdaten werden in der Regel nach 7 Tagen gelöscht.
+        </p>
+
+        <h2>5. Kontaktformular und Anfragen</h2>
+        <p>
+          Wenn Sie uns über das Kontaktformular, E-Mail oder Telefon kontaktieren, erfassen wir folgende Daten:
+        </p>
+        <ul>
+          <li>Name</li>
+          <li>E-Mail-Adresse</li>
+          <li>Telefonnummer (optional)</li>
+          <li>Nachrichteninhalt</li>
+          <li>Datum und Uhrzeit der Anfrage</li>
+        </ul>
+        <p>
+          <strong>Zweck:</strong> Beantwortung Ihrer Anfrage und Kommunikation mit Ihnen<br>
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) oder Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)<br>
+          <strong>Speicherdauer:</strong> Die Daten werden nach Beantwortung Ihrer Anfrage für die Dauer von 3 Jahren gespeichert, um Folgefragen beantworten zu können. Danach werden sie gelöscht.
+        </p>
+
+        <h2>6. Buchung von Dienstleistungen</h2>
+        <p>
+          Wenn Sie eine Dienstleistung bei uns buchen, verarbeiten wir folgende Daten:
+        </p>
+        <ul>
+          <li>Vollständiger Name</li>
+          <li>E-Mail-Adresse</li>
+          <li>Telefonnummer</li>
+          <li>Postanschrift</li>
+          <li>Informationen zu Allergien und Ernährungsvorlieben</li>
+          <li>Anzahl der Gäste</li>
+          <li>Datum und Uhrzeit der Dienstleistung</li>
+          <li>Zahlungsinformationen (Bankdaten oder Kreditkartendaten)</li>
+        </ul>
+        <p>
+          <strong>Zweck:</strong> Erfüllung des Vertrags, Rechnungsstellung, Kommunikation<br>
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)<br>
+          <strong>Speicherdauer:</strong> Die Daten werden für die Dauer des Vertrags und darüber hinaus für 10 Jahre gemäß Steuerrecht (§ 257 HGB) gespeichert.<br>
+          <strong>Empfänger:</strong> Die Daten werden ggf. an Zahlungsdienstleister übermittelt.
+        </p>
+
+        <h2>7. Zahlungsabwicklung</h2>
+        <p>
+          Für die Zahlungsabwicklung nutzen wir externe Zahlungsdienstleister. Diese verarbeiten Ihre Zahlungsdaten nach eigenen Datenschutzrichtlinien. Wir übermitteln nur die notwendigsten Daten an diese Dienstleister.
+        </p>
+        <p>
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)<br>
+          <strong>Hinweis:</strong> Die Zahlungsdienstleister sind unabhängige Verantwortliche. Bitte beachten Sie deren Datenschutzerklärungen.
+        </p>
+
+        <h2>8. Kommunikation über WhatsApp</h2>
+        <p>
+          Wir bieten Ihnen die Möglichkeit, uns über WhatsApp zu kontaktieren. WhatsApp wird von Meta Platforms Ireland Limited betrieben und unterliegt der <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank">WhatsApp Datenschutzerklärung</a>.
+        </p>
+        <p>
+          <strong>Datenverarbeitung:</strong> Wenn Sie uns über WhatsApp kontaktieren, werden Ihre Nachrichten und Kontaktdaten von WhatsApp verarbeitet. Wir speichern die Kommunikation für die Dauer der Geschäftsbeziehung und darüber hinaus für 3 Jahre.<br>
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch Nutzung des Dienstes)<br>
+          <strong>Hinweis:</strong> Die Übertragung Ihrer Daten an WhatsApp erfolgt außerhalb des Europäischen Wirtschaftsraums. Meta hat Standarddatenschutzklauseln abgeschlossen, um ein angemessenes Schutzniveau zu gewährleisten.
+        </p>
+
+        <h2>9. Instagram und Social Media</h2>
+        <p>
+          Auf dieser Website ist ein Link zu unserem Instagram-Profil integriert. Instagram wird von Meta Platforms Ireland Limited betrieben.
+        </p>
+        <p>
+          <strong>Datenverarbeitung:</strong> Wenn Sie auf den Instagram-Link klicken oder unser Profil besuchen, werden Ihre Daten von Instagram/Meta verarbeitet. Dies umfasst Ihre IP-Adresse, Browser-Informationen und ggf. Ihre Interaktionen mit unserem Profil.<br>
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Präsenz in sozialen Medien)<br>
+          <strong>Hinweis:</strong> Bitte beachten Sie die <a href="https://www.instagram.com/about/legal/privacy/" target="_blank">Instagram Datenschutzerklärung</a> von Meta.
+        </p>
+
+        <h2>10. Cookies und Tracking</h2>
+        <p>
+          Diese Website verwendet derzeit keine Cookies oder Tracking-Technologien. Sollten wir in Zukunft Cookies implementieren, werden wir Ihre Einwilligung einholen und Sie entsprechend informieren.
+        </p>
+
+        <h2>11. Ihre Rechte als betroffene Person</h2>
+        <p>
+          Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:
+        </p>
+        <ul>
+          <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Sie können jederzeit Auskunft über die Verarbeitung Ihrer Daten verlangen.</li>
+          <li><strong>Berichtigungsrecht (Art. 16 DSGVO):</strong> Sie können unrichtige Daten berichtigen lassen.</li>
+          <li><strong>Löschungsrecht (Art. 17 DSGVO):</strong> Sie können die Löschung Ihrer Daten verlangen, soweit keine gesetzlichen Aufbewahrungspflichten bestehen.</li>
+          <li><strong>Einschränkungsrecht (Art. 18 DSGVO):</strong> Sie können die Einschränkung der Verarbeitung Ihrer Daten verlangen.</li>
+          <li><strong>Datenportabilität (Art. 20 DSGVO):</strong> Sie können Ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format erhalten.</li>
+          <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Sie können der Verarbeitung Ihrer Daten widersprechen.</li>
+          <li><strong>Widerrufsrecht:</strong> Sie können eine erteilte Einwilligung jederzeit widerrufen.</li>
+        </ul>
+        <p>
+          Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter <a href="mailto:yourweeklychef.de@gmail.com">yourweeklychef.de@gmail.com</a> oder per Telefon unter +49 160 99892607.
+        </p>
+
+        <h2>12. Beschwerderecht</h2>
+        <p>
+          Sie haben das Recht, sich bei der zuständigen Datenschutzbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.
+        </p>
+        <p>
+          <strong>Zuständige Datenschutzbehörde für Berlin:</strong><br>
+          Berliner Beauftragte für Datenschutz und Informationsfreiheit<br>
+          Friedrichstraße 219<br>
+          10969 Berlin<br>
+          Telefon: +49 30 13889-0<br>
+          E-Mail: <a href="mailto:mailbox@datenschutz-berlin.de">mailbox@datenschutz-berlin.de</a><br>
+          Website: <a href="https://www.datenschutz-berlin.de" target="_blank">www.datenschutz-berlin.de</a>
+        </p>
+
+        <h2>13. Weitergabe von Daten an Dritte</h2>
+        <p>
+          Wir geben Ihre personenbezogenen Daten grundsätzlich nicht an Dritte weiter, es sei denn:
+        </p>
+        <ul>
+          <li>Sie haben ausdrücklich eingewilligt</li>
+          <li>Dies ist zur Erfüllung eines Vertrags erforderlich (z.B. Zahlungsdienstleister)</li>
+          <li>Wir sind gesetzlich dazu verpflichtet (z.B. Behörden, Gerichte)</li>
+          <li>Dies ist erforderlich zur Wahrung unserer berechtigten Interessen</li>
         </ul>
 
-        <h2>5. Rechtsgrundlagen der Verarbeitung</h2>
-        <p>Die Verarbeitung Ihrer Daten erfolgt auf Basis folgender Rechtsgrundlagen:</p>
+        <h2>14. Datensicherheit</h2>
+        <p>
+          Wir treffen umfangreiche technische und organisatorische Maßnahmen zum Schutz Ihrer Daten vor unbefugtem Zugriff, Verlust, Zerstörung oder Veränderung. Dies umfasst:
+        </p>
         <ul>
-          <li>Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</li>
-          <li>Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 lit. b DSGVO).</li>
-          <li>Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO).</li>
-          <li>Berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO).</li>
+          <li>Verschlüsselte Übertragung von Daten (HTTPS)</li>
+          <li>Sichere Passwörter und Zugriffskontrolle</li>
+          <li>Regelmäßige Sicherheitsupdates</li>
+          <li>Backup und Notfallplanung</li>
+          <li>Schulung von Mitarbeitern zum Datenschutz</li>
+        </ul>
+        <p>
+          Trotz dieser Maßnahmen kann absolute Sicherheit im Internet nicht garantiert werden.
+        </p>
+
+        <h2>15. Auftragsverarbeiter</h2>
+        <p>
+          Wir nutzen folgende Auftragsverarbeiter, die Ihre Daten in unserem Auftrag verarbeiten:
+        </p>
+        <ul>
+          <li><strong>Hosting-Provider:</strong> https://www.united-domains.de/ – Speicherung und Bereitstellung der Website</li>
+          <li><strong>E-Mail-Dienste:</strong> Gmail – Verwaltung von E-Mail-Kommunikation</li>
+        </ul>
+        <p>
+          Mit allen Auftragsverarbeitern haben wir Auftragsverarbeitungsverträge (AV-Verträge) gemäß Art. 28 DSGVO abgeschlossen.
+        </p>
+
+        <h2>16. Datenübermittlung in Drittländer</h2>
+        <p>
+          Einige Ihrer Daten können in Drittländer außerhalb der Europäischen Union übermittelt werden (z.B. zu Meta für WhatsApp und Instagram). Für diese Übermittlungen haben wir angemessene Schutzmaßnahmen getroffen, wie beispielsweise Standarddatenschutzklauseln der EU-Kommission.
+        </p>
+
+        <h2>17. Aufbewahrungsdauer von Daten</h2>
+        <p>
+          Wir speichern Ihre personenbezogenen Daten nur so lange, wie dies erforderlich ist:
+        </p>
+        <ul>
+          <li><strong>Kontaktdaten:</strong> 3 Jahre nach letztem Kontakt</li>
+          <li><strong>Vertragsdaten:</strong> 10 Jahre (gemäß Steuerrecht)</li>
+          <li><strong>Zahlungsdaten:</strong> 10 Jahre (gemäß Steuerrecht)</li>
+          <li><strong>Server-Logdaten:</strong> 7 Tage</li>
+          <li><strong>Newsletter-Daten:</strong> Bis zum Widerruf der Anmeldung</li>
         </ul>
 
-        <h2>6. Ihre Rechte als betroffene Person</h2>
-        <p>Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen und Kopie der Daten entsprechend Art. 15 DSGVO.</p>
-        <p>Sie haben entsprechend Art. 16 DSGVO das Recht, die Vervollständigung der Sie betreffenden Daten oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen.</p>
-        <p>Sie haben nach Maßgabe des Art. 17 DSGVO das Recht zu verlangen, dass betreffende Daten unverzüglich gelöscht werden, bzw. alternativ nach Maßgabe des Art. 18 DSGVO eine Einschränkung der Verarbeitung der Daten zu verlangen.</p>
-        <p>Sie haben das Recht zu verlangen, dass die Sie betreffenden Daten, die Sie uns bereitgestellt haben, nach Maßgabe des Art. 20 DSGVO zu erhalten und deren Übermittlung an andere Verantwortliche zu fordern.</p>
-        <p>Sie haben gem. Art. 77 DSGVO das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen.</p>
+        <h2>18. Änderungen dieser Datenschutzerklärung</h2>
+        <p>
+          Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Die aktuelle Version finden Sie auf dieser Website. Wesentliche Änderungen werden wir Ihnen per E-Mail mitteilen.
+        </p>
 
-        <h2>7. Widerrufsrecht</h2>
-        <p>Sie haben das Recht, erteilte Einwilligungen gem. Art. 7 Abs. 3 DSGVO mit Wirkung für die Zukunft zu widerrufen.</p>
+        <h2>19. Kontakt zum Datenschutz</h2>
+        <p>
+          Wenn Sie Fragen zum Datenschutz haben oder Ihre Rechte ausüben möchten, kontaktieren Sie uns bitte:
+        </p>
+        <p>
+          <strong>Your Weekly Chef</strong><br>
+          Olha Polianina<br>
+          Geisenheimer Straße 56<br>
+          14197 Berlin<br>
+          E-Mail: <a href="mailto:yourweeklychef.de@gmail.com">yourweeklychef.de@gmail.com</a><br>
+          Telefon: +49 160 99892607
+        </p>
 
-        <h2>8. Widerspruchsrecht</h2>
-        <p>Sie können der künftigen Verarbeitung der Sie betreffenden Daten nach Maßgabe des Art. 21 DSGVO jederzeit widersprechen.</p>
+        <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(90,122,58,0.15); font-size: 0.95rem; color: var(--text-light);">
+          <strong>Gültig ab:</strong> 01.06.2026<br>
+          <strong>Letzte Aktualisierung:</strong> Mai 2026
+        </p>
 
-        <h2>9. Änderungen der Datenschutzerklärung</h2>
-        <p>Wir bitten Sie, sich regelmäßig über den Inhalt unserer Datenschutzerklärung zu informieren. Wir passen die Datenschutzerklärung an, sobald die Änderungen der von uns durchgeführten Datenverarbeitungen dies erforderlich machen. Wir werden Sie informieren, sobald die Änderungen eine Mitwirkungshandlung Ihrerseits (z.B. Einwilligung) oder eine sonstige individuelle Benachrichtigung erforderlich machen.</p>
       </div>
     </section>
   </main>
@@ -759,32 +601,6 @@
         <div class="footer__logo">Your Weekly Chef</div>
         <div class="footer__logo-sub">Privatkoch Berlin</div>
         <p class="footer__tagline">Ihr persönlicher Koch für gesunde und köstliche Mahlzeiten, direkt in Ihrer Küche in Berlin.</p>
-        <div class="footer__social">
-          <div class="footer__social-wrapper">
-            <a href="#" class="footer__social-link wa-trigger">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
-            </a>
-            <div class="wa-panel">
-              <div class="wa-panel__header">
-                <div class="wa-panel__title">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
-                  Chatten Sie mit uns auf WhatsApp
-                </div>
-                <button class="wa-panel__close">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                </button>
-              </div>
-              <p class="wa-panel__text">Hallo! Wie kann ich Ihnen heute helfen?</p>
-              <a href="https://wa.me/49176628856" target="_blank" class="wa-panel__btn btn-green">
-                Nachricht senden
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
-              </a>
-            </div>
-          </div>
-          <a href="https://www.instagram.com/yourweeklychef.de/" target="_blank" class="footer__social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-          </a>
-        </div>
       </div>
 
       <div>
@@ -809,7 +625,7 @@
     </div>
 
     <div class="container footer__bottom">
-      <div class="footer__copy">© 2024 Your Weekly Chef. Alle Rechte vorbehalten.</div>
+      <div class="footer__copy">© 2026 Your Weekly Chef. Alle Rechte vorbehalten.</div>
       <div class="footer__bottom-links">
         <a href="/datenschutz.html">Datenschutzerklärung</a>
         <a href="/impressum.html">Impressum</a>
@@ -819,117 +635,25 @@
   </footer>
 
   <script>
-    // Scroll progress
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (scrollTop / scrollHeight) * 100;
-      document.querySelector('.scroll-progress').style.width = scrolled + '%';
-    });
-
-    // Nav scroll effect
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.nav');
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-
-    // Mobile nav toggle
     const hamburger = document.querySelector('.nav__hamburger');
     const mobileNav = document.querySelector('.nav__mobile');
 
     hamburger.addEventListener('click', () => {
       mobileNav.classList.toggle('open');
-      hamburger.classList.toggle('open');
     });
 
     mobileNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileNav.classList.remove('open');
-        hamburger.classList.remove('open');
       });
     });
 
-    // WhatsApp panel toggle
-    const waTrigger = document.querySelector('.wa-trigger');
-    const waPanel = document.querySelector('.wa-panel');
-    const waClose = document.querySelector('.wa-panel__close');
-
-    waTrigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      waPanel.classList.toggle('open');
-    });
-
-    waClose.addEventListener('click', () => {
-      waPanel.classList.remove('open');
-    });
-
-    // Close WhatsApp panel when clicking outside
     document.addEventListener('click', (e) => {
-      if (!waPanel.contains(e.target) && !waTrigger.contains(e.target)) {
-        waPanel.classList.remove('open');
+      if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileNav.classList.remove('open');
       }
-    });
-
-    // Form submission
-    const contactForm = document.querySelector('.form');
-    const formSuccess = document.querySelector('.form__success');
-
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let isValid = true;
-
-      contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('error');
-          input.nextElementSibling.classList.add('visible');
-        } else {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
-        }
-      });
-
-      if (isValid) {
-        // Simulate form submission
-        setTimeout(() => {
-          contactForm.reset();
-          formSuccess.classList.add('visible');
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            formSuccess.classList.remove('visible');
-          }, 5000);
-        }, 500);
-      }
-    });
-
-    contactForm.querySelectorAll('input, select, textarea').forEach(input => {
-      input.addEventListener('input', () => {
-        if (input.value.trim()) {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
-        }
-      });
-    });
-
-    // Fade-up animation on scroll
-    const fadeUpElements = document.querySelectorAll('.fade-up');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    fadeUpElements.forEach(element => {
-      observer.observe(element);
     });
   </script>
+
 </body>
 </html>

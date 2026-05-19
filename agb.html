@@ -1,58 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Weekly Chef — Allgemeine Geschäftsbedingungen (AGB)</title>
-  <meta name="description" content="Allgemeine Geschäftsbedingungen für die Dienste von Your Weekly Chef in Berlin. Informationen zu Preisen, Stornierungen und Haftung." />
+  <title>Your Weekly Chef — AGB</title>
+  <meta name="description" content="Allgemeine Geschäftsbedingungen (AGB) für Your Weekly Chef in Berlin. Rechtliche Bedingungen für die Nutzung unserer Dienstleistungen." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ─── CSS Variables ─────────────────────────────────────────── */
     :root {
       --green-dark:    #3D5C28;
       --green-mid:     #4A6B2F;
       --green-main:    #5A7A3A;
       --green-light:   #6B8F47;
       --green-muted:   #7A9A55;
-      --green-hero:    #4C6830;
       --tan:           #C9A96E;
       --tan-light:     #D4B882;
-      --tan-pale:      #EDD9B0;
-      --mint:          #E8F0E2;
-      --mint-mid:      #D6E8CC;
       --cream:         #F7F4EE;
-      --cream-dark:    #EDE8DF;
       --white:         #FFFFFF;
       --charcoal:      #2C2C2C;
-      --charcoal-mid:  #3E3E3E;
       --text-body:     #4A4A4A;
       --text-light:    #6E6E6E;
       --text-muted:    #8A8A8A;
-      --border:        rgba(90,122,58,0.15);
-      --shadow-sm:     0 2px 12px rgba(60,80,30,0.08);
-      --shadow-md:     0 8px 32px rgba(60,80,30,0.12);
-      --shadow-lg:     0 20px 60px rgba(60,80,30,0.15);
-      --radius-sm:     8px;
-      --radius-md:     16px;
-      --radius-lg:     28px;
-      --radius-xl:     48px;
-      --radius-full:   9999px;
       --font-serif:    'Cormorant Garamond', Georgia, serif;
       --font-sans:     'DM Sans', system-ui, sans-serif;
       --font-script:   'Dancing Script', cursive;
       --transition:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* ─── Reset & Base ──────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
       font-family: var(--font-sans);
@@ -67,7 +48,6 @@
     button { cursor: pointer; font-family: var(--font-sans); border: none; }
     ul { list-style: none; }
 
-    /* ─── Utility ───────────────────────────────────────────────── */
     .container {
       width: 100%;
       max-width: 1160px;
@@ -75,104 +55,6 @@
       padding: 0 24px;
     }
 
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--green-main);
-      background: var(--mint);
-      border: 1px solid rgba(90,122,58,0.2);
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
-      margin-bottom: 20px;
-    }
-
-    .section-label--white {
-      color: rgba(255,255,255,0.9);
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.25);
-    }
-
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 500;
-      line-height: 1.2;
-      color: var(--charcoal);
-      margin-bottom: 16px;
-    }
-
-    .section-title em {
-      font-style: italic;
-      color: var(--green-main);
-    }
-
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-light);
-      max-width: 540px;
-      line-height: 1.75;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      border-radius: var(--radius-full);
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      transition: var(--transition);
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--tan);
-      color: var(--charcoal);
-    }
-    .btn-primary:hover {
-      background: var(--tan-light);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(201,169,110,0.4);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.55);
-    }
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.8);
-    }
-
-    .btn-green {
-      background: var(--green-main);
-      color: var(--white);
-    }
-    .btn-green:hover {
-      background: var(--green-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(90,122,58,0.35);
-    }
-
-    .btn-outline-green {
-      background: transparent;
-      color: var(--green-main);
-      border: 1.5px solid var(--green-main);
-    }
-    .btn-outline-green:hover {
-      background: var(--green-main);
-      color: var(--white);
-    }
-
-    /* ─── Navigation ────────────────────────────────────────────── */
     .nav {
       position: fixed;
       top: 0;
@@ -180,10 +62,6 @@
       right: 0;
       z-index: 100;
       padding: 0 24px;
-      transition: var(--transition);
-    }
-
-    .nav.scrolled {
       background: rgba(76,104,48,0.97);
       backdrop-filter: blur(12px);
       box-shadow: 0 2px 20px rgba(0,0,0,0.15);
@@ -234,44 +112,9 @@
       color: rgba(255,255,255,0.85);
       letter-spacing: 0.01em;
       transition: color var(--transition);
-      position: relative;
     }
 
-    .nav__links a::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--tan);
-      transition: width var(--transition);
-    }
-
-    .nav__links a:hover {
-      color: var(--white);
-    }
-
-    .nav__links a:hover::after {
-      width: 100%;
-    }
-
-    .nav__cta {
-      background: rgba(255,255,255,0.15);
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.4);
-      padding: 10px 22px;
-      border-radius: var(--radius-full);
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .nav__cta:hover {
-      background: var(--tan);
-      border-color: var(--tan);
-      color: var(--charcoal);
-    }
+    .nav__links a:hover { color: var(--white); }
 
     .nav__hamburger {
       display: none;
@@ -287,7 +130,6 @@
       height: 2px;
       background: var(--white);
       border-radius: 2px;
-      transition: var(--transition);
     }
 
     .nav__mobile {
@@ -317,16 +159,10 @@
 
     .nav__mobile a:hover { color: var(--tan); }
 
-    .nav__mobile .btn-primary {
-      margin-top: 12px;
-      text-align: center;
-      justify-content: center;
-    }
-
-    /* ─── Content Section ───────────────────────────────────────── */
     .content-section {
       padding: 120px 0;
       background: var(--cream);
+      margin-top: 72px;
     }
 
     .content-section h1 {
@@ -381,7 +217,16 @@
       color: var(--charcoal);
     }
 
-    /* ─── Footer ────────────────────────────────────────────────── */
+    .content-section a {
+      color: var(--green-main);
+      text-decoration: underline;
+      transition: color var(--transition);
+    }
+
+    .content-section a:hover {
+      color: var(--green-dark);
+    }
+
     .footer {
       background: var(--charcoal);
       padding: 60px 0 32px;
@@ -415,129 +260,6 @@
       color: rgba(255,255,255,0.45);
       line-height: 1.65;
       max-width: 260px;
-    }
-
-    .footer__social {
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .footer__social-link {
-      width: 38px;
-      height: 38px;
-      border-radius: var(--radius-sm);
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.55);
-      font-size: 1rem;
-      transition: var(--transition);
-    }
-
-    .footer__social-link:hover {
-      background: var(--green-main);
-      border-color: var(--green-main);
-      color: var(--white);
-    }
-
-    /* Интерактивная панель WhatsApp */
-    .footer__social-wrapper {
-      position: relative;
-      display: inline-block;
-    }
-
-    .wa-panel {
-      position: absolute;
-      bottom: 54px;
-      left: 0;
-      width: 290px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      box-shadow: var(--shadow-lg);
-      display: none;
-      z-index: 110;
-      text-align: left;
-    }
-
-    .wa-panel::after {
-      content: '';
-      position: absolute;
-      bottom: -7px;
-      left: 14px;
-      width: 14px;
-      height: 14px;
-      background: var(--white);
-      transform: rotate(45deg);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .wa-panel.open {
-      display: block;
-      animation: waFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    @keyframes waFadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .wa-panel__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .wa-panel__title {
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--charcoal);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .wa-panel__close {
-      background: none;
-      border: none;
-      font-size: 1.3rem;
-      color: var(--text-muted);
-      line-height: 1;
-      padding: 2px;
-    }
-
-    .wa-panel__close:hover { color: var(--charcoal); }
-
-    .wa-panel__text {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 16px;
-      line-height: 1.5;
-    }
-
-    .wa-panel__btn {
-      padding: 10px 16px;
-      font-size: 0.85rem;
-      width: 100%;
-      justify-content: center;
-      background: #25D366 !important;
-      color: #FFFFFF !important;
-      border-radius: var(--radius-full);
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(37,211,102,0.25);
-    }
-
-    .wa-panel__btn:hover {
-      background: #1BD75E !important;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(37,211,102,0.35);
     }
 
     .footer__col-title {
@@ -591,68 +313,17 @@
 
     .footer__bottom-links a:hover { color: rgba(255,255,255,0.6); }
 
-    /* ─── Responsive ────────────────────────────────────────────── */
-    @media (max-width: 1024px) {
-      .footer__inner {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
     @media (max-width: 768px) {
-      .nav__links,
-      .nav__cta { display: none; }
-
+      .nav__links { display: none; }
       .nav__hamburger { display: flex; }
-
-      .nav__mobile.open { display: flex; }
-
-      .footer__inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .footer__bottom {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .wa-panel {
-        width: 260px;
-        left: -20px;
-      }
-      .wa-panel::after {
-        left: 32px;
-      }
-    }
-
-    /* ─── Language Switcher ─────────────────────────────────────── */
-    .nav__lang-switcher {
-      display: flex;
-      gap: 12px;
-      margin-left: 16px;
-      padding-left: 16px;
-      border-left: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .lang-link {
-      font-size: 0.75rem !important;
-      font-weight: 600 !important;
-      color: rgba(255,255,255,0.5) !important;
-      transition: var(--transition);
-    }
-
-    .lang-link:hover, .lang-link.active {
-      color: var(--white) !important;
+      .footer__inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer__bottom { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <div class="scroll-progress"></div>
-
-  <nav class="nav scrolled">
+  <nav class="nav">
     <div class="nav__inner container">
       <a href="/" class="nav__logo">
         <span class="nav__logo-script">Your Weekly Chef</span>
@@ -665,14 +336,7 @@
         <a href="/#services">Leistungen</a>
         <a href="/#testimonials">Referenzen</a>
         <a href="/#contact">Kontakt</a>
-        <div class="nav__lang-switcher">
-          <a href="/" class="lang-link active">DE</a>
-          <a href="/en/" class="lang-link">EN</a>
-          <a href="/ru/" class="lang-link">RU</a>
-        </div>
       </div>
-
-      <a href="/#contact" class="nav__cta btn-primary">Jetzt buchen</a>
 
       <button class="nav__hamburger">
         <span></span>
@@ -687,12 +351,6 @@
       <a href="/#services">Leistungen</a>
       <a href="/#testimonials">Referenzen</a>
       <a href="/#contact">Kontakt</a>
-      <a href="/#contact" class="btn-primary">Jetzt buchen</a>
-      <div class="nav__lang-switcher">
-        <a href="/" class="lang-link active">DE</a>
-        <a href="/en/" class="lang-link">EN</a>
-        <a href="/ru/" class="lang-link">RU</a>
-      </div>
     </div>
   </nav>
 
@@ -701,46 +359,306 @@
       <div class="container">
         <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
 
-        <h2>1. Geltungsbereich</h2>
-        <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen Your Weekly Chef (nachfolgend „Anbieter“) und seinen Kunden über die Erbringung von Privatkoch-Dienstleistungen, Meal Prep und damit verbundenen Services.</p>
-
-        <h2>2. Leistungen und Vertragsschluss</h2>
-        <p>Der Anbieter bietet individuelle Kochdienstleistungen in der Küche des Kunden an. Ein Vertrag kommt durch die schriftliche Bestätigung (E-Mail oder WhatsApp) eines Angebots durch den Kunden zustande.</p>
-
-        <h2>3. Preise und Zahlungsbedingungen</h2>
+        <h2>§ 1 Geltungsbereich und Vertragsparteien</h2>
+        <p>
+          Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Rechtsbeziehungen zwischen:
+        </p>
         <ul>
-          <li>Es gelten die zum Zeitpunkt der Buchung vereinbarten Preise.</li>
-          <li>Die Kosten für Lebensmittel sind, sofern nicht anders vereinbart, nicht im Honorar enthalten und werden gegen Vorlage der Belege gesondert berechnet.</li>
-          <li>Die Zahlung erfolgt, sofern nicht anders vereinbart, unmittelbar nach Erbringung der Dienstleistung per Überweisung, Kartenzahlung oder in bar.</li>
+          <li><strong>Anbieter (Dienstleister):</strong> Your Weekly Chef, Olha Polianina, Geisenheimer Straße 56, 14197 Berlin</li>
+          <li><strong>Kunde (Auftraggeber):</strong> Die natürliche oder juristische Person, die eine Dienstleistung bei uns bucht</li>
+        </ul>
+        <p>
+          Diese AGB gelten für alle Dienstleistungen, die wir erbringen, insbesondere für die Buchung und Durchführung von Privatköchin-Services. Abweichende Bedingungen des Kunden werden nicht anerkannt, es sei denn, wir stimmen diesen ausdrücklich schriftlich zu.
+        </p>
+
+        <h2>§ 2 Leistungsbeschreibung</h2>
+        <p>
+          Wir erbringen folgende Dienstleistungen:
+        </p>
+        <ul>
+          <li>Zubereitung von Mahlzeiten nach Kundenwünschen und Vorgaben</li>
+          <li>Beratung zu Menüplanung und Ernährung</li>
+          <li>Berücksichtigung von Allergien, Unverträglichkeiten und Ernährungsvorlieben</li>
+          <li>Einkauf von Lebensmitteln (optional, nach Absprache)</li>
+          <li>Vorbereitung und Durchführung von Mahlzeiten vor Ort in der Küche des Kunden</li>
+          <li>Grundreinigung der genutzten Küchenbereiche nach Abschluss der Tätigkeit</li>
+        </ul>
+        <p>
+          Die genaue Leistung wird vor Vertragsabschluss in einem Gespräch mit dem Kunden festgelegt und bestätigt.
+        </p>
+
+        <h2>§ 3 Vertragsabschluss und Buchung</h2>
+        <p>
+          <strong>3.1 Buchungsprozess</strong><br>
+          Die Buchung erfolgt durch Kontaktaufnahme per E-Mail, Telefon oder WhatsApp. Der Kunde teilt folgende Informationen mit:
+        </p>
+        <ul>
+          <li>Gewünschtes Datum und Uhrzeit</li>
+          <li>Anzahl der Gäste</li>
+          <li>Menüwünsche oder Ernährungsvorlieben</li>
+          <li>Allergien und Unverträglichkeiten</li>
+          <li>Besondere Anforderungen oder Wünsche</li>
+        </ul>
+        <p>
+          <strong>3.2 Bestätigung</strong><br>
+          Nach Erhalt der Buchungsanfrage prüfen wir die Verfügbarkeit und senden dem Kunden eine schriftliche Bestätigung per E-Mail. Diese Bestätigung enthält:
+        </p>
+        <ul>
+          <li>Datum und Uhrzeit der Dienstleistung</li>
+          <li>Ort der Dienstleistung</li>
+          <li>Beschreibung der vereinbarten Leistung</li>
+          <li>Gesamtpreis und Zahlungsbedingungen</li>
+          <li>Stornierungsbedingungen</li>
+        </ul>
+        <p>
+          <strong>3.3 Vertragsabschluss</strong><br>
+          Der Vertrag kommt zustande, wenn der Kunde die Bestätigung akzeptiert und die Anzahlung leistet.
+        </p>
+
+        <h2>§ 4 Preise und Zahlungsbedingungen</h2>
+        <p>
+          <strong>4.1 Preisgestaltung</strong><br>
+          Die Preise werden individuell je nach Umfang und Art der Dienstleistung festgelegt. Sie richten sich nach:
+        </p>
+        <ul>
+          <li>Anzahl der Gäste</li>
+          <li>Dauer der Tätigkeit</li>
+          <li>Art der Menüs (einfach, gehobene Küche, spezielle Anforderungen)</li>
+          <li>Anfahrtskosten (falls erforderlich)</li>
+          <li>Kosten für Lebensmittel (falls vom Kunden gewünscht)</li>
+        </ul>
+        <p>
+          <strong>4.2 Zahlungsmodalitäten</strong><br>
+
+        <p>
+          Akzeptierte Zahlungsmethoden: Banküberweisung, Kreditkarte (falls verfügbar), PayPal (falls verfügbar).<br>
+          Die Bankverbindung wird in der Buchungsbestätigung mitgeteilt.
+        </p>
+        <p>
+          <strong>4.3 Zusatzkosten</strong><br>
+          Falls während der Durchführung der Dienstleistung zusätzliche Lebensmittel oder Materialien erforderlich werden, die nicht in der ursprünglichen Vereinbarung enthalten waren, werden diese dem Kunden in Rechnung gestellt. Der Kunde wird vorher um Zustimmung gebeten.
+        </p>
+        <p>
+          <strong>4.4 Rechnungsstellung</strong><br>
+          Eine Rechnung wird nach Erbringung der Dienstleistung ausgestellt und per E-Mail versendet.
+        </p>
+
+        <h2>§ 5 Stornierung und Rücktritt</h2>
+        <p>
+          <strong>5.1 Stornierungsbedingungen durch den Kunden</strong><br>
+
+        <p>
+          Stornierungen müssen schriftlich per E-Mail oder Telefon erfolgen.
+        </p>
+        <p>
+          <strong>5.2 Rücktritt durch den Anbieter</strong><br>
+          Wir behalten uns das Recht vor, vom Vertrag zurückzutreten, wenn:
+        </p>
+        <ul>
+          <li>Die Restzahlung nicht fristgerecht erfolgt</li>
+          <li>Der Kunde uns keine erforderlichen Informationen (z.B. Allergien) mitteilt</li>
+          <li>Die Küche des Kunden nicht den minimalen Hygienestandards entspricht</li>
+          <li>Höhere Gewalt oder unvorhergesehene Umstände die Erbringung unmöglich machen</li>
+          <li>Der Kunde sich ungebührlich verhält oder die Sicherheit gefährdet</li>
+        </ul>
+        <p>
+          Im Falle eines Rücktritts durch uns wird die Anzahlung erstattet.
+        </p>
+
+        <h2>§ 6 Widerrufsrecht</h2>
+        <p>
+          <strong>6.1 Widerrufsrecht für Verbraucher</strong><br>
+          Verbraucher (natürliche Personen, die einen Vertrag zu Zwecken abschließen, die überwiegend weder ihrer gewerblichen noch ihrer beruflichen Tätigkeit zugerechnet werden) haben das Recht, den Vertrag innerhalb von 14 Tagen ohne Angabe von Gründen zu widerrufen.
+        </p>
+        <p>
+          <strong>6.2 Ausnahmen vom Widerrufsrecht</strong><br>
+          Das Widerrufsrecht gilt nicht für Verträge zur Erbringung von Dienstleistungen, wenn die Dienstleistung bereits begonnen hat. Da unsere Dienstleistungen an einem bestimmten Termin erbracht werden, beginnt die Dienstleistung mit dem vereinbarten Termin. Daher können Buchungen, die weniger als 14 Tage vor dem Termin erfolgen, nicht widerrufen werden.
+        </p>
+        <p>
+          <strong>6.3 Widerrufsformular</strong><br>
+          Um Ihr Widerrufsrecht auszuüben, teilen Sie uns bitte schriftlich mit (per E-Mail oder Brief):
+        </p>
+        <ul>
+          <li>Ihren Namen und Ihre Kontaktdaten</li>
+          <li>Die Buchungsnummer oder das Datum der Buchung</li>
+          <li>Eine Erklärung, dass Sie den Vertrag widerrufen möchten</li>
+        </ul>
+        <p>
+          <strong>Kontakt:</strong> yourweeklychef.de@gmail.com
+        </p>
+
+        <h2>§ 7 Allergien und Ernährungsvorlieben</h2>
+        <p>
+          <strong>7.1 Mitteilungspflicht</strong><br>
+          Der Kunde ist verpflichtet, uns vor Vertragsabschluss alle bekannten Allergien, Unverträglichkeiten und Ernährungsvorlieben mitzuteilen. Dies ist entscheidend für die Sicherheit und Zufriedenheit.
+        </p>
+        <p>
+          <strong>7.2 Haftung</strong><br>
+          Wir haften nicht für allergische Reaktionen oder Unverträglichkeiten, wenn der Kunde uns nicht vollständig über diese informiert hat. Wir treffen alle zumutbaren Vorsichtsmaßnahmen, um Kreuzkontaminationen zu vermeiden, können aber keine absolute Garantie geben, besonders bei schweren Allergien.
+        </p>
+        <p>
+          <strong>7.3 Medizinische Bedingungen</strong><br>
+          Für medizinisch komplexe Ernährungsanforderungen empfehlen wir, vorab mit uns und ggf. mit einem Arzt oder Ernährungsberater zu sprechen.
+        </p>
+
+        <h2>§ 8 Lebensmitteleinkauf</h2>
+        <p>
+          <strong>8.1 Einkauf durch den Anbieter</strong><br>
+          Falls der Kunde wünscht, dass wir die Lebensmittel einkaufen, werden folgende Regelungen angewendet:
+        </p>
+        <ul>
+          <li>Der Kunde stellt uns ein Budget oder eine Einkaufsliste zur Verfügung</li>
+          <li>Wir kaufen hochwertige, frische Zutaten ein</li>
+          <li>Alle Einkaufsbelege werden dem Kunden zur Verfügung gestellt</li>
+          <li>Die Kosten werden auf Basis der Belege berechnet</li>
+        </ul>
+        <p>
+          <strong>8.2 Einkauf durch den Kunden</strong><br>
+          Falls der Kunde die Lebensmittel selbst einkauft, werden diese von uns verarbeitet. Wir haften nicht für die Qualität oder Frische der bereitgestellten Zutaten.
+        </p>
+
+        <h2>§ 9 Ort und Zeit der Dienstleistung</h2>
+        <p>
+          <strong>9.1 Ort</strong><br>
+          Die Dienstleistung wird in der Regel in der Küche des Kunden erbracht. Abweichungen müssen vorab schriftlich vereinbart werden.
+        </p>
+        <p>
+          <strong>9.2 Zeitpunkt</strong><br>
+          Der genaue Zeitpunkt wird in der Buchungsbestätigung festgelegt. Der Kunde ist verpflichtet, die Küche zu dem vereinbarten Zeitpunkt zugänglich zu machen.
+        </p>
+        <p>
+          <strong>9.3 Verspätungen</strong><br>
+          Falls wir aufgrund von Verkehrsproblemen oder anderen unvorhergesehenen Umständen verspätet sind, werden wir den Kunden unverzüglich informieren. Dies berechtigt den Kunden nicht zur Stornierung, es sei denn, die Verspätung beträgt mehr als 30 Minuten.
+        </p>
+
+        <h2>§ 10 Hygiene und Sicherheit</h2>
+        <p>
+          <strong>10.1 Hygienestandards</strong><br>
+          Wir halten alle gesetzlichen Hygienestandards ein und verfügen über entsprechende Schulungen. Wir erwarten, dass die Küche des Kunden ebenfalls einen angemessenen Hygienestandard aufweist.
+        </p>
+        <p>
+          <strong>10.2 Haftung für Schäden</strong><br>
+          Wir haften nicht für Schäden an der Einrichtung oder den Geräten des Kunden, die durch normalen Gebrauch entstehen. Wir werden jedoch sorgfältig mit allen Geräten umgehen.
+        </p>
+        <p>
+          <strong>10.3 Versicherung</strong><br>
+          Der Kunde sollte sicherstellen, dass eine angemessene Haftpflichtversicherung besteht. Wir empfehlen, unsere Dienstleistung in die Hausratversicherung oder Haftpflichtversicherung einzubeziehen.
+        </p>
+
+        <h2>§ 11 Haftung und Gewährleistung</h2>
+        <p>
+          <strong>11.1 Haftungsbeschränkung</strong><br>
+          Unsere Haftung ist auf den Preis der gebuchten Dienstleistung begrenzt, es sei denn, es liegt Vorsatz oder grobe Fahrlässigkeit vor.
+        </p>
+        <p>
+          <strong>11.2 Gewährleistung</strong><br>
+          Wir gewährleisten, dass die Dienstleistung nach bestem Wissen und Gewissen und gemäß den vereinbarten Spezifikationen erbracht wird. Geschmack ist subjektiv, daher können wir keine Gewährleistung für die Zufriedenheit mit dem Geschmack der Speisen übernehmen.
+        </p>
+        <p>
+          <strong>11.3 Ausschluss von Haftung</strong><br>
+          Wir haften nicht für:
+        </p>
+        <ul>
+          <li>Allergische Reaktionen bei unvollständiger Information durch den Kunden</li>
+          <li>Geschmackliche Vorlieben oder Unzufriedenheit</li>
+          <li>Schäden an der Einrichtung durch normalen Gebrauch</li>
+          <li>Folgeschäden oder entgangene Gewinne</li>
+          <li>Höhere Gewalt oder unvorhergesehene Umstände</li>
         </ul>
 
-        <h2>4. Stornierung und Terminverschiebung</h2>
-        <p>Termine sind für beide Seiten verbindlich. Sollte der Kunde einen Termin absagen oder verschieben müssen, gelten folgende Bedingungen:</p>
+        <h2>§ 12 Verhalten und Hausregeln</h2>
+        <p>
+          <strong>12.1 Verhalten des Kunden</strong><br>
+          Der Kunde verpflichtet sich zu respektvollem Verhalten gegenüber dem Anbieter. Belästigung, Beleidigung oder unangemessenes Verhalten berechtigen uns, die Dienstleistung abzubrechen und den Vertrag zu kündigen.
+        </p>
+        <p>
+          <strong>12.2 Zugang zur Küche</strong><br>
+          Der Kunde stellt sicher, dass wir ungehinderten Zugang zur Küche und den notwendigen Geräten haben. Wir benötigen Zugang zu:
+        </p>
         <ul>
-          <li>Absagen bis zu <strong>48 Stunden</strong> vor dem Termin sind kostenfrei.</li>
-          <li>Bei Absagen weniger als 48 Stunden vor dem Termin werden 50% des vereinbarten Honorars fällig.</li>
-          <li>Bei Absagen weniger als 24 Stunden vor dem Termin oder bei Nichterscheinen wird das volle Honorar (100%) berechnet.</li>
-          <li>Bereits eingekaufte Lebensmittel müssen in jedem Fall zu 100% erstattet werden.</li>
+          <li>Herd und Backofen</li>
+          <li>Kühlschrank und Gefrierschrank</li>
+          <li>Spüle und Wasser</li>
+          <li>Arbeitsplatten</li>
+          <li>Grundausstattung an Küchengeräten (Messer, Schneidebretter, Töpfe, Pfannen)</li>
         </ul>
+        <p>
+          <strong>12.3 Privatsphäre</strong><br>
+          Der Kunde respektiert unsere Privatsphäre während der Arbeit. Wir bitten, uns bei der Arbeit nicht zu unterbrechen, es sei denn, es gibt dringende Fragen.
+        </p>
 
-        <h2>5. Allergien und diätetische Anforderungen</h2>
-        <p>Der Kunde ist verpflichtet, den Anbieter bis spätestens <strong>72 Stunden</strong> vor dem Termin über bestehende Allergien, Unverträglichkeiten oder spezifische diätetische Anforderungen zu informieren. Der Anbieter übernimmt keine Haftung für allergische Reaktionen, wenn diese Informationen nicht rechtzeitig oder unvollständig bereitgestellt wurden.</p>
+        <h2>§ 13 Kommunikation und Kontakt</h2>
+        <p>
+          <strong>13.1 Kontaktmittel</strong><br>
+          Die Kommunikation erfolgt per E-Mail, Telefon oder WhatsApp. Der Kunde akzeptiert diese Kommunikationsmittel.
+        </p>
+        <p>
+          <strong>13.2 Erreichbarkeit</strong><br>
+          Wir sind während der Geschäftszeiten erreichbar. Anfragen werden in der Regel innerhalb von 24 Stunden beantwortet.
+        </p>
+        <p>
+          <strong>13.3 Wichtige Mitteilungen</strong><br>
+          Wichtige Mitteilungen (z.B. Stornierungen, Änderungen) müssen schriftlich erfolgen.
+        </p>
 
-        <h2>6. Anforderungen an die Küche des Kunden</h2>
-        <ul>
-          <li>Der Kunde stellt eine funktionsfähige und saubere Küche sowie die notwendigen Geräte (Herd, Backofen, Kühlschrank, Wasseranschluss) zur Verfügung.</li>
-          <li>Der Anbieter verpflichtet sich, die Küche nach Abschluss der Arbeiten in einem ordnungsgemäßen und sauberen Zustand zu hinterlassen.</li>
-          <li>Der Anbieter behandelt die Räumlichkeiten und das Inventar des Kunden mit größтер Sorgfalt.</li>
-        </ul>
+        <h2>§ 14 Datenschutz</h2>
+        <p>
+          Die Verarbeitung Ihrer personenbezogenen Daten erfolgt gemäß unserer Datenschutzerklärung. Bitte lesen Sie diese sorgfältig durch.
+        </p>
 
-        <h2>7. Haftung</h2>
-        <p>Der Anbieter haftet für Schäden, die durch grobe Fahrlässigkeit oder Vorsatz verursacht wurden. Eine Haftung für leichte Fahrlässigkeit ist ausgeschlossen, sofern keine wesentlichen Vertragspflichten verletzt wurden.</p>
+        <h2>§ 15 Geistiges Eigentum</h2>
+        <p>
+          <strong>15.1 Rezepte und Menüs</strong><br>
+          Alle von uns entwickelten Rezepte und Menüs sind unser geistiges Eigentum. Der Kunde darf diese nicht ohne unsere Genehmigung weitergeben oder kommerziell nutzen.
+        </p>
+        <p>
+          <strong>15.2 Fotos</strong><br>
+          Falls der Kunde Fotos der Mahlzeiten machen möchte, ist dies erlaubt. Wir bitten jedoch, diese nicht ohne unsere Genehmigung in sozialen Medien zu veröffentlichen, besonders nicht mit kommerziellen Zwecken.
+        </p>
 
-        <h2>8. Datenschutz</h2>
-        <p>Die Verarbeitung personenbezogener Daten erfolgt gemäß der Datenschutzerklärung des Anbieters und den gesetzlichen Bestimmungen (DSGVO).</p>
+        <h2>§ 16 Änderungen der AGB</h2>
+        <p>
+          Wir behalten uns das Recht vor, diese AGB jederzeit zu ändern. Änderungen werden dem Kunden mindestens 30 Tage vor Inkrafttreten mitgeteilt. Die Fortsetzung der Geschäftsbeziehung gilt als Akzeptanz der neuen AGB.
+        </p>
 
-        <h2>9. Schlussbestimmungen</h2>
-        <p>Es gilt das Recht der Bundesrepublik Deutschland. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+        <h2>§ 17 Salvatorische Klausel</h2>
+        <p>
+          Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt die Gültigkeit der übrigen Bestimmungen unberührt. Die unwirksame Bestimmung wird durch eine wirksame Bestimmung ersetzt, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung entspricht.
+        </p>
+
+        <h2>§ 18 Anwendbares Recht und Gerichtsstand</h2>
+        <p>
+          <strong>18.1 Anwendbares Recht</strong><br>
+          Diese AGB und alle Verträge unterliegen dem Recht der Bundesrepublik Deutschland, insbesondere dem Bürgerlichen Gesetzbuch (BGB).
+        </p>
+        <p>
+          <strong>18.2 Gerichtsstand</strong><br>
+          Gerichtsstand für alle Streitigkeiten ist Berlin, Deutschland. Dies gilt jedoch nicht, wenn der Kunde Verbraucher ist und seinen Wohnsitz in einem anderen Land hat; in diesem Fall gelten die Gesetze dieses Landes.
+        </p>
+        <p>
+          <strong>18.3 Außergerichtliche Streitbeilegung</strong><br>
+          Wir sind bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Die zuständige Stelle ist die Schlichtungsstelle der Handwerkskammer Berlin.
+        </p>
+
+        <h2>§ 19 Kontakt und Impressum</h2>
+        <p>
+          <strong>Your Weekly Chef</strong><br>
+          Olha Polianina<br>
+          Geisenheimer Straße 56<br>
+          14197 Berlin<br>
+          Deutschland<br><br>
+          <strong>E-Mail:</strong> <a href="mailto:yourweeklychef.de@gmail.com">yourweeklychef.de@gmail.com</a><br>
+          <strong>Telefon:</strong> +49 160 99892607
+        </p>
+        <p>
+          Weitere Informationen finden Sie in unserem <a href="/impressum.html">Impressum</a> und unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+
+        <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(90,122,58,0.15); font-size: 0.95rem; color: var(--text-light);">
+          <strong>Gültig ab:</strong> 01.06.2026<br>
+          <strong>Letzte Aktualisierung:</strong> Mai 2026
+        </p>
+
       </div>
     </section>
   </main>
@@ -751,32 +669,6 @@
         <div class="footer__logo">Your Weekly Chef</div>
         <div class="footer__logo-sub">Privatkoch Berlin</div>
         <p class="footer__tagline">Ihr persönlicher Koch für gesunde und köstliche Mahlzeiten, direkt in Ihrer Küche in Berlin.</p>
-        <div class="footer__social">
-          <div class="footer__social-wrapper">
-            <a href="#" class="footer__social-link wa-trigger">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
-            </a>
-            <div class="wa-panel">
-              <div class="wa-panel__header">
-                <div class="wa-panel__title">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp"><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/><path d="M12.2 2h-.4A7.2 7.2 0 0 0 5 9.2v3.1L2 22l6.3-2.3c1.7.9 3.5 1.3 5.4 1.3 4.6 0 8.3-3.7 8.3-8.3S16.8 2 12.2 2Z"/></svg>
-                  Chatten Sie mit uns auf WhatsApp
-                </div>
-                <button class="wa-panel__close">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                </button>
-              </div>
-              <p class="wa-panel__text">Hallo! Wie kann ich Ihnen heute helfen?</p>
-              <a href="https://wa.me/49176628856" target="_blank" class="wa-panel__btn btn-green">
-                Nachricht senden
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
-              </a>
-            </div>
-          </div>
-          <a href="https://www.instagram.com/yourweeklychef.de/" target="_blank" class="footer__social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-          </a>
-        </div>
       </div>
 
       <div>
@@ -801,7 +693,7 @@
     </div>
 
     <div class="container footer__bottom">
-      <div class="footer__copy">© 2024 Your Weekly Chef. Alle Rechte vorbehalten.</div>
+      <div class="footer__copy">© 2026 Your Weekly Chef. Alle Rechte vorbehalten.</div>
       <div class="footer__bottom-links">
         <a href="/datenschutz.html">Datenschutzerklärung</a>
         <a href="/impressum.html">Impressum</a>
@@ -811,117 +703,25 @@
   </footer>
 
   <script>
-    // Scroll progress
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (scrollTop / scrollHeight) * 100;
-      document.querySelector('.scroll-progress').style.width = scrolled + '%';
-    });
-
-    // Nav scroll effect
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.nav');
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-
-    // Mobile nav toggle
     const hamburger = document.querySelector('.nav__hamburger');
     const mobileNav = document.querySelector('.nav__mobile');
 
     hamburger.addEventListener('click', () => {
       mobileNav.classList.toggle('open');
-      hamburger.classList.toggle('open');
     });
 
     mobileNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileNav.classList.remove('open');
-        hamburger.classList.remove('open');
       });
     });
 
-    // WhatsApp panel toggle
-    const waTrigger = document.querySelector('.wa-trigger');
-    const waPanel = document.querySelector('.wa-panel');
-    const waClose = document.querySelector('.wa-panel__close');
-
-    waTrigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      waPanel.classList.toggle('open');
-    });
-
-    waClose.addEventListener('click', () => {
-      waPanel.classList.remove('open');
-    });
-
-    // Close WhatsApp panel when clicking outside
     document.addEventListener('click', (e) => {
-      if (!waPanel.contains(e.target) && !waTrigger.contains(e.target)) {
-        waPanel.classList.remove('open');
+      if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileNav.classList.remove('open');
       }
-    });
-
-    // Form submission
-    const contactForm = document.querySelector('.form');
-    const formSuccess = document.querySelector('.form__success');
-
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let isValid = true;
-
-      contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.classList.add('error');
-          input.nextElementSibling.classList.add('visible');
-        } else {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
-        }
-      });
-
-      if (isValid) {
-        // Simulate form submission
-        setTimeout(() => {
-          contactForm.reset();
-          formSuccess.classList.add('visible');
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            formSuccess.classList.remove('visible');
-          }, 5000);
-        }, 500);
-      }
-    });
-
-    contactForm.querySelectorAll('input, select, textarea').forEach(input => {
-      input.addEventListener('input', () => {
-        if (input.value.trim()) {
-          input.classList.remove('error');
-          input.nextElementSibling.classList.remove('visible');
-        }
-      });
-    });
-
-    // Fade-up animation on scroll
-    const fadeUpElements = document.querySelectorAll('.fade-up');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    fadeUpElements.forEach(element => {
-      observer.observe(element);
     });
   </script>
+
 </body>
 </html>

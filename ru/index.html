@@ -1886,46 +1886,44 @@
         </div>
 
         <div class="contact__form-wrap">
-          <h3 class="contact__form-title">Senden Sie mir eine Nachricht</h3>
-          <p class="contact__form-sub">Ich antworte in der Regel innerhalb von 24 Stunden.</p>
+          <h3 class="contact__form-title">Отправьте мне сообщение. </h3>
+          <p class="contact__form-sub">Как правило я стараюсь ответить в течении 24 часов.</p>
          <form id="contact-form" class="form" action="https://formspree.io/f/xpqbreng" method="POST">
   <!-- Остальной код формы остается таким же -->
   <div class="form__row">
     <div class="form__group">
-      <label for="name" class="form__label">Name <span>*</span></label>
-      <input type="text" id="name" name="name" class="form__input" placeholder="Ihr Name" required />
-      <span class="form__error">Bitte geben Sie Ihren Namen ein.</span>
+      <label for="name" class="form__label">Имя <span>*</span></label>
+      <input type="text" id="name" name="name" class="form__input" placeholder="Ваше имя" required />
+      <span class="form__error">Пожалуйста, введите свое имя.</span>
     </div>
     <div class="form__group">
       <label for="email" class="form__label">E-Mail <span>*</span></label>
-      <input type="email" id="email" name="email" class="form__input" placeholder="Ihre E-Mail" required />
-      <span class="form__error">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
+      <input type="email" id="email" name="email" class="form__input" placeholder="Ваш E-Mail" required />
+      <span class="form__error">Пожалуйста, введите адрес своей електронной почты.</span>
     </div>
   </div>
   <div class="form__group">
-    <label for="service" class="form__label">Interessierte Dienstleistung <span>*</span></label>
+    <label for="service" class="form__label">Интересующие Вас услуги <span>*</span></label>
     <select id="service" name="service" class="form__select" required>
-      <option value="">Wählen Sie eine Dienstleistung</option>
-      <option value="meal-prep">Wöchentliches Meal Prep</option>
-      <option value="events">Besondere Anlässe & Dinnerpartys</option>
-      <option value="consulting">Ernährungsberatung & Diätplanung</option>
-      <option value="classes">Kochkurse & Workshops</option>
-      <option value="other">Sonstiges</option>
+      <option value="">Выберите услугу.</option>
+      <option value="meal-prep">Еженедельное приготовление еды (Meal Prep)</option>
+      <option value="consulting">Консультации по питанию и планирование диеты</option>
+      <option value="other">Другое</option>
     </select>
     <span class="form__error">Выберите услугу.</span>
   </div>
   <div class="form__group">
-    <label for="district" class="form__label">Bezirk <span>*</span></label>
-    <input type="text" id="district" name="district" class="form__input" placeholder="Ihr Bezirk in Berlin" required />
+    <label for="district" class="form__label">Район <span>*</span></label>
+    <input type="text" id="district" name="district" class="form__input" placeholder="Ваш район в Берлине" required />
     <span class="form__error">Введите название вашего района.</span>
   </div>
   <div class="form__group">
     <label for="message" class="form__label">Ваше сообщение. <span>*</span></label>
-    <textarea id="message" name="message" class="form__textarea" placeholder="Ihre Nachricht" required></textarea>
+    <textarea id="message" name="message" class="form__textarea" placeholder="Ваше сообщение" required></textarea>
     <span class="form__error">Оставьте свое сообщение.</span>
   </div>
   <button type="submit" class="form__submit btn-green">
-    Nachricht senden
+    Отправить сообщение
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M15 9l-6 6"/></svg>
   </button>
 </form>

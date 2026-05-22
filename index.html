@@ -605,6 +605,125 @@
       color: var(--green-dark);
     }
 
+  /* ─── Responsive Gallery ──────────────────────────────────── */
+    @media (max-width: 768px) {
+      .gallery__grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+      }
+
+      .about__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about__photo-wrap {
+        aspect-ratio: 1;
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .gallery__item {
+        aspect-ratio: 1;
+      }
+
+      .about__photo-inner {
+        gap: 12px;
+        padding: 24px;
+      }
+
+      .about__photo-text {
+        font-size: 1.4rem;
+      }
+    }
+
+    .about__photo-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+
+
+    .about__accent-card {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      background: var(--tan);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .about__accent-card-num {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+
+    .about__accent-card-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: rgba(44,44,44,0.7);
+      margin-top: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .about__text {
+      font-size: 1.05rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .about__text strong {
+      color: var(--green-main);
+      font-weight: 600;
+    }
+
+    .about__langs {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .about__lang-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+
+    .about__lang-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--mint);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      padding: 5px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--green-dark);
+    }
+
     /* ─── How It Works ──────────────────────────────────────────── */
     .how {
       padding: 120px 0;
@@ -901,96 +1020,6 @@
       line-height: 1.65;
     }
 
-    /* ─── Testimonials ──────────────────────────────────────────── */
-    .testimonials {
-      padding: 120px 0;
-      background: var(--cream-dark);
-    }
-
-    .testimonials__header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .testimonials__header .section-subtitle {
-      margin: 0 auto;
-    }
-
-    .testimonials__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .testimonial-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .testimonial-card__stars {
-      display: flex;
-      gap: 3px;
-      margin-bottom: 20px;
-    }
-
-    .testimonial-card__star {
-      color: var(--tan);
-      font-size: 1rem;
-    }
-
-    .testimonial-card__quote {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--charcoal-mid);
-      line-height: 1.7;
-      flex: 1;
-      margin-bottom: 28px;
-    }
-
-    .testimonial-card__author {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .testimonial-card__avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--green-muted), var(--green-main));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--white);
-      flex-shrink: 0;
-    }
-
-    .testimonial-card__name {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--charcoal);
-    }
-
-    .testimonial-card__meta {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
 
     /* ─── Booking / Contact ─────────────────────────────────────── */
     .contact {
